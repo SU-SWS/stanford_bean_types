@@ -24,6 +24,7 @@ function stanford_bean_types_field_default_fields() {
       'module' => 'field_collection',
       'settings' => array(
         'path' => '',
+        'hide_blank_items' => TRUE,
       ),
       'translatable' => '0',
       'type' => 'field_collection',
@@ -350,6 +351,7 @@ function stanford_bean_types_field_default_fields() {
       'module' => 'field_collection',
       'settings' => array(
         'path' => '',
+        'hide_blank_items' => TRUE,
       ),
       'translatable' => '0',
       'type' => 'field_collection',
