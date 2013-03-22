@@ -97,15 +97,12 @@ function stanford_bean_types_field_default_fields() {
       'bundle' => 'stanford_postcard',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Warning: When displayed, the text in this field is trimmed to 450 characters.  ',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(
-            'trim_length' => '450',
-          ),
-          'type' => 'text_trimmed',
+          'type' => 'text_default',
           'weight' => '3',
         ),
       ),
