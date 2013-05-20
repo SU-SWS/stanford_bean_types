@@ -22,10 +22,7 @@ function stanford_bean_types_field_default_fields() {
       'indexes' => array(),
       'locked' => '0',
       'module' => 'field_collection',
-      'settings' => array(
-        'path' => '',
-        'hide_blank_items' => TRUE,
-      ),
+      'settings' => array(),
       'translatable' => '0',
       'type' => 'field_collection',
     ),
