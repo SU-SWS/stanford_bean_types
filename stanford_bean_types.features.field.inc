@@ -22,7 +22,9 @@ function stanford_bean_types_field_default_fields() {
       'indexes' => array(),
       'locked' => '0',
       'module' => 'field_collection',
-      'settings' => array(),
+      'settings' => array(
+        'hide_blank_items' => TRUE,
+      ),
       'translatable' => '0',
       'type' => 'field_collection',
     ),
@@ -30,7 +32,7 @@ function stanford_bean_types_field_default_fields() {
       'bundle' => 'stanford_postcard',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'This displays an image in the block.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -275,7 +277,7 @@ function stanford_bean_types_field_default_fields() {
       'bundle' => 'stanford_postcard',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'The link title should be a call to read more (e.g., "Learn more about our department"). The URL directs to more information.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
