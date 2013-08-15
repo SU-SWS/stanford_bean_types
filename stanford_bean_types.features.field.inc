@@ -247,7 +247,7 @@ function stanford_bean_types_field_default_fields() {
   $fields['bean-stanford_postcard-field_s_postcard_link'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_s_postcard_link',
