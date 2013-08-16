@@ -42,7 +42,7 @@ function stanford_bean_types_field_default_fields() {
             'delete' => '',
             'description' => 0,
             'edit' => '',
-            'view_mode' => 'stanford_4_col_header',
+            'view_mode' => 'stanford_3_col_header',
           ),
           'type' => 'field_collection_view',
           'weight' => '7',
