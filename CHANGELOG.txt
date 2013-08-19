@@ -1,5 +1,13 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Bean Types 7.x-1.0-alpha6 2013-08-19
+---------------------------------------------
+Changes since 7.x-1.0-alpha6:
+  -Changed link field to be unlimited on Postcard BEAN
+  -Changed body field to default on Postcard BEAN
+  -Field-level help
+  -Bug fixes and compatibility updates
+
 Stanford Bean Types 7.x-1.0-alpha5 2013-03-06
 ---------------------------------------------
