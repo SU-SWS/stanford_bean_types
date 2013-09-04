@@ -2060,7 +2060,7 @@ function stanford_bean_types_field_default_fields() {
             'delete' => '',
             'description' => 0,
             'edit' => '',
-            'view_mode' => 'stanford_8_col_banner',
+            'view_mode' => 'stanford_9_col_banner',
           ),
           'type' => 'field_collection_view',
           'weight' => '0',
