@@ -1597,6 +1597,81 @@ function stanford_bean_types_field_default_fields() {
     ),
   );
 
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_flickr_logo'.
+  $flickr_fid = variable_get('stanford_bean_types_flickr_fid');
+  $fields['bean-stanford_social_media_connect-field_s_smc_flickr_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_flickr_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => $flickr_fid,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_flickr',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_flickr_logo',
+      'label' => 'Flickr Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
+      ),
+    ),
+  );
+
   // Exported field: 'bean-stanford_social_media_connect-field_s_smc_googleplus'.
   $fields['bean-stanford_social_media_connect-field_s_smc_googleplus'] = array(
     'field_config' => array(
@@ -1647,7 +1722,7 @@ function stanford_bean_types_field_default_fields() {
       ),
       'entity_type' => 'bean',
       'field_name' => 'field_s_smc_googleplus',
-      'label' => 'GooglePlus',
+      'label' => 'Google+',
       'required' => 0,
       'settings' => array(
         'attributes' => array(
@@ -1674,6 +1749,81 @@ function stanford_bean_types_field_default_fields() {
         'settings' => array(),
         'type' => 'link_field',
         'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_googleplus_logo'.
+  $googleplus_fid = variable_get('stanford_bean_types_googleplus_fid');
+  $fields['bean-stanford_social_media_connect-field_s_smc_googleplus_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_googleplus_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => $googleplus_fid,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_googleplus',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_googleplus_logo',
+      'label' => 'Google+ Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
       ),
     ),
   );
@@ -1759,6 +1909,81 @@ function stanford_bean_types_field_default_fields() {
     ),
   );
 
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_linkedin_logo'.
+  $linkedin_fid = variable_get('stanford_bean_types_linkedin_fid');
+  $fields['bean-stanford_social_media_connect-field_s_smc_linkedin_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_linkedin_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => $linkedin_fid,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_linkedin',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_linkedin_logo',
+      'label' => 'LinkedIn Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
+      ),
+    ),
+  );
+
   // Exported field: 'bean-stanford_social_media_connect-field_s_smc_pinterest'.
   $fields['bean-stanford_social_media_connect-field_s_smc_pinterest'] = array(
     'field_config' => array(
@@ -1840,6 +2065,81 @@ function stanford_bean_types_field_default_fields() {
     ),
   );
 
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_pinterest_logo'.
+  $pinterest_fid = variable_get('stanford_bean_types_pinterest_fid');
+  $fields['bean-stanford_social_media_connect-field_s_smc_pinterest_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_pinterest_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => $pinterest_fid,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_pinterest',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_pinterest_logo',
+      'label' => 'Pinterest Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
+      ),
+    ),
+  );
+
   // Exported field: 'bean-stanford_social_media_connect-field_s_smc_tumblr'.
   $fields['bean-stanford_social_media_connect-field_s_smc_tumblr'] = array(
     'field_config' => array(
@@ -1917,6 +2217,80 @@ function stanford_bean_types_field_default_fields() {
         'settings' => array(),
         'type' => 'link_field',
         'weight' => '7',
+      ),
+    ),
+  );
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_tumblr_logo'.
+  $tumblr_fid = variable_get('stanford_bean_types_tumblr_fid');
+  $fields['bean-stanford_social_media_connect-field_s_smc_tumblr_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_tumblr_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => $tumblr_fid,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_tumblr',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_tumblr_logo',
+      'label' => 'Tumblr Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
       ),
     ),
   );
@@ -2158,6 +2532,81 @@ function stanford_bean_types_field_default_fields() {
     ),
   );
 
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_vimeo_logo'.
+  $vimeo_fid = variable_get('stanford_bean_types_vimeo_fid');
+  $fields['bean-stanford_social_media_connect-field_s_smc_vimeo_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_vimeo_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => $vimeo_fid,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_vimeo',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_vimeo_logo',
+      'label' => 'Vimeo Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
+      ),
+    ),
+  );
+
   // Exported field: 'bean-stanford_social_media_connect-field_s_smc_youtube'.
   $fields['bean-stanford_social_media_connect-field_s_smc_youtube'] = array(
     'field_config' => array(
@@ -2239,6 +2688,81 @@ function stanford_bean_types_field_default_fields() {
     ),
   );
 
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_youtube_logo'.
+  $youtube_fid = variable_get('stanford_bean_types_youtube_fid');
+  $fields['bean-stanford_social_media_connect-field_s_smc_youtube_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_youtube_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => $youtube_fid,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_youtube',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_youtube_logo',
+      'label' => 'YouTube Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Address Line 1');
@@ -2253,7 +2777,9 @@ function stanford_bean_types_field_default_fields() {
   t('File');
   t('File Insert');
   t('Flickr');
-  t('GooglePlus');
+  t('Flickr Logo');
+  t('Google+');
+  t('Google+ Logo');
   t('Image');
   t('Image Insert');
   t('Insert a link to your Facebook account; if left empty, this field will not display.');
@@ -2267,6 +2793,7 @@ function stanford_bean_types_field_default_fields() {
   t('Insert a link to your YouTube account; if left empty, this field will not display.');
   t('Link');
   t('LinkedIn');
+  t('LinkedIn Logo');
   t('Phone');
   t('Pinterest');
   t('Read More Link');
@@ -2274,13 +2801,16 @@ function stanford_bean_types_field_default_fields() {
   t('This displays an image in the block.');
   t('This text field displays the fax number (e.g., "(555) 555-555" or for international numbers: "+31 42 123 4567").');
   t('Tumblr');
+  t('Tumblr Logo');
   t('Twitter');
   t('Twitter Logo');
   t('Upload a banner image');
   t('Upload and insert an image into your content.');
   t('Upload and insert file links into your content');
   t('Vimeo');
+  t('Vimeo Logo');
   t('YouTube');
+  t('YouTube Logo');
 
   return $fields;
 }
