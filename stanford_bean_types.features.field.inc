@@ -10,6 +10,62 @@
 function stanford_bean_types_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'bean-stanford_banner-field_s_image_info'.
+  $fields['bean-stanford_banner-field_s_image_info'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_image_info',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'field_collection',
+      'settings' => array(
+        'hide_blank_items' => TRUE,
+        'path' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'field_collection',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_banner',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Upload a banner image',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'field_collection',
+          'settings' => array(
+            'add' => '',
+            'delete' => '',
+            'description' => 0,
+            'edit' => '',
+            'view_mode' => 'stanford_9_col_banner',
+          ),
+          'type' => 'field_collection_view',
+          'weight' => '0',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_image_info',
+      'label' => 'Image',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'field_collection',
+        'settings' => array(),
+        'type' => 'field_collection_embed',
+        'weight' => '42',
+      ),
+    ),
+  );
+
   // Exported field: 'bean-stanford_contact-field_s_contact_address_line_1'.
   $fields['bean-stanford_contact-field_s_contact_address_line_1'] = array(
     'field_config' => array(
@@ -824,6 +880,7 @@ function stanford_bean_types_field_default_fields() {
         'module' => 'file',
         'settings' => array(
           'insert' => 1,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'auto',
           'insert_styles' => array(
@@ -930,6 +987,7 @@ function stanford_bean_types_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 1,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'image_large-square',
           'insert_styles' => array(
@@ -975,736 +1033,6 @@ function stanford_bean_types_field_default_fields() {
     ),
   );
 
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_facebook'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_facebook'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_facebook',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'title' => '',
-          'url' => 'https://www.facebook.com/',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your Facebook account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '1',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_facebook',
-      'label' => 'Facebook',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'Facebook',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '1',
-      ),
-    ),
-  );
-
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_flickr'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_flickr'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_flickr',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'url' => 'http://www.flickr.com/',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your Flickr account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '9',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_flickr',
-      'label' => 'Flickr',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'Flickr',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '9',
-      ),
-    ),
-  );
-
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_googleplus'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_googleplus'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_googleplus',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'url' => 'https://plus.google.com',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your Google+ account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '3',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_googleplus',
-      'label' => 'GooglePlus',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'GooglePlus',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '3',
-      ),
-    ),
-  );
-
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_linkedin'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_linkedin'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_linkedin',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'url' => 'http://www.linkedin.com/',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your LinkedIn account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '4',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_linkedin',
-      'label' => 'LinkedIn',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'LinkedIn',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '4',
-      ),
-    ),
-  );
-
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_pinterest'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_pinterest'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_pinterest',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'url' => 'http://pinterest.com/',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your Pinterest account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '8',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_pinterest',
-      'label' => 'Pinterest',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'Pinterest',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '8',
-      ),
-    ),
-  );
-
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_tumblr'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_tumblr'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_tumblr',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'url' => 'https://www.tumblr.com/',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your Tumblr account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '7',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_tumblr',
-      'label' => 'Tumblr',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'Tumblr',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '7',
-      ),
-    ),
-  );
-
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_twitter'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_twitter'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_twitter',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'url' => 'https://twitter.com/',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your Twitter account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '2',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_twitter',
-      'label' => 'Twitter',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'Twitter',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '2',
-      ),
-    ),
-  );
-
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_vimeo'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_vimeo'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_vimeo',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'url' => 'http://vimeo.com/',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your Vimeo account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '6',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_vimeo',
-      'label' => 'Vimeo',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'Vimeo',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '6',
-      ),
-    ),
-  );
-
-  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_youtube'.
-  $fields['bean-stanford_social_media_connect-field_s_smc_youtube'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_smc_youtube',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_social_media_connect',
-      'default_value' => array(
-        0 => array(
-          'url' => 'http://www.youtube.com/',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Insert a link to your YouTube account; if left empty, this field will not display.',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '5',
-        ),
-      ),
-      'entity_type' => 'bean',
-      'field_name' => 'field_s_smc_youtube',
-      'label' => 'YouTube',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => 'default',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'value',
-        'title_maxlength' => '128',
-        'title_value' => 'YouTube',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '5',
-      ),
-    ),
-  );
-
   // Exported field: 'bean-stanford_postcard-field_s_image_info'.
   $fields['bean-stanford_postcard-field_s_image_info'] = array(
     'field_config' => array(
@@ -1719,6 +1047,7 @@ function stanford_bean_types_field_default_fields() {
       'module' => 'field_collection',
       'settings' => array(
         'hide_blank_items' => TRUE,
+        'path' => '',
       ),
       'translatable' => '0',
       'type' => 'field_collection',
@@ -1796,6 +1125,7 @@ function stanford_bean_types_field_default_fields() {
         'default' => array(
           'label' => 'hidden',
           'module' => 'text',
+          'settings' => array(),
           'type' => 'text_default',
           'weight' => '3',
         ),
@@ -1896,6 +1226,7 @@ function stanford_bean_types_field_default_fields() {
         'module' => 'file',
         'settings' => array(
           'insert' => 1,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'auto',
           'insert_styles' => array(
@@ -2028,65 +1359,865 @@ function stanford_bean_types_field_default_fields() {
       ),
     ),
   );
-  // Exported field: 'bean-stanford_banner-field_s_image_info'.
-  $fields['bean-stanford_banner-field_s_image_info'] = array(
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_facebook'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_facebook'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_s_image_info',
+      'field_name' => 'field_s_smc_facebook',
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
-      'module' => 'field_collection',
+      'module' => 'link',
       'settings' => array(
-        'path' => '',
-        'hide_blank_items' => TRUE,
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
       ),
       'translatable' => '0',
-      'type' => 'field_collection',
+      'type' => 'link_field',
     ),
     'field_instance' => array(
-      'bundle' => 'stanford_banner',
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'title' => '',
+          'url' => 'https://www.facebook.com/',
+        ),
+      ),
       'deleted' => '0',
-      'description' => 'Upload a banner image',
+      'description' => 'Insert a link to your Facebook account; if left empty, this field will not display.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'field_collection',
-          'settings' => array(
-            'add' => '',
-            'delete' => '',
-            'description' => 0,
-            'edit' => '',
-            'view_mode' => 'stanford_9_col_banner',
-          ),
-          'type' => 'field_collection_view',
-          'weight' => '0',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '1',
         ),
       ),
       'entity_type' => 'bean',
-      'field_name' => 'field_s_image_info',
-      'label' => 'Image',
+      'field_name' => 'field_s_smc_facebook',
+      'label' => 'Facebook',
       'required' => 0,
       'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'Facebook',
+        'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
-        'module' => 'field_collection',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'field_collection_embed',
-        'weight' => '42',
+        'type' => 'link_field',
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_facebook_logo'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_facebook_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_facebook_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => '345',
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_facebook',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_facebook_logo',
+      'label' => 'Facebook Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'insert' => 0,
+          'insert_absolute' => 0,
+          'insert_class' => '',
+          'insert_default' => 'auto',
+          'insert_styles' => array(
+            'auto' => 'auto',
+            'icon_link' => 0,
+            'image' => 0,
+            'image_12-col-banner' => 0,
+            'image_3-col-header' => 0,
+            'image_3-col-well-header' => 0,
+            'image_3-col-well-profile' => 0,
+            'image_4-col-header' => 0,
+            'image_6-col-banner' => 0,
+            'image_6-col-banner-short' => 0,
+            'image_6-col-banner-tall' => 0,
+            'image_6-col-header' => 0,
+            'image_6-col-header-short' => 0,
+            'image_8-col-banner' => 0,
+            'image_8-col-banner-short' => 0,
+            'image_8-col-banner-tall' => 0,
+            'image_9-col-banner' => 0,
+            'image_9-col-banner-short' => 0,
+            'image_icon' => 0,
+            'image_icon-square' => 0,
+            'image_large' => 0,
+            'image_large-landscape' => 0,
+            'image_large-landscape-scaled' => 0,
+            'image_large-profile' => 0,
+            'image_large-profile-scaled' => 0,
+            'image_large-scaled' => 0,
+            'image_large-square' => 0,
+            'image_med-icon' => 0,
+            'image_med-landscape' => 0,
+            'image_med-landscape-scaled' => 0,
+            'image_med-profile' => 0,
+            'image_med-profile-scaled' => 0,
+            'image_med-square' => 0,
+            'image_medium' => 0,
+            'image_medlg-profile' => 0,
+            'image_page-width' => 0,
+            'image_sm-landscape' => 0,
+            'image_sm-profile' => 0,
+            'image_sm-square' => 0,
+            'image_thmb-landscape' => 0,
+            'image_thmb-profile' => 0,
+            'image_thmb-square' => 0,
+            'image_thumbnail' => 0,
+            'image_xlarge-landscape' => 0,
+            'image_xs-landscape' => 0,
+            'link' => 0,
+          ),
+          'insert_width' => '',
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_flickr'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_flickr'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_flickr',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'url' => 'http://www.flickr.com/',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Insert a link to your Flickr account; if left empty, this field will not display.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '10',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_flickr',
+      'label' => 'Flickr',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'Flickr',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '9',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_googleplus'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_googleplus'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_googleplus',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'url' => 'https://plus.google.com',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Insert a link to your Google+ account; if left empty, this field will not display.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '4',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_googleplus',
+      'label' => 'GooglePlus',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'GooglePlus',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_linkedin'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_linkedin'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_linkedin',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'url' => 'http://www.linkedin.com/',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Insert a link to your LinkedIn account; if left empty, this field will not display.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '5',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_linkedin',
+      'label' => 'LinkedIn',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'LinkedIn',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_pinterest'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_pinterest'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_pinterest',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'url' => 'http://pinterest.com/',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Insert a link to your Pinterest account; if left empty, this field will not display.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '9',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_pinterest',
+      'label' => 'Pinterest',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'Pinterest',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '8',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_tumblr'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_tumblr'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_tumblr',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'url' => 'https://www.tumblr.com/',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Insert a link to your Tumblr account; if left empty, this field will not display.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '8',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_tumblr',
+      'label' => 'Tumblr',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'Tumblr',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '7',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_twitter'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_twitter'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_twitter',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'url' => 'https://twitter.com/',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Insert a link to your Twitter account; if left empty, this field will not display.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '3',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_twitter',
+      'label' => 'Twitter',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'Twitter',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_vimeo'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_vimeo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_vimeo',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'url' => 'http://vimeo.com/',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Insert a link to your Vimeo account; if left empty, this field will not display.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '7',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_vimeo',
+      'label' => 'Vimeo',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'Vimeo',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '6',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_youtube'.
+  $fields['bean-stanford_social_media_connect-field_s_smc_youtube'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_youtube',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'default_value' => array(
+        0 => array(
+          'url' => 'http://www.youtube.com/',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'Insert a link to your YouTube account; if left empty, this field will not display.',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '6',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_youtube',
+      'label' => 'YouTube',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'YouTube',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '5',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Image');
-  t('Upload a banner image');
   t('Address Line 1');
   t('Address Line 2');
   t('Body');
@@ -2094,10 +2225,13 @@ function stanford_bean_types_field_default_fields() {
   t('Each link is a URL about this website. The title provides a human readable name (e.g., "Map Link"). For each title enter the corresponding URL (e.g., "http://campus-map.stanford.edu/").');
   t('Email');
   t('Facebook');
+  t('Facebook Logo');
   t('Fax');
+  t('File');
   t('File Insert');
   t('Flickr');
   t('GooglePlus');
+  t('Image');
   t('Image Insert');
   t('Insert a link to your Facebook account; if left empty, this field will not display.');
   t('Insert a link to your Flickr account; if left empty, this field will not display.');
@@ -2113,9 +2247,12 @@ function stanford_bean_types_field_default_fields() {
   t('Phone');
   t('Pinterest');
   t('Read More Link');
+  t('The link title should be a call to read more (e.g., "Learn more about our department"). The URL directs to more information.');
+  t('This displays an image in the block.');
   t('This text field displays the fax number (e.g., "(555) 555-555" or for international numbers: "+31 42 123 4567").');
   t('Tumblr');
   t('Twitter');
+  t('Upload a banner image');
   t('Upload and insert an image into your content.');
   t('Upload and insert file links into your content');
   t('Vimeo');
