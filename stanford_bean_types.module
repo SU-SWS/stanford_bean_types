@@ -5,3 +5,22 @@
  */
 
 include_once 'stanford_bean_types.features.inc';
+
+define('MODULE_PATH', drupal_get_path('module', 'stanford_bean_types'));
+
+/**
+ *
+ * Implements template_preprocess_field().
+ *
+ */
+function stanford_bean_types_preprocess_field(&$variables) {
+  if($variables['element']['#field_name'] == 'field_s_smc_facebook') {
+    global $base_url;
+    $fb_logo = $base_url . '/' . MODULE_PATH . '/images/facebook.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $fb_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
+}
