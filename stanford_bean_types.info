@@ -5,6 +5,7 @@ package = Stanford
 php = 5.2.4
 version = 7.x-1.0-alpha6
 project = stanford_bean_types
+stylesheets[all][] = css/social-media.css
 dependencies[] = bean
 dependencies[] = bean_admin_ui
 dependencies[] = ctools
