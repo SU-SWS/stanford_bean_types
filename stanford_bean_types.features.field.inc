@@ -1442,6 +1442,7 @@ function stanford_bean_types_field_default_fields() {
   );
 
   // Exported field: 'bean-stanford_social_media_connect-field_s_smc_facebook_logo'.
+  $facebook_fid = variable_get('stanford_bean_types_facebook_fid');
   $fields['bean-stanford_social_media_connect-field_s_smc_facebook_logo'] = array(
     'field_config' => array(
       'active' => '1',
@@ -1465,7 +1466,7 @@ function stanford_bean_types_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '345',
+        'default_image' => $facebook_fid,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -1506,59 +1507,6 @@ function stanford_bean_types_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'insert' => 0,
-          'insert_absolute' => 0,
-          'insert_class' => '',
-          'insert_default' => 'auto',
-          'insert_styles' => array(
-            'auto' => 'auto',
-            'icon_link' => 0,
-            'image' => 0,
-            'image_12-col-banner' => 0,
-            'image_3-col-header' => 0,
-            'image_3-col-well-header' => 0,
-            'image_3-col-well-profile' => 0,
-            'image_4-col-header' => 0,
-            'image_6-col-banner' => 0,
-            'image_6-col-banner-short' => 0,
-            'image_6-col-banner-tall' => 0,
-            'image_6-col-header' => 0,
-            'image_6-col-header-short' => 0,
-            'image_8-col-banner' => 0,
-            'image_8-col-banner-short' => 0,
-            'image_8-col-banner-tall' => 0,
-            'image_9-col-banner' => 0,
-            'image_9-col-banner-short' => 0,
-            'image_icon' => 0,
-            'image_icon-square' => 0,
-            'image_large' => 0,
-            'image_large-landscape' => 0,
-            'image_large-landscape-scaled' => 0,
-            'image_large-profile' => 0,
-            'image_large-profile-scaled' => 0,
-            'image_large-scaled' => 0,
-            'image_large-square' => 0,
-            'image_med-icon' => 0,
-            'image_med-landscape' => 0,
-            'image_med-landscape-scaled' => 0,
-            'image_med-profile' => 0,
-            'image_med-profile-scaled' => 0,
-            'image_med-square' => 0,
-            'image_medium' => 0,
-            'image_medlg-profile' => 0,
-            'image_page-width' => 0,
-            'image_sm-landscape' => 0,
-            'image_sm-profile' => 0,
-            'image_sm-square' => 0,
-            'image_thmb-landscape' => 0,
-            'image_thmb-profile' => 0,
-            'image_thmb-square' => 0,
-            'image_thumbnail' => 0,
-            'image_xlarge-landscape' => 0,
-            'image_xs-landscape' => 0,
-            'link' => 0,
-          ),
-          'insert_width' => '',
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
@@ -2017,7 +1965,7 @@ function stanford_bean_types_field_default_fields() {
           'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'link_default',
+          'type' => 'hidden',
           'weight' => '3',
         ),
       ),
@@ -2050,6 +1998,81 @@ function stanford_bean_types_field_default_fields() {
         'settings' => array(),
         'type' => 'link_field',
         'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported field: 'bean-stanford_social_media_connect-field_s_smc_twitter_logo'.
+  $twitter_fid = variable_get('stanford_bean_types_twitter_fid');
+  $fields['bean-stanford_social_media_connect-field_s_smc_twitter_logo'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_smc_twitter_logo',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => $twitter_fid,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_social_media_connect',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'image_link_formatter',
+          'settings' => array(
+            'image_link' => 'field_s_smc_twitter',
+            'image_style' => '',
+          ),
+          'type' => 'image_link_formatter',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'bean',
+      'field_name' => 'field_s_smc_twitter_logo',
+      'label' => 'Twitter Logo',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png',
+        'max_filesize' => '5KB',
+        'max_resolution' => '48x48',
+        'min_resolution' => '48x48',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '31',
       ),
     ),
   );
@@ -2252,6 +2275,7 @@ function stanford_bean_types_field_default_fields() {
   t('This text field displays the fax number (e.g., "(555) 555-555" or for international numbers: "+31 42 123 4567").');
   t('Tumblr');
   t('Twitter');
+  t('Twitter Logo');
   t('Upload a banner image');
   t('Upload and insert an image into your content.');
   t('Upload and insert file links into your content');

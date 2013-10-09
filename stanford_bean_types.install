@@ -1,0 +1,60 @@
+<?php
+/**
+ * @file
+ * Schema definitions. Install/update/uninstall hooks.
+ */
+
+define('MODULE_PATH', drupal_get_path('module', 'stanford_bean_types'));
+
+/**
+ * Implements hook_install().
+ */
+
+function stanford_bean_types_install() {
+  $files = array('facebook.png', 'flickr.png', 'google.png', 'linkedin.png', 'pinterest.png', 'tumblr.png', 'twitter.png', 'vimeo.png', 'you-tube.png');
+  foreach ($files as $filename) {
+    stanford_bean_types_create_file($filename);
+  }
+}
+
+/**
+ * 
+ * Create a file entity.
+ * @param array $filename the name of the file to be saved
+ * 
+ */
+function stanford_bean_types_create_file($filename) {
+  $filepath = drupal_realpath(MODULE_PATH . '/images/' . $filename);
+  $image = (object) array(
+    'uid' => 1,
+    'uri' => $filepath,
+    'filemime' => file_get_mimetype($filepath),
+    'status' => 1,
+  );
+  // Save the file to the root of the public files directory.
+  $image = file_copy($image, 'public://');
+  // grab the fid
+  $fid = $image->fid;
+  // strip off .png. We know they all will be .pngs
+  $filename_no_extension = str_replace('.png', '', $filename);
+  // set a variable like stanford_bean_types_facebook_fid = $fid
+  variable_set('stanford_bean_types_' . $filename_no_extension . '_fid', $fid);
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function stanford_bean_types_uninstall() {
+  //undo that voodoo that we did do
+  //don't delete nodes, as we have no idea what the user did to them
+  // Get module variables
+  global $conf;
+  foreach (array_keys($conf) as $key) {
+    // Find variables that have the module prefix
+    // Stolen from openlayers
+    if (strpos($key, 'stanford_bean_types_') === 0) {
+      variable_del($key);
+    }   
+  }
+}
