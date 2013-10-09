@@ -11,7 +11,7 @@ define('MODULE_PATH', drupal_get_path('module', 'stanford_bean_types'));
  */
 
 function stanford_bean_types_install() {
-  $files = array('facebook.png', 'flickr.png', 'google.png', 'linkedin.png', 'pinterest.png', 'tumblr.png', 'twitter.png', 'vimeo.png', 'you-tube.png');
+  $files = array('facebook.png', 'flickr.png', 'google.png', 'linkedin.png', 'pinterest.png', 'tumblr.png', 'twitter.png', 'vimeo.png', 'youtube.png');
   foreach ($files as $filename) {
     stanford_bean_types_create_file($filename);
   }
