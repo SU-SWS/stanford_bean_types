@@ -23,4 +23,76 @@ function stanford_bean_types_preprocess_field(&$variables) {
 
     return;
   }
+  if($variables['element']['#field_name'] == 'field_s_smc_flickr') {
+    global $base_url;
+    $fl_logo = $base_url . '/' . MODULE_PATH . '/images/flickr.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $fl_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
+  if($variables['element']['#field_name'] == 'field_s_smc_google') {
+    global $base_url;
+    $go_logo = $base_url . '/' . MODULE_PATH . '/images/google.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $go_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
+  if($variables['element']['#field_name'] == 'field_s_smc_linkedin') {
+    global $base_url;
+    $li_logo = $base_url . '/' . MODULE_PATH . '/images/linkedin.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $li_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
+  if($variables['element']['#field_name'] == 'field_s_smc_pinterest') {
+    global $base_url;
+    $pi_logo = $base_url . '/' . MODULE_PATH . '/images/pinterest.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $pi_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
+  if($variables['element']['#field_name'] == 'field_s_smc_tumblr') {
+    global $base_url;
+    $tu_logo = $base_url . '/' . MODULE_PATH . '/images/tumblr.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $tu_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
+  if($variables['element']['#field_name'] == 'field_s_smc_twitter') {
+    global $base_url;
+    $tw_logo = $base_url . '/' . MODULE_PATH . '/images/twitter.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $tw_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
+  if($variables['element']['#field_name'] == 'field_s_smc_vimeo') {
+    global $base_url;
+    $vi_logo = $base_url . '/' . MODULE_PATH . '/images/vimeo.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $vi_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
+  if($variables['element']['#field_name'] == 'field_s_smc_youtube') {
+    global $base_url;
+    $vi_logo = $base_url . '/' . MODULE_PATH . '/images/youtube.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $vi_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
 }
