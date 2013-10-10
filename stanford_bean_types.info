@@ -6,6 +6,7 @@ php = 5.2.4
 version = 7.x-1.x-a11y-template
 project = stanford_bean_types
 stylesheets[all][] = css/social-media.css
+scripts[] = js/stanford-bean-types.js
 dependencies[] = bean
 dependencies[] = bean_admin_ui
 dependencies[] = ctools
