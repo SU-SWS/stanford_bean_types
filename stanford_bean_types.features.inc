@@ -21,10 +21,3 @@ function stanford_bean_types_ctools_plugin_api() {
     return array("version" => "1");
   }
 }
-
-/**
- * Implements hook_views_api().
- */
-function stanford_bean_types_views_api() {
-  return array("version" => "3.0");
-}
