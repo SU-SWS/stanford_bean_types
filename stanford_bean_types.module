@@ -14,6 +14,7 @@ $module_path = drupal_get_path('module', 'stanford_bean_types');
  *
  */
 function stanford_bean_types_preprocess_field(&$variables) {
+  global $module_path;
   if($variables['element']['#field_name'] == 'field_s_smc_facebook') {
     global $base_url;
     $fb_logo = $base_url . '/' . $module_path . '/images/facebook.png';
