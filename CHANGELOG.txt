@@ -1,9 +1,18 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
-Stanford Bean Types 7.x-1.0-alpha6 2013-08-19
+Stanford Bean Types 7.x-1.0-alpha7 2013-10-14
 ---------------------------------------------
 Changes since 7.x-1.0-alpha6:
+  -Added stanford_contact, stanford_large_block, and stanford_social_media_connect BEAN types
+  -Moved CSS for social media BEANs from stanford_jumpstart to this module
+  -Improved accessibility for social media BEANs by adding an <img> element
+  -Improved clarity of user-facing messages
+  -Added default permissions for administrator role
+
+Stanford Bean Types 7.x-1.0-alpha6 2013-08-19
+---------------------------------------------
+Changes since 7.x-1.0-alpha5:
   -Changed link field to be unlimited on Postcard BEAN
   -Changed body field to default on Postcard BEAN
   -Field-level help
