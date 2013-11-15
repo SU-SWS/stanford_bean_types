@@ -1,6 +1,11 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Bean Types 7.x-1.0-alpha8 2013-11-15
+---------------------------------------------
+Changes since 7.x-1.0-alpha7:
+  -Fixed bug in YouTube icon filename
+
 Stanford Bean Types 7.x-1.0-alpha7 2013-10-14
 ---------------------------------------------
 Changes since 7.x-1.0-alpha6:
