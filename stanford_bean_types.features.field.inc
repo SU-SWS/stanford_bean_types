@@ -723,12 +723,12 @@ function stanford_bean_types_field_default_fields() {
         'better_formats' => array(
           'allowed_formats' => array(
             'content_editor_text_format' => 'content_editor_text_format',
-            'ds_code' => 0,
-            'filtered_html' => 0,
-            'full_html' => 0,
+            'ds_code' => 'ds_code',
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
             'plain_text' => 'plain_text',
           ),
-          'allowed_formats_toggle' => 1,
+          'allowed_formats_toggle' => 0,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
