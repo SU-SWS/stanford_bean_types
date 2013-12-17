@@ -102,7 +102,7 @@ function stanford_bean_types_preprocess_field(&$variables) {
  * Implements hook_form_FORM_ID_alter().
  */
 function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id) {
-  $form['title']['#description'] = t('The title can be customized for your site. It displays when the block displays on a page. Leave it blank if you don\'t want a title.' );
+  $form['title']['#description'] = t('The title displays when the block is displayed on a page. Leave it blank if you don\'t want a title.' );
   $form['label']['#description'] = t('The label identifies the block for administration purposes. It is <em>not displayed</em> when the block is displayed on a page. It is displayed in the admin interface and when the block is edited.' );
 }
 
