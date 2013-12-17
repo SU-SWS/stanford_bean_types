@@ -7,7 +7,7 @@
 /**
  * Implements hook_user_default_permissions().
  */
-function stanford_bean_types_user_default_permissions() {
+function stanford_bean_types_permissions_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: create any stanford_banner bean.
@@ -96,6 +96,56 @@ function stanford_bean_types_user_default_permissions() {
     'name' => 'delete any stanford_social_media_connect bean',
     'roles' => array(
       0 => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
+    // Exported permission: view any stanford_banner bean.
+  $permissions['view any stanford_banner bean'] = array(
+    'name' => 'view any stanford_banner bean',
+    'roles' => array(
+      0 => 'anonymous user',
+      1 => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: view any stanford_contact bean.
+  $permissions['view any stanford_contact bean'] = array(
+    'name' => 'view any stanford_contact bean',
+    'roles' => array(
+      0 => 'anonymous user',
+      1 => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: view any stanford_large_block bean.
+  $permissions['view any stanford_large_block bean'] = array(
+    'name' => 'view any stanford_large_block bean',
+    'roles' => array(
+      0 => 'anonymous user',
+      1 => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: view any stanford_postcard bean.
+  $permissions['view any stanford_postcard bean'] = array(
+    'name' => 'view any stanford_postcard bean',
+    'roles' => array(
+      0 => 'anonymous user',
+      1 => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: view any stanford_social_media_connect bean.
+  $permissions['view any stanford_social_media_connect bean'] = array(
+    'name' => 'view any stanford_social_media_connect bean',
+    'roles' => array(
+      0 => 'anonymous user',
+      1 => 'authenticated user',
     ),
     'module' => 'bean',
   );
