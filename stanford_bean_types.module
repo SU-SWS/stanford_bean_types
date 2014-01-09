@@ -28,7 +28,7 @@ function stanford_bean_types_preprocess_field(&$variables) {
     global $base_url;
     $fl_logo = $base_url . '/' . $module_path . '/images/flickr.png';
     $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
-    $markup .= '<img src="' . $fl_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '"title="' . $variables['element']['#items'][0]['title'] . '" /></a>';
+    $markup .= '<img src="' . $fl_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" title="' . $variables['element']['#items'][0]['title'] . '" /></a>';
     $variables['items'][0]['#markup'] = $markup;
 
     return;
