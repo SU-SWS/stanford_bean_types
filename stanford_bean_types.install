@@ -13,7 +13,7 @@ function stanford_bean_types_update_7100(&$sandbox) {
   if (!module_exists('stanford_bean_types_permissions')) {
     if (!module_enable(array('stanford_bean_types_permissions'))) {
       watchdog('stanford_bean_types', 'Could not enable stanford_bean_types_permissions module');
-      throw new DrupalUpdateException("Could not enable stanford_bean_types_permissions module. Please check module exists.");
+      throw new DrupalUpdateException("Could not enable stanford_bean_types_permissions module. Please check that the module exists.");
     }
     else {
       watchdog('stanford_bean_types', 'Enabled stanford_bean_types_permissions module.');
