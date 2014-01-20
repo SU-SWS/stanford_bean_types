@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * stanford_bean_types.features.user_permission.inc
+ * stanford_bean_types_permissions.features.user_permission.inc
  */
 
 /**
@@ -10,142 +10,142 @@
 function stanford_bean_types_permissions_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create any stanford_banner bean.
+  // Exported permission: 'create any stanford_banner bean'.
   $permissions['create any stanford_banner bean'] = array(
     'name' => 'create any stanford_banner bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: create any stanford_contact bean.
+  // Exported permission: 'create any stanford_contact bean'.
   $permissions['create any stanford_contact bean'] = array(
     'name' => 'create any stanford_contact bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: create any stanford_large_block bean.
+  // Exported permission: 'create any stanford_large_block bean'.
   $permissions['create any stanford_large_block bean'] = array(
     'name' => 'create any stanford_large_block bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: create any stanford_postcard bean.
+  // Exported permission: 'create any stanford_postcard bean'.
   $permissions['create any stanford_postcard bean'] = array(
     'name' => 'create any stanford_postcard bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: create any stanford_social_media_connect bean.
+  // Exported permission: 'create any stanford_social_media_connect bean'.
   $permissions['create any stanford_social_media_connect bean'] = array(
     'name' => 'create any stanford_social_media_connect bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: delete any stanford_banner bean.
+  // Exported permission: 'delete any stanford_banner bean'.
   $permissions['delete any stanford_banner bean'] = array(
     'name' => 'delete any stanford_banner bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: delete any stanford_contact bean.
+  // Exported permission: 'delete any stanford_contact bean'.
   $permissions['delete any stanford_contact bean'] = array(
     'name' => 'delete any stanford_contact bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: delete any stanford_large_block bean.
+  // Exported permission: 'delete any stanford_large_block bean'.
   $permissions['delete any stanford_large_block bean'] = array(
     'name' => 'delete any stanford_large_block bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: delete any stanford_postcard bean.
+  // Exported permission: 'delete any stanford_postcard bean'.
   $permissions['delete any stanford_postcard bean'] = array(
     'name' => 'delete any stanford_postcard bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: delete any stanford_social_media_connect bean.
+  // Exported permission: 'delete any stanford_social_media_connect bean'.
   $permissions['delete any stanford_social_media_connect bean'] = array(
     'name' => 'delete any stanford_social_media_connect bean',
     'roles' => array(
-      0 => 'administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'bean',
   );
 
-    // Exported permission: view any stanford_banner bean.
+  // Exported permission: 'view any stanford_banner bean'.
   $permissions['view any stanford_banner bean'] = array(
     'name' => 'view any stanford_banner bean',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: view any stanford_contact bean.
+  // Exported permission: 'view any stanford_contact bean'.
   $permissions['view any stanford_contact bean'] = array(
     'name' => 'view any stanford_contact bean',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: view any stanford_large_block bean.
+  // Exported permission: 'view any stanford_large_block bean'.
   $permissions['view any stanford_large_block bean'] = array(
     'name' => 'view any stanford_large_block bean',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: view any stanford_postcard bean.
+  // Exported permission: 'view any stanford_postcard bean'.
   $permissions['view any stanford_postcard bean'] = array(
     'name' => 'view any stanford_postcard bean',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bean',
   );
 
-  // Exported permission: view any stanford_social_media_connect bean.
+  // Exported permission: 'view any stanford_social_media_connect bean'.
   $permissions['view any stanford_social_media_connect bean'] = array(
     'name' => 'view any stanford_social_media_connect bean',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bean',
   );
