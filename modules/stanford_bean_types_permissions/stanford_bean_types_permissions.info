@@ -26,3 +26,9 @@ features[user_permission][] = view any stanford_contact bean
 features[user_permission][] = view any stanford_large_block bean
 features[user_permission][] = view any stanford_postcard bean
 features[user_permission][] = view any stanford_social_media_connect bean
+features[user_permission][] = edit any stanford_banner bean
+features[user_permission][] = edit any stanford_contact bean
+features[user_permission][] = edit any stanford_large_block bean
+features[user_permission][] = edit any stanford_postcard bean
+features[user_permission][] = edit any stanford_social_media_connect bean
+

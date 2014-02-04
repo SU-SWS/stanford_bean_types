@@ -150,5 +150,50 @@ function stanford_bean_types_permissions_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit any stanford_social_media_connect bean'.
+  $permissions['edit any stanford_social_media_connect bean'] = array(
+    'name' => 'edit any stanford_social_media_connect bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any stanford_contact bean'.
+  $permissions['edit any edit any stanford_contact bean bean'] = array(
+    'name' => 'edit any stanford_contact bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any stanford_banner bean'.
+  $permissions['edit any stanford_banner bean'] = array(
+    'name' => 'edit any stanford_banner bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any stanford_large_block bean'.
+  $permissions['edit any stanford_large_block bean'] = array(
+    'name' => 'edit any stanford_large_block bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'edit any stanford_postcard bean'.
+  $permissions['edit any stanford_postcard bean'] = array(
+    'name' => 'edit any stanford_postcard bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bean',
+  );
+
   return $permissions;
 }
