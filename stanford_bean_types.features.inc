@@ -11,6 +11,9 @@ function stanford_bean_types_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "bean_admin_ui" && $api == "bean") {
     return array("version" => "5");
   }
+  if ($module == "bean" && $api == "types") {
+    return array("version" => "5");
+  }
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
