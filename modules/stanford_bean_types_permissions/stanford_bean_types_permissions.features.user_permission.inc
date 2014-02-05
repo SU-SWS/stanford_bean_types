@@ -160,7 +160,7 @@ function stanford_bean_types_permissions_user_default_permissions() {
   );
 
   // Exported permission: 'edit any stanford_contact bean'.
-  $permissions['edit any edit any stanford_contact bean bean'] = array(
+  $permissions['edit any stanford_contact bean'] = array(
     'name' => 'edit any stanford_contact bean',
     'roles' => array(
       'administrator' => 'administrator',
