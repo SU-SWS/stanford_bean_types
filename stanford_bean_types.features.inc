@@ -31,3 +31,13 @@ function stanford_bean_types_ctools_plugin_api($module = NULL, $api = NULL) {
 function stanford_bean_types_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
+
+/**
+ * [stanford_bean_types_bean_types_api_info description]
+ * @return [type] [description]
+ */
+function stanford_bean_types_bean_types_api_info() {
+  return array(
+    'api' => bean_current_version(),
+  );
+}
