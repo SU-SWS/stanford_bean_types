@@ -125,6 +125,15 @@ function stanford_bean_types_preprocess_field(&$variables) {
 
     return;
   }
+  if($field_name == 'field_s_smc_instagram') {
+    global $base_url;
+    $vi_logo = $base_url . '/' . $module_path . '/images/instagram.png';
+    $markup = '<a href="' . $variables['element']['#items'][0]['display_url'] . '">';
+    $markup .= '<img src="' . $vi_logo .'" alt="'. $variables['element']['#items'][0]['title'] . '" title="' . $variables['element']['#items'][0]['title'] . '" /></a>';
+    $variables['items'][0]['#markup'] = $markup;
+
+    return;
+  }
 }
 
 /**

@@ -1382,6 +1382,57 @@ function stanford_bean_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'bean-stanford_social_media_connect-field_s_smc_instagram'
+  $field_instances['bean-stanford_social_media_connect-field_s_smc_instagram'] = array(
+    'bundle' => 'stanford_social_media_connect',
+    'default_value' => array(
+      0 => array(
+        'url' => 'http://www.instagram.com/',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Insert a link to your Instagram account; if left empty, this field will not display.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_s_smc_instagram',
+    'label' => 'Instagram',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'title' => 'value',
+      'title_maxlength' => 128,
+      'title_value' => 'Instagram',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Address Line 1');
