@@ -2,7 +2,7 @@
 ##### Version: 7.x-2.0-alpha1
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)   
-[Changelog.txt](Changelog.txt)
+[Changelog.txt](CHANGELOG.txt)
 
 This module provides default BEAN types. Contained in this feature are the Stanford Banner, Stanford Contact, Stanford Large Block, Stanford Postcard, and Stanford Social Media Connect beans. Site administrators can create any number of these Bean blocks and place them on their site. 
 
