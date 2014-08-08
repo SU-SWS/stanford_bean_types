@@ -1,6 +1,7 @@
-#Stanford Bean Types
+#[Stanford Bean Types](https://github.com/SU-SWS/stanford_bean_types)
 ### Version: 7.x-2.0-alpha1
-[GitHub](https://github.com/SU-SWS/stanford_bean_types)
+
+Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
 
 This module provides default BEAN types. Contained in this feature are the Stanford Banner, Stanford Contact, Stanford Large Block, Stanford Postcard, and Stanford Social Media Connect beans. Site administrators can create any number of these Bean blocks and place them on their site. 
 
@@ -19,6 +20,7 @@ The basic building block of the bean types, this block allows users a lot of fle
 **Stanford Social Media Connect**
 This block provides a group of social media icons that link to your social media pages. Included in the options are: Facebook, Twitter, GooglePlus, LinkedIn, YouTube, Vimeo, Tumblr, Pinterest, Instagram, and Flickr.
 
+
 Sub Modules
 ---
 
@@ -28,3 +30,18 @@ Sub Modules
 Stanford Bean Type Permissions modules provides some out of the box permissions that may be installed through an installation profile as it is dependant on the Stanford Bean Types module. This module may be safely disabled and overridden through the permissions setting page.
 </dd>
 </dl>
+
+Installation
+---
+
+Install this module like any other module. [See Drupal Documentation](https://drupal.org/documentation/install/modules-themes/modules-7)
+
+Configuration
+---
+
+Nothing special needed.
+
+Troubleshooting
+---
+
+If you are experiencing issues with this module try reverting the feature first. If you are still experiencing issues try posting an issue on the GitHub issues page.
