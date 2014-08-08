@@ -19,6 +19,8 @@ The basic building block of the bean types, this block allows users a lot of fle
 **Stanford Social Media Connect**
 This block provides a group of social media icons that link to your social media pages. Included in the options are: Facebook, Twitter, GooglePlus, LinkedIn, YouTube, Vimeo, Tumblr, Pinterest, Instagram, and Flickr.
 
+Sub Modules
+---
 
-* ##Stanford Bean Types Permissions
+* [Stanford Bean Types Permissions][https://github.com/SU-SWS/stanford_bean_types/edit/7.x-2.x-dev/README.md]
 Stanford Bean Type Permissions modules provides some out of the box permissions that may be installed through an installation profile as it is dependant on the Stanford Bean Types module. This module may be safely disabled and overridden through the permissions setting page.
