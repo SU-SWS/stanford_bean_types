@@ -71,7 +71,7 @@ You can insert files and images into your body content. There is no header image
   $bean_type->name = 'stanford_testimonial_block';
   $bean_type->label = 'stanford_testimonial_block';
   $bean_type->options = '';
-  $bean_type->description = '';
+  $bean_type->description = 'Testimonial blocks are used to feature a headshot, quote, and attribution.';
   $export['stanford_testimonial_block'] = $bean_type;
 
   return $export;
