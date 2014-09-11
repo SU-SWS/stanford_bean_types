@@ -22,6 +22,15 @@ function stanford_bean_types_bean_admin_ui_types() {
   $bean_type = new stdClass();
   $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
   $bean_type->api_version = 5;
+  $bean_type->name = 'stanford_big_text_block';
+  $bean_type->label = 'stanford_big_text_block';
+  $bean_type->options = '';
+  $bean_type->description = '';
+  $export['stanford_big_text_block'] = $bean_type;
+
+  $bean_type = new stdClass();
+  $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
+  $bean_type->api_version = 5;
   $bean_type->name = 'stanford_contact';
   $bean_type->label = 'Stanford Contact';
   $bean_type->options = '';
@@ -55,6 +64,15 @@ You can insert files and images into your body content. There is no header image
   $bean_type->options = '';
   $bean_type->description = 'Add your social media links (e.g., Facebook, Twitter, YouTube, etc.)';
   $export['stanford_social_media_connect'] = $bean_type;
+
+  $bean_type = new stdClass();
+  $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
+  $bean_type->api_version = 5;
+  $bean_type->name = 'stanford_testimonial_block';
+  $bean_type->label = 'stanford_testimonial_block';
+  $bean_type->options = '';
+  $bean_type->description = '';
+  $export['stanford_testimonial_block'] = $bean_type;
 
   return $export;
 }
