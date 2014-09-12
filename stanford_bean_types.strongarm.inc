@@ -25,6 +25,15 @@ function stanford_bean_types_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'stanford_12_col_banner_tall' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_9_col_banner' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_12_col_banner' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -61,6 +70,18 @@ function stanford_bean_types_strongarm() {
       ),
       'token' => array(
         'custom_settings' => FALSE,
+      ),
+      'stanford_12_col_banner_tall' => array(
+        'weight' => '-5',
+        'visible' => TRUE,
+      ),
+      'stanford_9_col_banner' => array(
+        'weight' => '-5',
+        'visible' => TRUE,
+      ),
+      'stanford_12_col_banner' => array(
+        'weight' => '-5',
+        'visible' => TRUE,
       ),
     ),
     'extra_fields' => array(
