@@ -990,7 +990,7 @@ function stanford_bean_types_field_default_field_instances() {
   $field_instances['bean-stanford_postcard-field_s_postcard_file'] = array(
     'bundle' => 'stanford_postcard',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload and insert file links into your content',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1016,12 +1016,12 @@ function stanford_bean_types_field_default_field_instances() {
     ),
     'entity_type' => 'bean',
     'field_name' => 'field_s_postcard_file',
-    'label' => 'File',
+    'label' => 'File Insert',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
       'file_directory' => '',
-      'file_extensions' => 'txt pdf doc docx xls xlsx rtf',
+      'file_extensions' => 'txt pdf doc docx ppt pptx xls xlsx xml odt zip rtf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
