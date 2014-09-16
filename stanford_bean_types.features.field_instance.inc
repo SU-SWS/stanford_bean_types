@@ -792,9 +792,10 @@ function stanford_bean_types_field_default_field_instances() {
         'insert' => 1,
         'insert_absolute' => FALSE,
         'insert_class' => '',
-        'insert_default' => 'auto',
+        'insert_default' => 'icon_link',
         'insert_styles' => array(
-          'auto' => 'auto',
+          'auto' => 0,
+          'icon_link' => 'icon_link',
           'image' => 0,
           'image_3-col-header' => 0,
           'image_3-col-well-header' => 0,
@@ -989,7 +990,7 @@ function stanford_bean_types_field_default_field_instances() {
   $field_instances['bean-stanford_postcard-field_s_postcard_file'] = array(
     'bundle' => 'stanford_postcard',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Upload and insert file links into your content',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1015,12 +1016,12 @@ function stanford_bean_types_field_default_field_instances() {
     ),
     'entity_type' => 'bean',
     'field_name' => 'field_s_postcard_file',
-    'label' => 'File',
+    'label' => 'File Insert',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
       'file_directory' => '',
-      'file_extensions' => 'txt pdf doc docx xls xlsx rtf',
+      'file_extensions' => 'txt pdf doc docx ppt pptx xls xlsx xml odt zip rtf',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -1031,9 +1032,10 @@ function stanford_bean_types_field_default_field_instances() {
         'insert' => 1,
         'insert_absolute' => FALSE,
         'insert_class' => '',
-        'insert_default' => 'auto',
+        'insert_default' => 'icon_link',
         'insert_styles' => array(
-          'auto' => 'auto',
+          'auto' => 0,
+          'icon_link' => 'icon_link',
           'image' => 0,
           'image_3-col-header' => 0,
           'image_3-col-well-header' => 0,
@@ -1061,7 +1063,7 @@ function stanford_bean_types_field_default_field_instances() {
           'image_thmb-profile' => 0,
           'image_thmb-square' => 0,
           'image_thumbnail' => 0,
-          'link' => 0,
+          'link' => 'link',
         ),
         'insert_width' => '',
         'progress_indicator' => 'throbber',

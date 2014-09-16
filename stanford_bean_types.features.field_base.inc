@@ -368,7 +368,7 @@ function stanford_bean_types_field_default_field_bases() {
     'module' => 'file',
     'settings' => array(
       'display_default' => 0,
-      'display_field' => 1,
+      'display_field' => 0,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -399,6 +399,7 @@ function stanford_bean_types_field_default_field_bases() {
     'module' => 'image',
     'settings' => array(
       'default_image' => 0,
+      'display_default' => 0,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -435,7 +436,7 @@ function stanford_bean_types_field_default_field_bases() {
   // Exported field_base: 'field_s_postcard_file'
   $field_bases['field_s_postcard_file'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_s_postcard_file',
@@ -455,8 +456,8 @@ function stanford_bean_types_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
-      'display_default' => 1,
-      'display_field' => 1,
+      'display_default' => 0,
+      'display_field' => 0,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
