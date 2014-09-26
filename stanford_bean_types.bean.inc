@@ -23,7 +23,7 @@ function stanford_bean_types_bean_admin_ui_types() {
   $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
   $bean_type->api_version = 5;
   $bean_type->name = 'stanford_big_text_block';
-  $bean_type->label = 'stanford_big_text_block';
+  $bean_type->label = 'Stanford Big Text Block';
   $bean_type->options = '';
   $bean_type->description = '';
   $export['stanford_big_text_block'] = $bean_type;
@@ -69,7 +69,7 @@ You can insert files and images into your body content. There is no header image
   $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
   $bean_type->api_version = 5;
   $bean_type->name = 'stanford_testimonial_block';
-  $bean_type->label = 'stanford_testimonial_block';
+  $bean_type->label = 'Stanford Testimonial Block';
   $bean_type->options = '';
   $bean_type->description = 'Testimonial blocks are used to feature a headshot, quote, and attribution.';
   $export['stanford_testimonial_block'] = $bean_type;
