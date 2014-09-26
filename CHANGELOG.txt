@@ -1,7 +1,7 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
-Stanford Bean Types 7.x-2.0-alpha2 2014-09-26
+Stanford Bean Types 7.x-2.1 2014-09-26
 ---------------------------------------------
 - Refactored permissions
 - Added new bean type: stanford_big_text_block
@@ -9,6 +9,10 @@ Stanford Bean Types 7.x-2.0-alpha2 2014-09-26
 - New display modes
 - New fields including file and image inserts
 - Update to instagram field.
+
+Stanford Bean Types 7.x-2.0 2014-03-11
+---------------------------------------------
+- Small updates
 
 Stanford Bean Types 7.x-2.0-alpha1 2014-03-11
 ---------------------------------------------
