@@ -26,8 +26,6 @@ function stanford_bean_types_permissions_user_default_permissions() {
     'name' => 'create any stanford_big_text_block bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
     ),
     'module' => 'bean',
   );
@@ -81,8 +79,6 @@ function stanford_bean_types_permissions_user_default_permissions() {
     'name' => 'create any stanford_testimonial_block bean',
     'roles' => array(
       'administrator' => 'administrator',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
     ),
     'module' => 'bean',
   );
@@ -253,9 +249,8 @@ function stanford_bean_types_permissions_user_default_permissions() {
   $permissions['view any stanford_big_text_block bean'] = array(
     'name' => 'view any stanford_big_text_block bean',
     'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bean',
   );
@@ -304,9 +299,8 @@ function stanford_bean_types_permissions_user_default_permissions() {
   $permissions['view any stanford_testimonial_block bean'] = array(
     'name' => 'view any stanford_testimonial_block bean',
     'roles' => array(
-      'administrator' => 'administrator',
-      'editor' => 'editor',
-      'site owner' => 'site owner',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bean',
   );
