@@ -1964,7 +1964,6 @@ function stanford_bean_types_field_default_field_instances() {
   t('Enter the testimonial credits (e.g., John Doe, Class of 2014).');
   t('Facebook');
   t('Fax');
-  t('File');
   t('File Insert');
   t('Flickr');
   t('GooglePlus');
