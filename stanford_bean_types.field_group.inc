@@ -18,7 +18,7 @@ function stanford_bean_types_field_group_info() {
   $field_group->entity_type = 'bean';
   $field_group->bundle = 'stanford_testimonial_block';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_postcard_right';
+  $field_group->parent_name = 'group_postcard';
   $field_group->data = array(
     'label' => 'first group',
     'weight' => '16',
@@ -41,6 +41,39 @@ function stanford_bean_types_field_group_info() {
     ),
   );
   $export['group_first_group|bean|stanford_testimonial_block|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_postcard|bean|stanford_testimonial_block|default';
+  $field_group->group_name = 'group_postcard';
+  $field_group->entity_type = 'bean';
+  $field_group->bundle = 'stanford_testimonial_block';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'postcard',
+    'weight' => '7',
+    'children' => array(
+      0 => 'group_first_group',
+      1 => 'group_second_group',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'postcard',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'postcard-right',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_postcard|bean|stanford_testimonial_block|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -749,7 +782,7 @@ function stanford_bean_types_field_group_info() {
   $field_group->entity_type = 'bean';
   $field_group->bundle = 'stanford_testimonial_block';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_postcard_right';
+  $field_group->parent_name = 'group_postcard';
   $field_group->data = array(
     'label' => 'second group',
     'weight' => '17',
