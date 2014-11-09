@@ -1,6 +1,12 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Bean Types 7.x-2.2 2014-11-08
+---------------------------------------------
+- BASIC-1102 | Added missing postcard-right wrapper div
+- BASIC-1102 | Changed testimonial block layout to postcard view by add… …
+- BASIC-967 | Updated permissions
+
 Stanford Bean Types 7.x-2.1 2014-09-26
 ---------------------------------------------
 - Refactored permissions
