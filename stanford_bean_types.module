@@ -17,17 +17,17 @@ function stanford_bean_types_bean_types() {
   include_once "stanford_bean_types.bean.inc";
   $plugins = array();
   $types = stanford_bean_types_bean_admin_ui_types();
-  $plugin_path = drupal_get_path('module', 'stanford_bean_types') . '/plugins/bean';
+  $plugin_path = drupal_get_path('module', 'bean') . '/plugins/bean';
 
   foreach($types as $k => $bean_type) {
     $plugins[$k] = array(
       'label' => $bean_type->name,
       'description' => t($bean_type->description),
       'handler' => array(
-        'class' => 'StanfordUIBean',
+        'class' => 'BeanDefault',
         'parent' => 'bean',
         'path' => $plugin_path,
-        'file' => 'stanford_bean_types.suui.inc',
+        'file' => 'BeanDefault.class.php',
       ),
     );
   }
