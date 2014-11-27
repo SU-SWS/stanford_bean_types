@@ -1,6 +1,10 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Bean Types 7.x-2.3 2014-11-27
+---------------------------------------------
+- Replaced custom bean class with one from the bean module.
+
 Stanford Bean Types 7.x-2.2 2014-11-08
 ---------------------------------------------
 - BASIC-1102 | Added missing postcard-right wrapper div
