@@ -38,10 +38,22 @@ function stanford_bean_types_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '1',
         ),
         'metatags' => array(
           'weight' => '40',
+        ),
+        'label' => array(
+          'weight' => '0',
+        ),
+        'revision' => array(
+          'weight' => '4',
+        ),
+        'view_mode' => array(
+          'weight' => '3',
+        ),
+        'redirect' => array(
+          'weight' => '5',
         ),
       ),
       'display' => array(
