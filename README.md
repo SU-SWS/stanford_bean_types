@@ -1,7 +1,8 @@
 #[Stanford Bean Types](https://github.com/SU-SWS/stanford_bean_types)
-##### Version: 7.x-2.3
+##### Version: 7.x-2.4
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
+
 [Changelog.txt](CHANGELOG.txt)
 
 This module provides default BEAN types. Contained in this feature are the Stanford Banner, Stanford Contact, Stanford Large Block, Stanford Postcard, and Stanford Social Media Connect beans. Site administrators can create any number of these Bean blocks and place them on their site.

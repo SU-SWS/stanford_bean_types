@@ -1,6 +1,13 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-2.4                            2015-03-19
+---------------------------------------------
+- Rearranged fields on stanford_banner block type.
+- .info file clean up.
+- Fixed bug on path to Bean plugin class.
+- Set dependency on bean 7.x-1.8 or greater.
+
 Stanford Bean Types 7.x-2.3 2014-11-27
 ---------------------------------------------
 - Replaced custom bean class with one from the bean module.
