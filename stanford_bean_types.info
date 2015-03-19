@@ -4,7 +4,7 @@ core = 7.x
 package = Stanford
 version = 7.x-2.3
 project = stanford_bean_types
-dependencies[] = bean
+dependencies[] = bean (>=7.x-1.8)
 dependencies[] = bean_admin_ui
 dependencies[] = ctools
 dependencies[] = ds
