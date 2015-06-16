@@ -160,6 +160,12 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
       $options[$view_mode] = $bean_info['view modes'][$view_mode]['label'];
     }
   }
+
+  // Always should have one.
+  if (empty($options) || !isset($options['default'])) {
+    $options['default'] = t("Default");
+  }
+
   $form['view_mode']['#options'] = $options;
 
 }
