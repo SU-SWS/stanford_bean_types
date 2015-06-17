@@ -138,9 +138,39 @@ function stanford_bean_types_preprocess_field(&$variables) {
 
 /**
  * Implements hook_form_FORM_ID_alter().
+ *
+ * Retrieves the view mode information for the Bean type and makes available
+ * as an option only those view modes which apply to this Bean by having
+ * custom settings. This ensures the view mode form element is not populated
+ * with irrelevant view modes that do not necessarily apply to this bean.
+ *
  */
 function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id) {
+
+  // Change the label and title fields description.
   $form['title']['#description'] = t('The title displays when the block is displayed on a page. Leave it blank if you don\'t want a title.' );
   $form['label']['#description'] = t('The label identifies the block for administration purposes. It is <em>not displayed</em> when the block is displayed on a page. It is displayed in the admin interface and when the block is edited.' );
+
+  // Fix the view_mode select option to only show view modes with custom settings.
+  $options = array();
+
+  // Always have default.
+  $options['default'] = t("Default");
+
+  $bean_info = $form['#entity']->entityInfo();
+  $view_mode_settings = field_view_mode_settings('bean', $form['#entity']->type);
+  $enabled = array();
+  foreach ($view_mode_settings as $view_mode => $settings) {
+    if ($settings['custom_settings'] && isset($bean_info['view modes'][$view_mode])) {
+      $enabled[$view_mode] = $bean_info['view modes'][$view_mode]['label'];
+    }
+  }
+
+  // Sort alpha.
+  asort($enabled);
+  $options = array_merge($options, $enabled);
+
+  $form['view_mode']['#options'] = $options;
+
 }
 
