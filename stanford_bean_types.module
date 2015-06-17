@@ -153,18 +153,22 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
 
   // Fix the view_mode select option to only show view modes with custom settings.
   $options = array();
+
+  // Always have default.
+  $options['default'] = t("Default");
+
   $bean_info = $form['#entity']->entityInfo();
   $view_mode_settings = field_view_mode_settings('bean', $form['#entity']->type);
+  $enabled = array();
   foreach ($view_mode_settings as $view_mode => $settings) {
     if ($settings['custom_settings'] && isset($bean_info['view modes'][$view_mode])) {
-      $options[$view_mode] = $bean_info['view modes'][$view_mode]['label'];
+      $enabled[$view_mode] = $bean_info['view modes'][$view_mode]['label'];
     }
   }
 
-  // Always should have one.
-  if (empty($options) || !isset($options['default'])) {
-    $options['default'] = t("Default");
-  }
+  // Sort alpha.
+  asort($enabled);
+  $options = array_merge($options, $enabled);
 
   $form['view_mode']['#options'] = $options;
 
