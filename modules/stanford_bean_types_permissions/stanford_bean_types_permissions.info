@@ -1,7 +1,7 @@
 name = Stanford Bean Types Permissions
 description = A permissions module for stanford_bean_types so that it may be used in a clean installation profile.
 core = 7.x
-version = 7.x-2.4
+version = 7.x-2.5
 package = Stanford
 dependencies[] = bean
 dependencies[] = bean_admin_ui

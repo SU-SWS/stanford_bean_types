@@ -1,6 +1,12 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-2.5                            2015-06-26
+---------------------------------------------
+- Removed foreign keys from features.
+- Hide irrelevant view modes from view mode select on bean edit form.
+- Sorting order for view modes.
+
 7.x-2.4                            2015-03-19
 ---------------------------------------------
 - Rearranged fields on stanford_banner block type.
