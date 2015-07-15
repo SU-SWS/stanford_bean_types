@@ -126,5 +126,4 @@ features[field_instance][] = bean-stanford_testimonial_block-field_s_testimonial
 features[field_instance][] = bean-stanford_testimonial_block-field_testimonial_more_link
 features[variable][] = field_bundle_settings_bean__stanford_banner
 features[variable][] = field_bundle_settings_bean__stanford_postcard
-files[] = plugins/bean/stanford_bean_types.suui.inc
 project status url = https://github.com/SU-SWS/stanford_bean_types
