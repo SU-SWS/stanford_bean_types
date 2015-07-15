@@ -162,7 +162,7 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
   }
   // Check for entity.
   elseif (isset($form["#entity"])) {
-    $entity = $form['#entity'];
+    $entity = entity_metadata_wrapper($form['#entity']->type, $form["#entity"]);
   }
 
   // If we cannot find an entity to work on then just go away.
@@ -171,7 +171,7 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
   }
 
   $bean_info = $entity->entityInfo();
-  $view_mode_settings = field_view_mode_settings('bean', $entity->type);
+  $view_mode_settings = field_view_mode_settings('bean', $entity->getBundle());
   $enabled = array();
   foreach ($view_mode_settings as $view_mode => $settings) {
     if ($settings['custom_settings'] && isset($bean_info['view modes'][$view_mode])) {
