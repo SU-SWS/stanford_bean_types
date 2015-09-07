@@ -41,8 +41,8 @@ function stanford_bean_types_bean_admin_ui_types() {
   $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
   $bean_type->api_version = 5;
   $bean_type->name = 'stanford_icon_block';
-  $bean_type->label = 'stanford_icon_block';
-  $bean_type->options = '';
+  $bean_type->label = 'Stanford Icon Block';
+  $bean_type->options = 'A postcard like block with the ability to have a font-awesome based icon next to the title.';
   $bean_type->description = '';
   $export['stanford_icon_block'] = $bean_type;
 

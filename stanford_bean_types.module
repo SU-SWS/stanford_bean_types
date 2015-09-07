@@ -33,6 +33,11 @@ function stanford_bean_types_bean_types() {
     );
   }
 
+  // Override for the Icon Block.
+  $plugins["stanford_icon_block"]["handler"]['class'] = "StanfordIconBlock";
+  $plugins["stanford_icon_block"]["handler"]['file'] = "StanfordIconBlock.php";
+  $plugins["stanford_icon_block"]["handler"]['path'] = drupal_get_path("module", "stanford_bean_types") . "/plugins/bean";
+
   return $plugins;
 }
 
@@ -186,3 +191,6 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
   $form['view_mode']['#options'] = $options;
 
 }
+
+
+
