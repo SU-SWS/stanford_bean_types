@@ -18,7 +18,6 @@ dependencies[] = stanford_image
 dependencies[] = strongarm
 dependencies[] = text
 files[] = plugins/bean/StanfordIconBlock.php
-files[] = templates/bean--stanford-icon-block.tpl.php
 scripts[] = js/stanford-bean-types.js
 stylesheets[all][] = css/social-media.css
 features[bean_type][] = stanford_banner
