@@ -41,6 +41,17 @@ function stanford_bean_types_permissions_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'create any stanford_icon_block bean'.
+  $permissions['create any stanford_icon_block bean'] = array(
+    'name' => 'create any stanford_icon_block bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'create any stanford_large_block bean'.
   $permissions['create any stanford_large_block bean'] = array(
     'name' => 'create any stanford_large_block bean',
@@ -107,6 +118,17 @@ function stanford_bean_types_permissions_user_default_permissions() {
   // Exported permission: 'delete any stanford_contact bean'.
   $permissions['delete any stanford_contact bean'] = array(
     'name' => 'delete any stanford_contact bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'delete any stanford_icon_block bean'.
+  $permissions['delete any stanford_icon_block bean'] = array(
+    'name' => 'delete any stanford_icon_block bean',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -191,6 +213,17 @@ function stanford_bean_types_permissions_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'edit any stanford_icon_block bean'.
+  $permissions['edit any stanford_icon_block bean'] = array(
+    'name' => 'edit any stanford_icon_block bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'edit any stanford_large_block bean'.
   $permissions['edit any stanford_large_block bean'] = array(
     'name' => 'edit any stanford_large_block bean',
@@ -261,6 +294,19 @@ function stanford_bean_types_permissions_user_default_permissions() {
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
+  // Exported permission: 'view any stanford_icon_block bean'.
+  $permissions['view any stanford_icon_block bean'] = array(
+    'name' => 'view any stanford_icon_block bean',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+      'site owner' => 'site owner',
     ),
     'module' => 'bean',
   );
