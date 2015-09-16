@@ -5,6 +5,52 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function stanford_bean_types_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'bean|stanford_icon_block|default';
+  $ds_fieldsetting->entity_type = 'bean';
+  $ds_fieldsetting->bundle = 'stanford_icon_block';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(),
+      ),
+    ),
+    'field_s_icon_body' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb-el' => 'div',
+          'lb-cl' => 'icon-body',
+        ),
+      ),
+    ),
+    'field_s_icon_link' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb-el' => 'div',
+          'lb-cl' => 'icon-link',
+        ),
+      ),
+    ),
+  );
+  $export['bean|stanford_icon_block|default'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function stanford_bean_types_ds_layout_settings_info() {
@@ -22,8 +68,8 @@ function stanford_bean_types_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'group_postcard',
         1 => 'group_postcard_icon',
-        2 => 'group_postcard_content',
-        3 => 'title',
+        2 => 'title',
+        3 => 'group_postcard_content',
         4 => 'field_s_icon_body',
         5 => 'field_s_icon_icon',
         6 => 'field_s_icon_link',
@@ -32,8 +78,8 @@ function stanford_bean_types_ds_layout_settings_info() {
     'fields' => array(
       'group_postcard' => 'ds_content',
       'group_postcard_icon' => 'ds_content',
-      'group_postcard_content' => 'ds_content',
       'title' => 'ds_content',
+      'group_postcard_content' => 'ds_content',
       'field_s_icon_body' => 'ds_content',
       'field_s_icon_icon' => 'ds_content',
       'field_s_icon_link' => 'ds_content',

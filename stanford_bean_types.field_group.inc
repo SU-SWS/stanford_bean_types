@@ -121,8 +121,8 @@ function stanford_bean_types_field_group_info() {
     'label' => 'Postcard',
     'weight' => '0',
     'children' => array(
-      0 => 'group_postcard_icon',
-      1 => 'group_postcard_content',
+      0 => 'group_postcard_content',
+      1 => 'group_postcard_icon',
     ),
     'format_type' => 'div',
     'format_settings' => array(
