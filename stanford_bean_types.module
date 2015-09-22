@@ -34,9 +34,10 @@ function stanford_bean_types_bean_types() {
   }
 
   // Override for the Icon Block.
-  $plugins["stanford_icon_block"]["handler"]['class'] = "StanfordIconBlock";
-  $plugins["stanford_icon_block"]["handler"]['file'] = "StanfordIconBlock.php";
-  $plugins["stanford_icon_block"]["handler"]['path'] = drupal_get_path("module", "stanford_bean_types") . "/plugins/bean";
+  $plugins["stanford_icon_block"]["handler"]["class"] = "StanfordIconBlock";
+  $plugins["stanford_icon_block"]["handler"]["parent"] = "BeanPlugin";
+  $plugins["stanford_icon_block"]["handler"]["file"] = "StanfordIconBlock.php";
+  $plugins["stanford_icon_block"]["handler"]["path"] = drupal_get_path("module", "stanford_bean_types") . "/plugins/bean";
 
   return $plugins;
 }
