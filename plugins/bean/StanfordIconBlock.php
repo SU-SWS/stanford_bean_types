@@ -4,7 +4,7 @@
  * StanfordIconBlock
  */
 
-class StanfordIconBlock extends BeanPlugin {
+class StanfordIconBlock extends Bean {
 
   /**
    * Return the block content.
