@@ -4,7 +4,7 @@
  * StanfordIconBlock
  */
 
-class StanfordIconBlock extends Bean {
+class StanfordIconBlock extends BeanDefault {
 
   /**
    * Return the block content.
