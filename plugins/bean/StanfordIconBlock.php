@@ -31,7 +31,7 @@ class StanfordIconBlock extends BeanDefault {
 
     // Create the markup and get the css class from the field.
     $markup = "<div>";
-    $markup .= "<i class=\"icon-3x " . drupal_clean_css_identifier($bean->field_s_icon_icon[LANGUAGE_NONE][0]['value']) . "\">" . t($text) . "</i>";
+    $markup .= "<i class=\"icon-3x " . drupal_clean_css_identifier($bean->field_s_icon_icon[LANGUAGE_NONE][0]['value']) . "\"><span class=\"icon-text\">" . t($text) . "</span></i>";
     $markup .= "</div>";
 
     // Re-set the field content.
