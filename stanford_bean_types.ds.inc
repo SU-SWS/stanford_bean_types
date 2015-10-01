@@ -28,22 +28,6 @@ function stanford_bean_types_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
-    'field_s_icon_body' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb-el' => 'div',
-          'lb-cl' => 'icon-body',
-        ),
-      ),
-    ),
-    'field_s_icon_link' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb-el' => 'div',
-          'lb-cl' => 'icon-link',
-        ),
-      ),
-    ),
   );
   $export['bean|stanford_icon_block|default'] = $ds_fieldsetting;
 

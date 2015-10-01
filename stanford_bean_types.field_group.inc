@@ -64,7 +64,7 @@ function stanford_bean_types_field_group_info() {
       'label' => 'Postcard Content',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'postcard-content',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
