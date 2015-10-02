@@ -1,5 +1,6 @@
 languages:
   PHP: true
+  JavaScript: true
 exclude_paths:
 - "test/*"
 - "doc/*"
@@ -7,4 +8,10 @@ engines:
   eslint:
     enabled: true
   csslint:
+    enabled: true
+  phpcodesniffer:
+    enabled: true
+  phpmd:
+    enabled: true
+  scss-lint:
     enabled: true
