@@ -87,8 +87,8 @@ function stanford_bean_types_strongarm() {
             'visible' => TRUE,
           ),
           'stanford_full_width_banner_short' => array(
-            'weight' => '1',
-            'visible' => FALSE,
+            'weight' => '-5',
+            'visible' => TRUE,
           ),
         ),
       ),
