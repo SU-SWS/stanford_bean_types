@@ -167,7 +167,7 @@ function stanford_bean_types_strongarm() {
       ),
     ),
   );
+  
   $export['field_bundle_settings_bean__stanford_postcard'] = $strongarm;
-
   return $export;
 }
