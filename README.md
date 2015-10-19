@@ -1,5 +1,5 @@
 #[Stanford Bean Types](https://github.com/SU-SWS/stanford_bean_types)
-##### Version: 7.x-2.5
+##### Version: 7.x-2.6
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
 
