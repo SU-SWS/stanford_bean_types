@@ -1,6 +1,14 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-2.6                            2015-10-19
+---------------------------------------------
+- Created .codeclimate.yml
+- Added fullwdith banner short view mode on stanford banner
+- Restored testimonial block
+- Added new module ds_bean_fields to support layout for icon-block
+- Added icon-block bean type
+
 7.x-2.5                            2015-06-26
 ---------------------------------------------
 - Removed foreign keys from features.
