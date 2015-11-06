@@ -693,7 +693,7 @@ function stanford_bean_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Postcard',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
       0 => 'group_s_postcard_content',
       1 => 'group_s_postcard_image',

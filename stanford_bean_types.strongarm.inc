@@ -135,14 +135,38 @@ function stanford_bean_types_strongarm() {
       'stanford_3_col_header' => array(
         'custom_settings' => TRUE,
       ),
+      'stanford_8_col_banner' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_full_width_banner_short' => array(
+        'custom_settings' => FALSE,
+      ),
+      'large_landscape' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_tiles' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '1',
         ),
         'metatags' => array(
           'weight' => '40',
+        ),
+        'label' => array(
+          'weight' => '0',
+        ),
+        'revision' => array(
+          'weight' => '8',
+        ),
+        'view_mode' => array(
+          'weight' => '7',
+        ),
+        'redirect' => array(
+          'weight' => '9',
         ),
       ),
       'display' => array(
