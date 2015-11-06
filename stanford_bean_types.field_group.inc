@@ -252,6 +252,7 @@ function stanford_bean_types_field_group_info() {
       0 => 'field_s_contact_address_line_1',
       1 => 'field_s_contact_address_line_2',
       2 => 'field_s_contact_city_state_zip',
+      3 => 'field_s_contact_address_line_3',
     ),
     'format_type' => 'div',
     'format_settings' => array(
