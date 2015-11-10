@@ -21,3 +21,21 @@ function stanford_bean_types_update_7100(&$sandbox) {
   }
 
 }
+
+/**
+ * Enable the new bean fields module.
+ * Upgrade path from 2.6 -> 2.7
+ */
+function stanford_bean_types_update_7200(&$sandbox) {
+
+  if (!module_exists('ds_bean_fields')) {
+    if (!module_enable(array('ds_bean_fields'))) {
+      watchdog('stanford_bean_types', 'Could not enable ds_bean_fields module');
+      throw new DrupalUpdateException("Could not enable ds_bean_fields module. Please check that the module exists.");
+    }
+    else {
+      watchdog('stanford_bean_types', 'Enabled ds_bean_fields module.');
+    }
+  }
+
+}

@@ -1,6 +1,14 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-2.7                            2015-10-19
+---------------------------------------------
+- Added upgrade hook for ds_bean_fields module
+- New image style types
+- New address field
+- New image insert field
+- Removed codeclimate.yml
+
 7.x-2.6                            2015-10-19
 ---------------------------------------------
 - Created .codeclimate.yml
