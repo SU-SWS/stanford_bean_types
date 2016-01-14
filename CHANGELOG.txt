@@ -1,6 +1,10 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-2.8                            2016-01-14
+---------------------------------------------
+- Upgrade hook finilization.
+
 7.x-2.7                            2015-10-19
 ---------------------------------------------
 - Added upgrade hook for ds_bean_fields module
