@@ -66,7 +66,9 @@ function stanford_bean_types_permissions_enable() {
     ),
   );
   $administrator = user_role_load_by_name('administrator');
-  _stanford_bean_types_permissions_grant_permissions($administrator->rid, $administrator_permissions);
+  if ($administrator->rid) {
+    _stanford_bean_types_permissions_grant_permissions($administrator->rid, $administrator_permissions);
+  }
   $editor_permissions = array(
     // module key
     'bean' => array(
@@ -106,7 +108,9 @@ function stanford_bean_types_permissions_enable() {
     ),
   );
   $editor = user_role_load_by_name('editor');
-  _stanford_bean_types_permissions_grant_permissions($editor->rid, $editor_permissions);
+  if ($editor->rid) {
+    _stanford_bean_types_permissions_grant_permissions($editor->rid, $editor_permissions);
+  }
   $site_owner_permissions = array(
     // module key
     'bean' => array(
@@ -146,7 +150,9 @@ function stanford_bean_types_permissions_enable() {
     ),
   );
   $site_owner = user_role_load_by_name('site owner');
-  _stanford_bean_types_permissions_grant_permissions($site_owner->rid, $site_owner_permissions);
+  if ($site_owner->rid) {
+    _stanford_bean_types_permissions_grant_permissions($site_owner->rid, $site_owner_permissions);
+  }
   $anonymous_user_permissions = array(
     // module key
     'bean' => array(
@@ -186,7 +192,9 @@ function stanford_bean_types_permissions_enable() {
     ),
   );
   $anonymous_user = user_role_load_by_name('anonymous user');
-  _stanford_bean_types_permissions_grant_permissions($anonymous_user->rid, $anonymous_user_permissions);
+  if ($anonymous_user->rid) {
+    _stanford_bean_types_permissions_grant_permissions($anonymous_user->rid, $anonymous_user_permissions);
+  }
   $authenticated_user_permissions = array(
     // module key
     'bean' => array(
@@ -226,7 +234,9 @@ function stanford_bean_types_permissions_enable() {
     ),
   );
   $authenticated_user = user_role_load_by_name('authenticated user');
-  _stanford_bean_types_permissions_grant_permissions($authenticated_user->rid, $authenticated_user_permissions);
+  if ($authenticated_user->rid) {
+    _stanford_bean_types_permissions_grant_permissions($authenticated_user->rid, $authenticated_user_permissions);
+  }
 }
 
 /**
