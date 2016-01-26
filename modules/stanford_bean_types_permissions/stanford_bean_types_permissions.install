@@ -5,28 +5,12 @@
  */
 
  /**
- * Implements hook_requirements().
- */
-function stanford_bean_types_permissions_requirements($phase) {
-  $requirements = array();
-  $t = get_t();
-  if ($phase == 'install') {
-    if (!module_exists('stanford_jumpstart_roles')) {
-      $requirements['stanford_bean_types_permissions'] = array(
-        'title' => $t('Stanford Bean Types Permissions'),
-        'description' => $t('Stanford Jumpstart Roles needs installed prior to Bean Types Permissions'),
-        'value' => 'Stanford Jumpstart Roles is not enabled',
-        'severity' => REQUIREMENT_ERROR,
-      );
-    }
-  }
-  return $requirements;
-}
-
- /**
  * Implements hook_enable().
  */
 function stanford_bean_types_permissions_enable() {
+  if (!module_exists('stanford_jumpstart_roles')) {
+    module_enable(array('stanford_jumpstart_roles'));
+  }
   $administrator_permissions = array(
     // module key
     'bean' => array(
