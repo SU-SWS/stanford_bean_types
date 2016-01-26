@@ -1,0 +1,260 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Bean Types Permissions.
+ */
+
+ /**
+ * Implements hook_requirements().
+ */
+function stanford_bean_types_permissions_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+  if ($phase == 'install') {
+    if (!module_exists('stanford_jumpstart_roles')) {
+      $requirements['stanford_bean_types_permissions'] = array(
+        'title' => $t('Stanford Bean Types Permissions'),
+        'description' => $t('Stanford Jumpstart Roles needs installed prior to Bean Types Permissions'),
+        'value' => 'Stanford Jumpstart Roles is not enabled',
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+  return $requirements;
+}
+
+ /**
+ * Implements hook_enable().
+ */
+function stanford_bean_types_permissions_enable(){
+  $administrator_permissions = array(
+    // module key
+    'bean' => array(
+        // permissions in the module
+        'create any stanford_banner bean',
+        'create any stanford_big_text_block bean',
+        'create any stanford_contact bean',
+        'create any stanford_icon_block bean',
+        'create any stanford_large_block bean',
+        'create any stanford_postcard bean',
+        'create any stanford_social_media_connect bean',
+        'create any stanford_testimonial_block bean',
+        'delete any stanford_banner bean',
+        'delete any stanford_big_text_block bean',
+        'delete any stanford_contact bean',
+        'delete any stanford_icon_block bean',
+        'delete any stanford_large_block bean',
+        'delete any stanford_postcard bean',
+        'delete any stanford_social_media_connect bean',
+        'delete any stanford_testimonial_block bean',
+        'edit any stanford_banner bean',
+        'edit any stanford_big_text_block bean',
+        'edit any stanford_contact bean',
+        'edit any stanford_icon_block bean',
+        'edit any stanford_large_block bean',
+        'edit any stanford_postcard bean',
+        'edit any stanford_social_media_connect bean',
+        'edit any stanford_testimonial_block bean',
+        //'view any stanford_banner bean',
+        //'view any stanford_big_text_block bean',
+        //'view any stanford_contact bean',
+        //'view any stanford_icon_block bean',
+        //'view any stanford_large_block bean',
+        //'view any stanford_postcard bean',
+        //'view any stanford_social_media_connect bean',
+        //'view any stanford_testimonial_block bean',
+    ),
+  );
+  $administrator = user_role_load_by_name('administrator');
+  _stanford_bean_types_permissions_grant_permissions($administrator, $administrator_permissions);
+  $editor_permissions = array(
+    // module key
+    'bean' => array(
+        // permissions in the module
+        'create any stanford_banner bean',
+        //'create any stanford_big_text_block bean',
+        'create any stanford_contact bean',
+        'create any stanford_icon_block bean',
+        'create any stanford_large_block bean',
+        'create any stanford_postcard bean',
+        'create any stanford_social_media_connect bean',
+        //'create any stanford_testimonial_block bean',
+        'delete any stanford_banner bean',
+        //'delete any stanford_big_text_block bean',
+        'delete any stanford_contact bean',
+        'delete any stanford_icon_block bean',
+        'delete any stanford_large_block bean',
+        'delete any stanford_postcard bean',
+        'delete any stanford_social_media_connect bean',
+        //'delete any stanford_testimonial_block bean',
+        'edit any stanford_banner bean',
+        'edit any stanford_big_text_block bean',
+        'edit any stanford_contact bean',
+        'edit any stanford_icon_block bean',
+        'edit any stanford_large_block bean',
+        'edit any stanford_postcard bean',
+        'edit any stanford_social_media_connect bean',
+        'edit any stanford_testimonial_block bean',
+        //'view any stanford_banner bean',
+        //'view any stanford_big_text_block bean',
+        //'view any stanford_contact bean',
+        //'view any stanford_icon_block bean',
+        //'view any stanford_large_block bean',
+        //'view any stanford_postcard bean',
+        //'view any stanford_social_media_connect bean',
+        //'view any stanford_testimonial_block bean',
+    ),
+  );
+  $editor = user_role_load_by_name('editor');
+  _stanford_bean_types_permissions_grant_permissions($editor, $editor_permissions);
+  $site_owner_permissions = array(
+    // module key
+    'bean' => array(
+        // permissions in the module
+        'create any stanford_banner bean',
+        //'create any stanford_big_text_block bean',
+        'create any stanford_contact bean',
+        'create any stanford_icon_block bean',
+        'create any stanford_large_block bean',
+        'create any stanford_postcard bean',
+        'create any stanford_social_media_connect bean',
+        //'create any stanford_testimonial_block bean',
+        'delete any stanford_banner bean',
+        'delete any stanford_big_text_block bean',
+        'delete any stanford_contact bean',
+        'delete any stanford_icon_block bean',
+        'delete any stanford_large_block bean',
+        'delete any stanford_postcard bean',
+        'delete any stanford_social_media_connect bean',
+        'delete any stanford_testimonial_block bean',
+        'edit any stanford_banner bean',
+        'edit any stanford_big_text_block bean',
+        'edit any stanford_contact bean',
+        'edit any stanford_icon_block bean',
+        'edit any stanford_large_block bean',
+        'edit any stanford_postcard bean',
+        'edit any stanford_social_media_connect bean',
+        'edit any stanford_testimonial_block bean',
+        //'view any stanford_banner bean',
+        //'view any stanford_big_text_block bean',
+        //'view any stanford_contact bean',
+        //'view any stanford_icon_block bean',
+        //'view any stanford_large_block bean',
+        //'view any stanford_postcard bean',
+        //'view any stanford_social_media_connect bean',
+        //'view any stanford_testimonial_block bean',
+    ),
+  );
+  $site_owner = user_role_load_by_name('site owner');
+  _stanford_bean_types_permissions_grant_permissions($site_owner, $site_owner_permissions);
+  $anonymous_user_permissions = array(
+    // module key
+    'bean' => array(
+        // permissions in the module
+        //'create any stanford_banner bean',
+        //'create any stanford_big_text_block bean',
+        //'create any stanford_contact bean',
+        //'create any stanford_icon_block bean',
+        //'create any stanford_large_block bean',
+        //'create any stanford_postcard bean',
+        //'create any stanford_social_media_connect bean',
+        //'create any stanford_testimonial_block bean',
+        //'delete any stanford_banner bean',
+        //'delete any stanford_big_text_block bean',
+        //'delete any stanford_contact bean',
+        //'delete any stanford_icon_block bean',
+        //'delete any stanford_large_block bean',
+        //'delete any stanford_postcard bean',
+        //'delete any stanford_social_media_connect bean',
+        //'delete any stanford_testimonial_block bean',
+        //'edit any stanford_banner bean',
+        //'edit any stanford_big_text_block bean',
+        //'edit any stanford_contact bean',
+        //'edit any stanford_icon_block bean',
+        //'edit any stanford_large_block bean',
+        //'edit any stanford_postcard bean',
+        //'edit any stanford_social_media_connect bean',
+        //'edit any stanford_testimonial_block bean',
+        'view any stanford_banner bean',
+        'view any stanford_big_text_block bean',
+        'view any stanford_contact bean',
+        'view any stanford_icon_block bean',
+        'view any stanford_large_block bean',
+        'view any stanford_postcard bean',
+        'view any stanford_social_media_connect bean',
+        'view any stanford_testimonial_block bean',
+    ),
+  );
+  $anonymous_user = user_role_load_by_name('anonymous user');
+  _stanford_bean_types_permissions_grant_permissions($site_owner, $anonymous_user_permissions);
+  $authenticated_user_permissions = array(
+    // module key
+    'bean' => array(
+        // permissions in the module
+        //'create any stanford_banner bean',
+        //'create any stanford_big_text_block bean',
+        //'create any stanford_contact bean',
+        //'create any stanford_icon_block bean',
+        //'create any stanford_large_block bean',
+        //'create any stanford_postcard bean',
+        //'create any stanford_social_media_connect bean',
+        //'create any stanford_testimonial_block bean',
+        //'delete any stanford_banner bean',
+        //'delete any stanford_big_text_block bean',
+        //'delete any stanford_contact bean',
+        //'delete any stanford_icon_block bean',
+        //'delete any stanford_large_block bean',
+        //'delete any stanford_postcard bean',
+        //'delete any stanford_social_media_connect bean',
+        //'delete any stanford_testimonial_block bean',
+        //'edit any stanford_banner bean',
+        //'edit any stanford_big_text_block bean',
+        //'edit any stanford_contact bean',
+        //'edit any stanford_icon_block bean',
+        //'edit any stanford_large_block bean',
+        //'edit any stanford_postcard bean',
+        //'edit any stanford_social_media_connect bean',
+        //'edit any stanford_testimonial_block bean',
+        'view any stanford_banner bean',
+        'view any stanford_big_text_block bean',
+        'view any stanford_contact bean',
+        'view any stanford_icon_block bean',
+        'view any stanford_large_block bean',
+        'view any stanford_postcard bean',
+        'view any stanford_social_media_connect bean',
+        'view any stanford_testimonial_block bean',
+    ),
+  );
+  $authenticated_user = user_role_load_by_name('authenticated user');
+  _stanford_bean_types_permissions_grant_permissions($authenticated_user, $authenticated_user_permissions);
+}
+
+/**
+ * Custom user_role_grant_permissions function
+ * does the same thing as user_role_grant_permissions
+ * but it can run at install time
+ * @see user_role_grant_permissions
+ * @param int $rid
+ * @param array $permissions
+ */
+function _stanford_bean_types_permissions_grant_permissions($rid, array $permissions = array()) {
+  // this line doesn't work on install / enable hooks
+  // $modules = user_permission_get_modules();
+  // Grant new permissions for the role.
+  foreach ($permissions as $module => $permission_list) {
+    foreach ($permission_list as $name) {
+        db_merge('role_permission')
+        ->key(array(
+            'rid' => $rid,
+            'permission' => $name,
+        ))
+        ->fields(array(
+            'module' => $module,
+        ))
+        ->execute();
+    }
+  }
+  // Clear the user access cache.
+  drupal_static_reset('user_access');
+  drupal_static_reset('user_role_permissions');
+}
