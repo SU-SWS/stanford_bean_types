@@ -5,6 +5,5 @@ package = Stanford
 version = 7.x-2.8-dev
 dependencies[] = bean
 dependencies[] = bean_admin_ui
-dependencies[] = ctools
 dependencies[] = stanford_bean_types
 dependencies[] = stanford_jumpstart_roles
