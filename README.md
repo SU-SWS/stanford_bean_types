@@ -1,7 +1,7 @@
 #[Stanford Bean Types](https://github.com/SU-SWS/stanford_bean_types)
-##### Version: 7.x-3.x-dev
+##### Version: 7.x-3.x
 
-Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
+Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama), [boznik](https://github.com/boznik)
 
 [Changelog.txt](CHANGELOG.txt)
 
