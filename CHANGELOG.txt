@@ -1,5 +1,8 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
+7.x-3.x                           2016-01-27
+---------------------------------------------
+- Modified permissions module to install directly to database
 
 7.x-2.8                            2016-01-14
 ---------------------------------------------
