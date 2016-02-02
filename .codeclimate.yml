@@ -4,6 +4,6 @@ languages:
    Python: false
    PHP: true
 exclude_paths:
-- "*features*.inc"
+- "*.features*.inc"
 - "*.strongarm*.inc"
 - "*.context*.inc"
