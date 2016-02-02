@@ -1,0 +1,9 @@
+languages:
+   Ruby: false
+   JavaScript: true
+   Python: false
+   PHP: true
+exclude_paths:
+- "*features*.inc"
+- "*.strongarm*.inc"
+- "*.context*.inc"
