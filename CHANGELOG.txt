@@ -1,6 +1,10 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-2.8+3-dev                        2016-02-17
+---------------------------------------------
+- Fix empty H2 element on icon blocks.
+
 7.x-2.8                            2016-01-14
 ---------------------------------------------
 - Upgrade hook finilization.
