@@ -21,6 +21,7 @@ dependencies[] = text
 scripts[] = js/stanford-bean-types.js
 stylesheets[all][] = css/social-media.css
 stylesheets[all][] = css/icon-block.css
+stylesheets[all][] = css/full-width-banner.css
 features[bean_type][] = stanford_banner
 features[bean_type][] = stanford_big_text_block
 features[bean_type][] = stanford_contact
