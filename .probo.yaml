@@ -1,0 +1,67 @@
+assets:
+  - db.sql.gz
+  - aliases.drushrc.php
+  - behat.local.yml
+  - .shoov.json
+  - package.json
+  - tests.js
+  - .shoov.yml
+steps:
+  - name: Download Drupal Behat and Shoov
+    plugin: Script
+    script: |
+      sudo apt-get update
+      sudo apt-get -y install python-software-properties software-properties-common
+      sudo add-apt-repository ppa:pi-rho/dev
+      sudo apt-get update
+      sudo apt-get -y install tmux
+      drush dl drupal-7.x --destination=/var/www
+      mkdir .drush
+      echo $ASSET_DIR/aliases.drushrc.php > .drush/aliases.drushrc.php
+      mv /var/www/drupal-7.x-dev /var/www/html
+      echo 'Downloaded drupal-7.x and moved it to /var/www/html'
+      cp $ASSET_DIR/aliases.drushrc.php /root/.drush/aliases.drushrc.php
+      echo 'Saved drush aliases file'
+      git clone https://github.com/SU-SWS/linky_clicky.git /srv/linky_clicky
+      cd /srv/linky_clicky
+      composer install
+      echo 'Downloaded linky_clicky to /srv/linky_clicky and ran composer install'
+      npm install -g npm
+      npm install -g mocha gm webdrivercss webdriverio selenium-standalone chromedriver
+      selenium-standalone install
+      nohup selenium-standalone start &>/dev/null &
+      cp $ASSET_DIR/behat.local.yml /srv/linky_clicky/sites/probo/behat.local.yml
+      echo 'Downloaded tmux and node packages and started selenium in the background'
+      cp $ASSET_DIR/.shoov.json /root/.shoov.json
+      mkdir -p /srv/linky_clicky/sites/probo/visual-monitor/test
+      cp $ASSET_DIR/package.json /srv/linky_clicky/sites/probo/package.json
+      cd /srv/linky_clicky/sites/probo
+      npm install
+      cp $ASSET_DIR/.shoov.yml /srv/linky_clicky/sites/probo/.shoov.yml
+      mkdir /srv/linky_clicky/sites/probo/visual-monitor/webdrivercss
+  - name: Probo CI site setup
+    plugin: Drupal
+    database: db.sql.gz
+    databaseGzipped: true
+    databaseUpdates: true
+    clearCaches: true
+  - name: Install and Enable Module
+    script: |
+      mkdir /var/www/html/sites/all/modules/stanford && mkdir /var/www/html/sites/all/modules/stanford/stanford_bean_types
+      mv /src/* /var/www/html/sites/all/modules/stanford/stanford_bean_types/
+      chown -R www-data:www-data /var/www/html/sites/default/files
+      drush --root=/var/www/html dl features ds bean -y && drush --root=/var/www/html en features bean_admin_ui ds_extras
+      git clone https://github.com/SU-SWS/stanford_image.git /var/www/html/sites/all/modules/stanford/stanford_image && git clone https://github.com/SU-SWS/stanford_image_styles.git /var/www/html/sites/all/modules/stanford/stanford_image_styles
+      drush --root=/var/www/html en stanford_bean_types -y
+      drush --root="/var/www/html" fra -y
+      drush dis overlay -y
+      drush --root="/var/www/html" updb -y
+      drush --root="/var/www/html" cc all -y
+  - name: Copy relevant Behat tests
+    command: 'cp /srv/linky_clicky/includes/features/SU-SWS/stanford_bean_types/stanford_bean_types.feature /srv/linky_clicky/sites/probo/features/.'
+  - name: Run relevant Behat tests
+    command: 'cd /srv/linky_clicky/sites/probo; /srv/linky_clicky/bin/behat features/stanford_bean_types.feature --profile default --suite dev --format progress --tags "~@javascript"'
+  - name: Copy relevant Shoov tests
+    command: "cp $ASSET_DIR/tests.js /srv/linky_clicky/sites/probo/visual-monitor/test/tests.js; sed -i -e 's/PROBO_BUILD_DOMAIN/$BUILD_DOMAIN/' /srv/linky_clicky/sites/probo/visual-monitor/test/tests.js"
+  - name: Run relevant Shoov tests
+    command: 'tmux new -s shoov -d; tmux list; cd /srv/linky_clicky/sites/probo/visual-monitor; PROVIDER_PREFIX=browserstack SELECTED_CAPS=chrome mocha'
