@@ -10,7 +10,7 @@
 function stanford_bean_types_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_s_big_text_block_body'
+  // Exported field_base: 'field_s_big_text_block_body'.
   $field_bases['field_s_big_text_block_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_s_big_text_block_lead_text'
+  // Exported field_base: 'field_s_big_text_block_lead_text'.
   $field_bases['field_s_big_text_block_lead_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -50,7 +50,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_s_big_text_block_more_link'
+  // Exported field_base: 'field_s_big_text_block_more_link'.
   $field_bases['field_s_big_text_block_more_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -79,7 +79,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_contact_address_line_1'
+  // Exported field_base: 'field_s_contact_address_line_1'.
   $field_bases['field_s_contact_address_line_1'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -100,7 +100,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_s_contact_address_line_2'
+  // Exported field_base: 'field_s_contact_address_line_2'.
   $field_bases['field_s_contact_address_line_2'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -121,7 +121,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_s_contact_address_line_3'
+  // Exported field_base: 'field_s_contact_address_line_3'.
   $field_bases['field_s_contact_address_line_3'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -142,7 +142,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_s_contact_city_state_zip'
+  // Exported field_base: 'field_s_contact_city_state_zip'.
   $field_bases['field_s_contact_city_state_zip'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -163,7 +163,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_s_contact_email'
+  // Exported field_base: 'field_s_contact_email'.
   $field_bases['field_s_contact_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -178,7 +178,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_s_contact_fax'
+  // Exported field_base: 'field_s_contact_fax'.
   $field_bases['field_s_contact_fax'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -199,7 +199,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_s_contact_link'
+  // Exported field_base: 'field_s_contact_link'.
   $field_bases['field_s_contact_link'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -228,7 +228,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_contact_phone'
+  // Exported field_base: 'field_s_contact_phone'.
   $field_bases['field_s_contact_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -249,7 +249,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_s_icon_body'
+  // Exported field_base: 'field_s_icon_body'.
   $field_bases['field_s_icon_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -268,7 +268,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_s_icon_icon'
+  // Exported field_base: 'field_s_icon_icon'.
   $field_bases['field_s_icon_icon'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -652,7 +652,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_s_icon_link'
+  // Exported field_base: 'field_s_icon_link'.
   $field_bases['field_s_icon_link'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -681,7 +681,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_large_blk_read_more_link'
+  // Exported field_base: 'field_s_large_blk_read_more_link'.
   $field_bases['field_s_large_blk_read_more_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -710,7 +710,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_large_block_body'
+  // Exported field_base: 'field_s_large_block_body'.
   $field_bases['field_s_large_block_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -729,7 +729,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_s_large_block_file_insert'
+  // Exported field_base: 'field_s_large_block_file_insert'.
   $field_bases['field_s_large_block_file_insert'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -752,7 +752,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_s_large_block_image_insert'
+  // Exported field_base: 'field_s_large_block_image_insert'.
   $field_bases['field_s_large_block_image_insert'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -775,7 +775,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_s_postcard_body'
+  // Exported field_base: 'field_s_postcard_body'.
   $field_bases['field_s_postcard_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -794,7 +794,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_s_postcard_file'
+  // Exported field_base: 'field_s_postcard_file'.
   $field_bases['field_s_postcard_file'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -817,7 +817,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_s_postcard_image_insert'
+  // Exported field_base: 'field_s_postcard_image_insert'.
   $field_bases['field_s_postcard_image_insert'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -839,7 +839,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_s_postcard_link'
+  // Exported field_base: 'field_s_postcard_link'.
   $field_bases['field_s_postcard_link'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -868,7 +868,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_facebook'
+  // Exported field_base: 'field_s_smc_facebook'.
   $field_bases['field_s_smc_facebook'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -897,7 +897,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_flickr'
+  // Exported field_base: 'field_s_smc_flickr'.
   $field_bases['field_s_smc_flickr'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -926,7 +926,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_googleplus'
+  // Exported field_base: 'field_s_smc_googleplus'.
   $field_bases['field_s_smc_googleplus'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -955,7 +955,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_instagram'
+  // Exported field_base: 'field_s_smc_instagram'.
   $field_bases['field_s_smc_instagram'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -984,7 +984,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_linkedin'
+  // Exported field_base: 'field_s_smc_linkedin'.
   $field_bases['field_s_smc_linkedin'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1013,7 +1013,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_pinterest'
+  // Exported field_base: 'field_s_smc_pinterest'.
   $field_bases['field_s_smc_pinterest'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1042,7 +1042,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_tumblr'
+  // Exported field_base: 'field_s_smc_tumblr'.
   $field_bases['field_s_smc_tumblr'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1071,7 +1071,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_twitter'
+  // Exported field_base: 'field_s_smc_twitter'.
   $field_bases['field_s_smc_twitter'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1100,7 +1100,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_vimeo'
+  // Exported field_base: 'field_s_smc_vimeo'.
   $field_bases['field_s_smc_vimeo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1129,7 +1129,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_smc_youtube'
+  // Exported field_base: 'field_s_smc_youtube'.
   $field_bases['field_s_smc_youtube'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1158,7 +1158,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_s_testimonial_credits'
+  // Exported field_base: 'field_s_testimonial_credits'.
   $field_bases['field_s_testimonial_credits'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1179,7 +1179,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_s_testimonial_quote'
+  // Exported field_base: 'field_s_testimonial_quote'.
   $field_bases['field_s_testimonial_quote'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -1200,7 +1200,7 @@ function stanford_bean_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_testimonial_more_link'
+  // Exported field_base: 'field_testimonial_more_link'.
   $field_bases['field_testimonial_more_link'] = array(
     'active' => 1,
     'cardinality' => 1,
