@@ -1,6 +1,11 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-3.0+8-dev                      2016-09-16
+---------------------------------------------
+- Added new view mode: stanford_header_150_width_left
+- Added .codeclimate.yml
+
 7.x-3.0                            2016-05-30
 ---------------------------------------------
 - Modified permissions module to install directly to database
