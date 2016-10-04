@@ -1,17 +1,26 @@
 assets:
   - ngrok.yml
+  - .shoov.json
   - .shoov.yml
+  - proboci_id_rsa
+  - proboci_id_rsa.pub
 steps:
   - name: Download Drupal Behat and Shoov
     plugin: Script
     script: |
+      cp $ASSET_DIR/proboci_id_rsa /root/.ssh/id_rsa
+      cp $ASSET_DIR/proboci_id_rsa.pub /root/.ssh/id_rsa.pub
+      git clone git@github.com:SU-SWS/stanford_sites_jumpstart_academic.git /srv/stanford_sites_jumpstart_academic
+      service mysql start
+      echo 'export PATH="/usr/bin/mysql:$PATH"' >> /root/.bash_profile
+      source /root/.bash_profile
+      mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root')";
       echo 'Download Probo CI assets'
       git clone https://github.com/SU-SWS/proboci_assets.git /srv/proboci_assets
       echo 'Install ngrok'
-      echo "127.0.0.1 html" >> /etc/hosts
       wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /srv/ngrok.zip
       unzip /srv/ngrok.zip -d /srv
-      cp /srv/proboci_assets/ngrok.yml /srv/ngrok.yml
+      cp $ASSET_DIR/ngrok.yml /srv/ngrok.yml
       (wget -O - pi.dk/3 || curl pi.dk/3/ || fetch -o - http://pi.dk/3) | bash
       echo 'Install node modules'
       npm install -g npm
@@ -19,11 +28,12 @@ steps:
       echo 'Install Geppetto'
       git clone https://github.com/SU-SWS/stanford_geppetto.git /srv/stanford_geppetto
       cd /srv/stanford_geppetto
+      git checkout proboci
       npm install
       cp /srv/proboci_assets/configure.json /srv/stanford_geppetto/configure.json
       echo 'Build site'
       cd /srv/stanford_geppetto
-      grunt build:make:install --build-product=jumpstart-academic --build-environment=production --build-type=production --build-directory=/var/www/html --build-database-user=root --build-database-pass=root --build-database-name=html
+      grunt build:make:install --build-product=jumpstart-academic --build-database-name=html
       echo 'Enable relevant modules'
       mkdir -p /var/www/html/sites/all/modules/stanford/stanford_bean_types
       chown -R www-data:www-data /var/www/html/sites/default/files
@@ -42,13 +52,15 @@ steps:
       git checkout shoov
       cp /srv/proboci_assets/behat.local.yml /srv/linky_clicky/sites/probo/behat.local.yml
       echo 'Download shoov tests'
-      cp $ASSETS_DIR/.shoov.json /root/.shoov.json
+      cp $ASSET_DIR/.shoov.json /root/.shoov.json
       mkdir -p /srv/linky_clicky/sites/probo/visual-monitor/test
       cp /srv/proboci_assets/package.json /srv/linky_clicky/sites/probo/package.json
       cd /srv/linky_clicky/sites/probo
       npm install
       cp /srv/proboci_assets/.shoov.yml /srv/linky_clicky/sites/probo/.shoov.yml
       mkdir /srv/linky_clicky/sites/probo/visual-monitor/webdrivercss
+      echo 'Setting 127.0.0.1 to html after loading database' 
+      echo "127.0.0.1 html" >> /etc/hosts
   - name: Copy relevant tests
     script: |
       cp /srv/linky_clicky/includes/features/SU-SWS/stanford_bean_types/stanford_bean_types.feature /srv/linky_clicky/sites/probo/features/.
