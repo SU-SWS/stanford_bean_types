@@ -6,9 +6,8 @@ steps:
     plugin: Script
     script: |
       # Test variables
-      test_feature='stanford_bean_types'
       test_deployer_product='jumpstart-academic'
-      test_product_profile='stanford_sites_jumpstart_academic'
+      test_feature=$(cd /src | echo *.info | cut -f1 -d".")
       # Server setup
       cp $ASSET_DIR/proboci_id_rsa /root/.ssh/id_rsa
       chmod 400 ~/.ssh/id_rsa
@@ -19,22 +18,25 @@ steps:
       source /root/.bash_profile
       mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('root')";
       mysql -u root -proot -e "CREATE DATABASE html";
+      # Downloading Probo CI Assets
+      git clone https://github.com/SU-SWS/proboci_assets.git /srv/proboci_assets
+      cp /srv/proboci_assets/.my.cnf /root/.my.cnf
       # Installing drush
       sudo mkdir --parents /opt/drush-8.x
       cd /opt/drush-8.x
       sudo composer init --require=drush/drush:8.* -n
       sudo composer config bin-dir /usr/local/bin
-      sudo composer install >/dev/null
-      # Downloading Probo CI Assets
-      git clone https://github.com/SU-SWS/proboci_assets.git /srv/proboci_assets
+      sudo composer install &>/dev/null &
+      # Installing parallel
+      (wget -O - pi.dk/3 || curl pi.dk/3/ || fetch -o - http://pi.dk/3) | bash
       # Installing node modules
       npm install -g npm >/dev/null
-      npm install -g gm webdrivercss webdriverio selenium-standalone chromedriver >/dev/null
+      npm install -g selenium-standalone chromedriver >/dev/null
+      selenium-standalone install --silent
       # Installing BeHat
       git clone https://github.com/SU-SWS/linky_clicky.git /srv/linky_clicky
       cd /srv/linky_clicky
-      composer install >/dev/null
-      selenium-standalone install >/dev/null
+      composer install &>/dev/null &
       cp /srv/proboci_assets/behat.local.yml /srv/linky_clicky/sites/probo/behat.local.yml
       cp /srv/linky_clicky/includes/features/SU-SWS/$test_feature/$test_feature.feature /srv/linky_clicky/sites/probo/features/.
       # Downloading and running Jumpstart Deployer
@@ -42,12 +44,20 @@ steps:
       cd /srv/stanford-jumpstart-deployer
       drush make development/product/$test_deployer_product/$test_deployer_product.make /var/www/html
       cp /srv/proboci_assets/.htaccess /var/www/html/.htaccess
+      mkdir -p /var/www/html/sites/default/files/styles
+      chmod -R 777 /var/www/html/sites/default/files
   - name: Building site
-    command: 'service mysql start; cd /var/www/html; drush si $test_product_profile --account-name=admin --db-url="mysql://root:root@localhost/html"'
+    command: '
+      df -h;
+      cd /var/www/html/profiles;
+      test_product_profile=$(echo stanford_sites_jumpstart_*);
+      service mysql start;
+      service mysql reload;
+      service mysql restart;
+      cd /var/www/html;
+      drush si $test_product_profile --account-name=admin --db-url="mysql://root:root@localhost/html"'
   - name: Run relevant Behat tests
-    script: |
-      ls -la /var/www/html/sites/default/files
-      cat /var/www/html/sites/default/files/.htaccess
-      nohup selenium-standalone start &>/dev/null &
-      cd /srv/linky_clicky/sites/probo
-      /srv/linky_clicky/bin/behat features/$test_feature.feature --profile default --suite dev --format pretty
+    command: '
+      test_feature=$(cd /src | echo *.info | cut -f1 -d".");
+      cd /srv/linky_clicky/sites/probo;
+      parallel ::: "nohup selenium-standalone start &>/dev/null &" "/srv/linky_clicky/bin/behat features/$test_feature.feature --profile default --suite dev --format pretty"'
