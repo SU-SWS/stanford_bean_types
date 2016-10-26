@@ -207,6 +207,3 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
   $form['view_mode']['#options'] = $options;
 
 }
-
-
-
