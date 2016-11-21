@@ -1,3 +1,16 @@
+# Several guidelines that I tried to follow when writing this file:
+# 1. Limit Probo CI steps to what we are interested in testing.
+# 2. Limit stdout to what might break or returns test results, which also speeds up builds.
+# 3. Limit what we must upload as assets to what we cannot push to public repositories.
+# 4. Similarly, make it as easy as possible to copy this file to new repositories.
+# 5. To specify the full path, ie. /root/directory, rather than ~/directory.
+#
+# Potential improvements
+# 1. Use Probo CI's Drupal plugin for building products, instead of the deployer.
+# 2. Or using Geppetto, instead of the deployer.
+# 3. Test whether Behat tests requiring @javascript will run with selenium in a separate shell.
+# 4. Right now, my profile variable would not work for JSV, as it assumes a jumpstart_ suffix.
+#
 assets:
   - proboci_id_rsa
   - proboci_id_rsa.pub
@@ -5,10 +18,10 @@ steps:
   - name: Setting up server and installing applications
     plugin: Script
     script: |
-      # Test variables
+      # Set Feature and Product-specific variables
       test_deployer_product='jumpstart-academic'
       test_feature=$(cd /src | echo *.info | cut -f1 -d".")
-      # Server setup
+      # Configure keys and MySQL
       cp $ASSET_DIR/proboci_id_rsa /root/.ssh/id_rsa
       chmod 400 ~/.ssh/id_rsa
       cp $ASSET_DIR/proboci_id_rsa.pub /root/.ssh/id_rsa.pub
@@ -21,7 +34,7 @@ steps:
       # Downloading Probo CI Assets
       git clone https://github.com/SU-SWS/proboci_assets.git /srv/proboci_assets
       cp /srv/proboci_assets/.my.cnf /root/.my.cnf
-      # Installing drush
+      # Installing drush 8
       sudo mkdir --parents /opt/drush-8.x
       cd /opt/drush-8.x
       sudo composer init --require=drush/drush:8.* -n
@@ -31,8 +44,11 @@ steps:
       npm install -g npm >/dev/null
       npm install -g selenium-standalone chromedriver >/dev/null
       selenium-standalone install --silent
+      # Probo CI fails to start selenium-standalone start when run with their command plugin.
+      # But we might need to start selenium in the same shell as we run Behat tests.
+      # And force Probo CI to display Behat test results, if using their script plugin.
       nohup selenium-standalone start &>/dev/null &
-      # Installing BeHat
+      # Installing Behat
       git clone https://github.com/SU-SWS/linky_clicky.git /srv/linky_clicky
       cd /srv/linky_clicky
       composer install &>/dev/null &
