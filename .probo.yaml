@@ -1,6 +1,5 @@
 # This file includes the minimum code required to build and test a site with ProboCI.
 # All other code is stored in SU-SWS/proboci_assets and should be updated there.
-# Best methods for managing keys is still up for discussion.
 
 # Uncomment if building a product other than a self-service site.
 assets:
@@ -18,4 +17,4 @@ steps:
     command: "git clone https://github.com/SU-SWS/proboci_assets.git /srv/proboci_assets;
       cp $ASSET_DIR/proboci_id_rsa.pub /root/.ssh/id_rsa.pub;
       cp $ASSET_DIR/proboci_id_rsa /root/.ssh/id_rsa;
-      /srv/proboci_assets/probo.sh stanford"
+      /srv/proboci_assets/probo.sh"
