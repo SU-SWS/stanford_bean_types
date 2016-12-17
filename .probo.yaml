@@ -9,8 +9,7 @@ assets:
 # Uncomment and place between downloading the proboci_assets repository and running the probo.sh script.
 # Add which product you would like to build by running the script with the name of the profile,
 # ie. /srv/proboci_assets/probo.sh jumpstart-academic
-# Choices include stanford, jumpstart, jumpstart-academic, jumpstart-engineering
-# And jumpstart-plus
+# Choices include stanford, jumpstart, jumpstart-academic, etc.
 
 steps:
   - name: Run tests from external proboci_assets repository
