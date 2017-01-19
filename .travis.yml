@@ -1,6 +1,8 @@
 # The stanford_travisci_scripts repository contains external scripts
 # used here to configure server and build a self-service site.
 # https://github.com/SU-SWS/stanford_travisci_scripts
+# This .travis.yml file assumes all scripts will be run from
+# $TRAVIS_BUILD_DIR, ie. /home/travis/build/SU-SWS/$TEST_FEATURE
 
 language: php
 php:
@@ -20,7 +22,6 @@ before_install:
 
 install:
   # install self-service site, disable webauth module, start webserver and selenium webdriver
-  - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - stanford_travisci_scripts/bin/install.sh
 
 before_script:
@@ -31,4 +32,4 @@ script:
   # make sure shell can find drush and run behat tests here, so Travis CI reports accurate results
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - cd stanford_travisci_scripts
-  - bin/behat
+  - bin/behat -p default -s all -f pretty features
