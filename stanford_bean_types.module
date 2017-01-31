@@ -8,11 +8,13 @@ include_once 'stanford_bean_types.features.inc';
 
 /**
  * Implements hook_bean_types.
+ *
  * This function exists only for installation purposes and beans are
  * exported and managed through the ui.
  * See: https://drupal.org/node/1897834 for issue details.
  *
- * @return array of bean types
+ * @return array
+ *   of bean types
  */
 function stanford_bean_types_bean_types() {
   include_once "stanford_bean_types.bean.inc";
@@ -207,6 +209,3 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
   $form['view_mode']['#options'] = $options;
 
 }
-
-
-
