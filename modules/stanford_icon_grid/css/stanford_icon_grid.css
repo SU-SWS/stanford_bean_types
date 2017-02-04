@@ -1,0 +1,39 @@
+.field-name-field-s-icon-ext-columns {
+  text-align: center;
+  line-height: 1em;
+}
+
+.field-name-field-s-icon-ext-columns .field-collection-view.span4:nth-child(3n+1) {
+  clear: none;
+}
+
+.field-name-field-s-icon-ext-columns i {
+  font-size: 80px;
+  height: 160px;
+  width: 160px;
+  border-radius: 80px;
+  position: relative;
+  margin-bottom: -2.5px;
+}
+
+.field-name-field-s-icon-ext-columns i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.field-name-field-s-icon-ext-columns-up-icon img {
+  height: 80px;
+  width: 80px;
+  padding: 40px;
+  border-radius: 80px;
+}
+
+.field-name-field-s-icon-ext-columns-title {
+  margin: 20px 0;
+}
+
+.field-name-field-s-icon-ext-columns-links {
+  margin-bottom: 20px;
+}

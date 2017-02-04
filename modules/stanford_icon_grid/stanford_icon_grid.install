@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Stanford Icon Grid Install/Schema.
+ */
+
+/**
+ * Implements hook_field_schema().
+ */
+function stanford_icon_grid_field_schema($field) {
+  $schema = array();
+  switch ($field['type']) {
+    case 'fontawesome_icon':
+      $schema = array(
+        'columns' => array(
+          'icon' => array(
+            'type' => 'varchar',
+            'length' => '255',
+            'not null' => FALSE,
+          ),
+        ),
+      );
+      break;
+
+  }
+  return $schema;
+}
