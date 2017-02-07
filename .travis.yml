@@ -1,14 +1,64 @@
 # The stanford_travisci_scripts repository contains external scripts
 # used here to configure server and build a self-service site.
 # https://github.com/SU-SWS/stanford_travisci_scripts
-# This .travis.yml file assumes all scripts will be run from
-# $TRAVIS_BUILD_DIR, ie. /home/travis/build/SU-SWS/$REPOSITORY_NAME
+
+# PRODUCT_NAME:
+# Leave blank to install a self-service site.
+# Or enter the product you would like to build.
+# If installing a product, you will need add the Environment Variable
+# ACCESS_TOKEN, to the settings for this repository at travis-ci.org.
+# The toggle "Display value in build log" should be off before clicking Add.
+# Options include
+# - jumpstart
+# - jumpstart-plus
+# - jumpstart-lab
+# - jumpstart-academic
+# - jumpstart-engineering
+#
+# ENABLE_MODUES:
+# Enter as a space separated string, modules and submodules that you
+# would like to enable after the installation profile has run. Useful
+# for adding additional items.
+# Example:
+# stanford_gallery nobots
+#
+# DISABLE_MODULES:
+# Enter as a space separated string, modules you would like disabled after the
+# installation profile has run.
+# Example:
+# webauth webauth_extras
+#
+# DEPLOYER_BRANCH:
+# Leave blank to use the default stanford-jumpstart-deployer branch.
+# Example:
+# basic-1234
+#
+# DRUPAL_PROFILE_BRANCH:
+# Leave blank to use the default Stanford-Drupal-Profile branch.
+#
+# CLICKY_BRANCH:
+# Leave blank to use the default linky_clicky branch.
+# Example:
+# 4.x
+#
+# SCRIPTS_BRANCH:
+# Leave blank to use the default stanford_travisci_scripts branch.
+# Example:
+# testing
+
+env:
+  global:
+    - PRODUCT_NAME="jumpstart-academic"
+    - ENABLE_MODULES=""
+    - DISABLE_MODULES="webauth"
+    - DEPLOYER_BRANCH=""
+    - DRUPAL_PROFILE_BRANCH=""
+    - CLICKY_BRANCH=""
+    - SCRIPTS_BRANCH=""
 
 language: php
 php:
-  - '5.4'
   - '5.6'
-  - '7.1'
 
 sudo: required
 
@@ -25,7 +75,8 @@ mysql:
 
 before_install:
   # download external repository with Stanford Travis CI scripts
-  - git clone https://github.com/SU-SWS/stanford_travisci_scripts.git $HOME/stanford_travisci_scripts
+  - if [ ! -z $SCRIPTS_BRANCH ]; then SCRIPTS_BRANCH="-b $SCRIPTS_BRANCH"; fi
+  - git clone $SCRIPTS_BRANCH https://github.com/SU-SWS/stanford_travisci_scripts.git $HOME/stanford_travisci_scripts
   - chmod +x $HOME/stanford_travisci_scripts/bin/*.sh
   # install composer packages
   - $HOME/stanford_travisci_scripts/bin/before_install.sh
