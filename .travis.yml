@@ -49,12 +49,12 @@
 env:
   global:
     - PRODUCT_NAME="jumpstart-academic"
-    - ENABLE_MODULES=""
+    - ENABLE_MODULES="stanford_icon_grid stanford_bean_types_permissions ds_bean_fields"
     - DISABLE_MODULES="webauth"
     - DEPLOYER_BRANCH=""
     - DRUPAL_PROFILE_BRANCH=""
     - CLICKY_BRANCH=""
-    - SCRIPTS_BRANCH=""
+    - SCRIPTS_BRANCH="enabletest"
 
 language: php
 php:
