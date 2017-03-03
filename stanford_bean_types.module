@@ -79,11 +79,12 @@ function stanford_bean_types_block_view_alter(&$data, $block) {
 
   // If the block is an icon block we want to remove the subject.
   if ($block->module == "bean") {
-    if ($data["content"]["bean"][$block->delta]["#bundle"] == "stanford_icon_block") {
-      $data["subject"] = "";
+    if (isset($data["content"])) {
+      if ($data["content"]["bean"][$block->delta]["#bundle"] == "stanford_icon_block") {
+        $data["subject"] = "";
+      }
     }
   }
-
 }
 
 /**
