@@ -1,6 +1,10 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-3.1-alpha2                   2017-03-17
+---------------------------------------------
+- fix Notice: Undefined index: content
+
 7.x-3.1-alpha1                   2017-03-02
 ---------------------------------------------
 - Added new icon grid bean type.
