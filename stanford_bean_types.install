@@ -1,12 +1,12 @@
 <?php
+
 /**
  * @file
  * Stanford Bean Types install file functionality.
  */
 
 /**
- * Ensures that any previous modules have the new permissions module enabled
- * when updating.
+ * Ensures that any previous modules have the new permissions module enabled.
  */
 function stanford_bean_types_update_7100(&$sandbox) {
 

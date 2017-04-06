@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Code for the Stanford Bean Types feature.
@@ -7,12 +8,11 @@
 include_once 'stanford_bean_types.features.inc';
 
 /**
- * Implements hook_bean_types.
+ * Implements hook_bean_types().
+ *
  * This function exists only for installation purposes and beans are
  * exported and managed through the ui.
  * See: https://drupal.org/node/1897834 for issue details.
- *
- * @return array of bean types
  */
 function stanford_bean_types_bean_types() {
   include_once "stanford_bean_types.bean.inc";
@@ -41,7 +41,6 @@ function stanford_bean_types_bean_types() {
 
   return $plugins;
 }
-
 
 /**
  * Implements template_preprocess_field().
@@ -97,10 +96,11 @@ function stanford_bean_types_block_view_alter(&$data, $block) {
  */
 function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id) {
   // Change the label and title fields description.
-  $form['title']['#description'] = t('The title displays when the block is displayed on a page. Leave it blank if you don\'t want a title.');
+  $form['title']['#description'] = t("The title displays when the block is displayed on a page. Leave it blank if you don't want a title.");
   $form['label']['#description'] = t('The label identifies the block for administration purposes. It is <em>not displayed</em> when the block is displayed on a page. It is displayed in the admin interface and when the block is edited.');
 
-  // Fix the view_mode select option to only show view modes with custom settings.
+  // Fix the view_mode select option to only show view modes with custom
+  // settings.
   $options = array();
 
   // Always have default.
@@ -134,4 +134,117 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
 
   $form['view_mode']['#options'] = $options;
 
+  // Bean additional settings similar to node form.
+  // @see node_form().
+  $bean = $form_state['bean'];
+
+  $form['additional_settings'] = array(
+    '#type' => 'vertical_tabs',
+    '#weight' => 99,
+  );
+
+  $form['options'] = array(
+    '#type' => 'fieldset',
+    '#access' => user_access('administer beans'),
+    '#title' => t('Publishing options'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'additional_settings',
+    '#attributes' => array(
+      'class' => array('node-form-options'),
+    ),
+    '#attached' => array(
+      'js' => array(drupal_get_path('module', 'node') . '/node.js'),
+    ),
+    '#weight' => 95,
+  );
+  $form['options']['status'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Published'),
+    '#default_value' => $bean->status,
+  );
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function stanford_bean_types_entity_insert($entity, $type) {
+  if ($type == 'bean') {
+    _stanford_bean_types_bean_status_set($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function stanford_bean_types_entity_update($entity, $type) {
+  if ($type == 'bean') {
+    _stanford_bean_types_bean_status_set($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function stanford_bean_types_entity_delete($entity, $type) {
+  if ($type == 'bean') {
+    $entity->status = 0;
+    _stanford_bean_types_bean_status_set($entity);
+  }
+}
+
+/**
+ * Sets a variable if the bean is set to unpublished.
+ *
+ * @param object $bean
+ *   Bean object.
+ */
+function _stanford_bean_types_bean_status_set($bean) {
+  $unpublished = variable_get('stanford_bean_types_unpublished', array());
+  if (!$bean->status) {
+    $unpublished[$bean->bid] = TRUE;
+  }
+  else {
+    unset($unpublished[$bean->bid]);
+  }
+  variable_set('stanford_bean_types_unpublished', $unpublished);
+}
+
+/**
+ * Implements hook_entity_load().
+ */
+function stanford_bean_types_entity_load($entities, $type) {
+  if ($type == 'bean') {
+    $unpublished = variable_get('stanford_bean_types_unpublished', array());
+    foreach ($entities as &$entity) {
+
+      $entity->status = 1;
+      if (isset($unpublished[$entity->bid])) {
+        $entity->status = 0;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_bean_access().
+ */
+function stanford_bean_types_bean_access($bean, $operation, $account) {
+  if ($operation == "view" && isset($bean->status) && !$bean->status) {
+    return FALSE;
+  }
+  return TRUE;
+}
+
+/**
+ * Implements hook_preprocess_entity().
+ */
+function stanford_bean_types_preprocess_entity(&$vars) {
+  if ($vars['entity_type'] == 'bean') {
+    drupal_add_css(drupal_get_path('module', 'stanford_bean_types') . '/css/stanford_bean_types.css');
+
+    if (!$vars['bean']->status) {
+      $vars['classes_array'][] = 'unpublished';
+    }
+  }
 }
