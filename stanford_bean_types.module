@@ -200,14 +200,16 @@ function stanford_bean_types_entity_delete($entity, $type) {
  *   Bean object.
  */
 function _stanford_bean_types_bean_status_set($bean) {
-  $unpublished = variable_get('stanford_bean_types_unpublished', array());
-  if (!$bean->status) {
-    $unpublished[$bean->bid] = TRUE;
+  if (isset($bean->status)) {
+    $unpublished = variable_get('stanford_bean_types_unpublished', array());
+    if (!$bean->status) {
+      $unpublished[$bean->bid] = TRUE;
+    }
+    else {
+      unset($unpublished[$bean->bid]);
+    }
+    variable_set('stanford_bean_types_unpublished', $unpublished);
   }
-  else {
-    unset($unpublished[$bean->bid]);
-  }
-  variable_set('stanford_bean_types_unpublished', $unpublished);
 }
 
 /**
