@@ -161,7 +161,7 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
   $form['options']['status'] = array(
     '#type' => 'checkbox',
     '#title' => t('Published'),
-    '#default_value' => $bean->status,
+    '#default_value' => isset($bean->status) ? $bean->status : 1,
   );
 }
 
