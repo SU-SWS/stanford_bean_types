@@ -15,7 +15,7 @@
   <?php foreach ($items as $delta => $item): ?>
 
     <?php if(!($delta % 3)): ?>
-      <div class="field-items clearfix"<?php print $content_attributes; ?>>
+      <div class="field-items row-fluid clearfix"<?php print $content_attributes; ?>>
     <?php endif; ?>
 
         <div class="field-item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></div>
