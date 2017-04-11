@@ -47,3 +47,72 @@ function stanford_bean_types_update_7201(&$sandbox) {
   }
 
 }
+
+/**
+ * Move links to field collection.
+ */
+function stanford_bean_types_update_7202(&$sandbox) {
+  $query = db_select('bean', 'b')
+    ->fields('b', array('bid'))
+    ->condition('type', 'stanford_social_media_connect')
+    ->execute();
+
+  $fields = array(
+    'field_s_smc_facebook' => array('color-instagram', 'Facebook'),
+    'field_s_smc_flickr' => array('color-flickr', 'Flickr'),
+    'field_s_smc_googleplus' => array('color-google', 'Google Plus'),
+    'field_s_smc_instagram' => array('color-instagram', 'Instagram'),
+    'field_s_smc_linkedin' => array('color-linkedin', 'LinkedIn'),
+    'field_s_smc_pinterest' => array('color-pinterest', 'Pinterest'),
+    'field_s_smc_tumblr' => array('color-tumblr', 'Tumblr'),
+    'field_s_smc_twitter' => array('color-twitter', 'Twitter'),
+    'field_s_smc_vimeo' => array('color-vimeo', 'Vimeo'),
+    'field_s_smc_youtube' => array('color-youtube', 'Youtube'),
+  );
+
+  while ($bid = $query->fetchField()) {
+    $bean = bean_load($bid);
+    $urls = array();
+
+
+    foreach (array_keys($fields) as $field_name) {
+      if (!empty($bean->$field_name)) {
+        $urls[$field_name] = $bean->{$field_name}[LANGUAGE_NONE][0]['url'];
+      }
+    }
+
+    foreach ($urls as $field => $url) {
+      list($class, $title) = $fields[$field];
+      $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_s_smc_links'));
+      $field_collection_item->setHostEntity('bean', $bean);
+      $field_collection_item->field_s_smc_icon[LANGUAGE_NONE][0]['icon'] = str_replace(' ', '-', strtolower($title));
+      $field_collection_item->field_s_smc_link[LANGUAGE_NONE][0] = array(
+        'url' => $url,
+        'title' => $title,
+      );
+      $field_collection_item->field_s_smc_color[LANGUAGE_NONE][0]['value'] = $class;
+      $field_collection_item->save();
+    }
+  }
+}
+
+/**
+ * Delete old fields.
+ */
+function stanford_bean_types_update_7203(&$sandbox) {
+  $fields = array(
+    'field_s_smc_facebook',
+    'field_s_smc_flickr',
+    'field_s_smc_googleplus',
+    'field_s_smc_instagram',
+    'field_s_smc_linkedin',
+    'field_s_smc_pinterest',
+    'field_s_smc_tumblr',
+    'field_s_smc_twitter',
+    'field_s_smc_vimeo',
+    'field_s_smc_youtube',
+  );
+  foreach ($fields as $field) {
+    field_delete_field($field);
+  }
+}
