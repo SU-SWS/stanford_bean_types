@@ -30,6 +30,7 @@
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon a:hover, .bean-stanford-social-media-connect .field-type-fontawesome-icon a:focus {
   opacity: 1;
+  text-decoration: none;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon i {
   display: table-cell;

@@ -52,6 +52,10 @@ function stanford_bean_types_update_7201(&$sandbox) {
  * Move links to field collection.
  */
 function stanford_bean_types_update_7202(&$sandbox) {
+  features_revert(array(
+    'stanford_bean_types' => array('field_base', 'field_instance'),
+  ));
+
   $query = db_select('bean', 'b')
     ->fields('b', array('bid'))
     ->condition('type', 'stanford_social_media_connect')
