@@ -78,15 +78,15 @@ function stanford_bean_types_update_7202(&$sandbox) {
 
   $fields = array(
     'field_s_smc_facebook' => array('color-instagram', 'Facebook'),
-    'field_s_smc_flickr' => array('color-flickr', 'Flickr'),
-    'field_s_smc_googleplus' => array('color-google', 'Google Plus'),
-    'field_s_smc_instagram' => array('color-instagram', 'Instagram'),
-    'field_s_smc_linkedin' => array('color-linkedin', 'LinkedIn'),
-    'field_s_smc_pinterest' => array('color-pinterest', 'Pinterest'),
-    'field_s_smc_tumblr' => array('color-tumblr', 'Tumblr'),
     'field_s_smc_twitter' => array('color-twitter', 'Twitter'),
-    'field_s_smc_vimeo' => array('color-vimeo', 'Vimeo'),
+    'field_s_smc_googleplus' => array('color-google', 'Google Plus'),
+    'field_s_smc_linkedin' => array('color-linkedin', 'LinkedIn'),
+    'field_s_smc_instagram' => array('color-instagram', 'Instagram'),
     'field_s_smc_youtube' => array('color-youtube', 'Youtube'),
+    'field_s_smc_vimeo' => array('color-vimeo', 'Vimeo'),
+    'field_s_smc_tumblr' => array('color-tumblr', 'Tumblr'),
+    'field_s_smc_pinterest' => array('color-pinterest', 'Pinterest'),
+    'field_s_smc_flickr' => array('color-flickr', 'Flickr'),
   );
 
   // Move link field data to field collections.
