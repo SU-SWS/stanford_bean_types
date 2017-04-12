@@ -2,18 +2,17 @@
   .field-type-link-field a {
     color: transparent;
     display: inline-block;
-    float: left;
     font-size: 0;
     height: 48px;
     margin-bottom: 5px;
     margin-right: 5px;
     width: 48px;
     opacity: 0.7;
-    filter: alpha(opacity=40);
+    filter: alpha(opacity = 40);
 
     &:hover {
       opacity: 1;
-      filter: alpha(opacity=100);
+      filter: alpha(opacity = 100);
     }
   }
 
@@ -34,6 +33,7 @@
       color: #ffffff;
       margin: 0 4px;
       opacity: .7;
+
       &:hover,
       &:focus {
         opacity: 1;
@@ -47,32 +47,41 @@
     }
 
     &.color-facebook a {
-      background: #39599F;
+      background: #39599f;
     }
+
     &.color-twitter a {
-      background: #45B0E3;
+      background: #45b0e3;
     }
+
     &.color-google a {
-      background: #2369A6;
+      background: #2369a6;
     }
+
     &.color-linkedin a {
-      background: #82C6DA;
+      background: #82c6da;
     }
+
     &.color-instagram a {
-      background: #2E5E86;
+      background: #2e5e86;
     }
+
     &.color-youtube a {
-      background: #DE4444;
+      background: #de4444;
     }
+
     &.color-vimeo a {
-      background: #90D7FF;
+      background: #90d7ff;
     }
+
     &.color-tumblr a {
-      background: #34414C;
+      background: #34414c;
     }
+
     &.color-pinterest a {
-      background: #CB2027;
+      background: #cb2027;
     }
+
     &.color-flickr a {
       border: 1px solid #808080;
       color: #000;

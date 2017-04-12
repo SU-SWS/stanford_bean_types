@@ -23,7 +23,7 @@ function stanford_bean_types_bean_types() {
   foreach ($types as $k => $bean_type) {
     $plugins[$k] = array(
       'label' => $bean_type->name,
-      'description' => t($bean_type->description),
+      'description' => $bean_type->description,
       'handler' => array(
         'class' => 'BeanDefault',
         'parent' => 'bean',

@@ -1,7 +1,6 @@
 .bean-stanford-social-media-connect .field-type-link-field a {
   color: transparent;
   display: inline-block;
-  float: left;
   font-size: 0;
   height: 48px;
   margin-bottom: 5px;
@@ -37,31 +36,31 @@
   vertical-align: middle;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-facebook a {
-  background: #39599F;
+  background: #39599f;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-twitter a {
-  background: #45B0E3;
+  background: #45b0e3;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-google a {
-  background: #2369A6;
+  background: #2369a6;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-linkedin a {
-  background: #82C6DA;
+  background: #82c6da;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-instagram a {
-  background: #2E5E86;
+  background: #2e5e86;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-youtube a {
-  background: #DE4444;
+  background: #de4444;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-vimeo a {
-  background: #90D7FF;
+  background: #90d7ff;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-tumblr a {
-  background: #34414C;
+  background: #34414c;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-pinterest a {
-  background: #CB2027;
+  background: #cb2027;
 }
 .bean-stanford-social-media-connect .field-type-fontawesome-icon.color-flickr a {
   border: 1px solid #808080;

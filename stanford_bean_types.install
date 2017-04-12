@@ -52,9 +52,24 @@ function stanford_bean_types_update_7201(&$sandbox) {
  * Move links to field collection.
  */
 function stanford_bean_types_update_7202(&$sandbox) {
-  features_revert(array(
-    'stanford_bean_types' => array('field_base', 'field_instance'),
-  ));
+  module_load_include('inc', 'stanford_bean_types', 'stanford_bean_types.features.field_base');
+  module_load_include('inc', 'stanford_bean_types', 'stanford_bean_types.features.field_instance');
+  $fields = stanford_bean_types_field_default_field_bases();
+  $instances = stanford_bean_types_field_default_field_instances();
+
+  // Create any missing fields.
+  foreach ($fields as $field_name => $field) {
+    if (!field_info_field($field_name)) {
+      field_create_field($field);
+    }
+  }
+
+  // Create any missing instances.
+  foreach ($instances as $instance) {
+    if (!field_info_instance($instance['entity_type'], $instance['field_name'], $instance['bundle'])) {
+      field_create_instance($instance);
+    }
+  }
 
   $query = db_select('bean', 'b')
     ->fields('b', array('bid'))
@@ -74,10 +89,10 @@ function stanford_bean_types_update_7202(&$sandbox) {
     'field_s_smc_youtube' => array('color-youtube', 'Youtube'),
   );
 
+  // Move link field data to field collections.
   while ($bid = $query->fetchField()) {
     $bean = bean_load($bid);
     $urls = array();
-
 
     foreach (array_keys($fields) as $field_name) {
       if (!empty($bean->$field_name)) {
@@ -87,15 +102,15 @@ function stanford_bean_types_update_7202(&$sandbox) {
 
     foreach ($urls as $field => $url) {
       list($class, $title) = $fields[$field];
-      $field_collection_item = entity_create('field_collection_item', array('field_name' => 'field_s_smc_links'));
-      $field_collection_item->setHostEntity('bean', $bean);
-      $field_collection_item->field_s_smc_icon[LANGUAGE_NONE][0]['icon'] = str_replace(' ', '-', strtolower($title));
-      $field_collection_item->field_s_smc_link[LANGUAGE_NONE][0] = array(
+      $field_collection = entity_create('field_collection_item', array('field_name' => 'field_s_smc_links'));
+      $field_collection->setHostEntity('bean', $bean);
+      $field_collection->field_s_smc_icon[LANGUAGE_NONE][0]['icon'] = str_replace(' ', '-', strtolower($title));
+      $field_collection->field_s_smc_link[LANGUAGE_NONE][0] = array(
         'url' => $url,
         'title' => $title,
       );
-      $field_collection_item->field_s_smc_color[LANGUAGE_NONE][0]['value'] = $class;
-      $field_collection_item->save();
+      $field_collection->field_s_smc_color[LANGUAGE_NONE][0]['value'] = $class;
+      $field_collection->save();
     }
   }
 }
