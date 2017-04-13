@@ -33,6 +33,15 @@ function stanford_icon_grid_preprocess_field(&$vars) {
 }
 
 /**
+ * Implements hook_field_attach_form().
+ */
+function stanford_icon_grid_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
+  if (isset($form['field_s_icon_ext_columns_bg_colo'])) {
+    drupal_add_js(drupal_get_path('module', 'stanford_icon_grid') . '/js/stanford_icon_grid.js');
+  }
+}
+
+/**
  * Implements hook_entity_view().
  */
 function stanford_icon_grid_entity_view($entity, $type, $view_mode, $langcode) {
@@ -40,6 +49,7 @@ function stanford_icon_grid_entity_view($entity, $type, $view_mode, $langcode) {
   if ($type != 'field_collection_item' || $entity->field_name != 'field_s_icon_ext_columns') {
     return;
   }
+  drupal_add_css(drupal_get_path('module', 'stanford_icon_grid') . '/css/stanford_icon_grid.css');
 
   // Only want to use the color, but not display it.
   unset($entity->content['field_s_icon_ext_columns_bg_colo']);

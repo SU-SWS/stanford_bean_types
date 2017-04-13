@@ -23,7 +23,7 @@ function stanford_bean_types_bean_types() {
   foreach ($types as $k => $bean_type) {
     $plugins[$k] = array(
       'label' => $bean_type->name,
-      'description' => t($bean_type->description),
+      'description' => $bean_type->description,
       'handler' => array(
         'class' => 'BeanDefault',
         'parent' => 'bean',
@@ -47,6 +47,11 @@ function stanford_bean_types_bean_types() {
  */
 function stanford_bean_types_preprocess_field(&$variables) {
   $field_name = $variables['element']['#field_name'];
+  if ($field_name == 'field_s_smc_icon') {
+    $field_collection = $variables['element']['#object'];
+    $variables['classes_array'][] = $field_collection->field_s_smc_color[LANGUAGE_NONE][0]['value'];
+  }
+
   $fields = array(
     'field_s_smc_facebook' => 'facebook.png',
     'field_s_smc_flickr' => 'flickr.png',
@@ -58,6 +63,7 @@ function stanford_bean_types_preprocess_field(&$variables) {
     'field_s_smc_vimeo' => 'vimeo.png',
     'field_s_smc_youtube' => 'youtube.png',
     'field_s_smc_instagram' => 'instagram.png',
+    'field_s_smc_mail' => 'mail.png',
   );
 
   if (array_key_exists($field_name, $fields)) {
@@ -248,5 +254,14 @@ function stanford_bean_types_preprocess_entity(&$vars) {
     if (!$vars['bean']->status) {
       $vars['classes_array'][] = 'unpublished';
     }
+  }
+}
+
+/**
+ * Implements hook_field_attach_form().
+ */
+function stanford_bean_types_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
+  if (isset($form['field_s_smc_color'])) {
+    drupal_add_css(drupal_get_path('module', 'stanford_bean_types') . '/css/stanford_bean_types.admin.css');
   }
 }
