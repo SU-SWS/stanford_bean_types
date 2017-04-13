@@ -1,0 +1,47 @@
+
+.field-name-field-s-smc-color {
+  option {
+    color: #fff;
+
+    &[value*="color-facebook"] {
+      background: #39599f;
+    }
+
+    &[value*="color-twitter"] {
+      background: #45b0e3;
+    }
+
+    &[value*="color-google"] {
+      background: #2369a6;
+    }
+
+    &[value*="color-linkedin"] {
+      background: #82c6da;
+    }
+
+    &[value*="color-instagram"] {
+      background: #2e5e86;
+    }
+
+    &[value*="color-youtube"] {
+      background: #de4444;
+    }
+
+    &[value*="color-vimeo"] {
+      background: #90d7ff;
+    }
+
+    &[value*="color-tumblr"] {
+      background: #34414c;
+    }
+
+    &[value*="color-pinterest"] {
+      background: #cb2027;
+    }
+
+    &[value*="color-flickr"] {
+      border: 1px solid #808080;
+      color: #000;
+    }
+  }
+}

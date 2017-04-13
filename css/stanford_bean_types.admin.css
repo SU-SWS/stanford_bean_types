@@ -1,0 +1,34 @@
+.field-name-field-s-smc-color option {
+  color: #fff;
+}
+.field-name-field-s-smc-color option[value*="color-facebook"] {
+  background: #39599f;
+}
+.field-name-field-s-smc-color option[value*="color-twitter"] {
+  background: #45b0e3;
+}
+.field-name-field-s-smc-color option[value*="color-google"] {
+  background: #2369a6;
+}
+.field-name-field-s-smc-color option[value*="color-linkedin"] {
+  background: #82c6da;
+}
+.field-name-field-s-smc-color option[value*="color-instagram"] {
+  background: #2e5e86;
+}
+.field-name-field-s-smc-color option[value*="color-youtube"] {
+  background: #de4444;
+}
+.field-name-field-s-smc-color option[value*="color-vimeo"] {
+  background: #90d7ff;
+}
+.field-name-field-s-smc-color option[value*="color-tumblr"] {
+  background: #34414c;
+}
+.field-name-field-s-smc-color option[value*="color-pinterest"] {
+  background: #cb2027;
+}
+.field-name-field-s-smc-color option[value*="color-flickr"] {
+  border: 1px solid #808080;
+  color: #000;
+}

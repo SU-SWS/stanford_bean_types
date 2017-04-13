@@ -256,3 +256,13 @@ function stanford_bean_types_preprocess_entity(&$vars) {
     }
   }
 }
+
+/**
+ * Implements hook_field_attach_form().
+ */
+function stanford_bean_types_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
+  if (isset($form['field_s_smc_color'])) {
+    dpm(drupal_get_path('module', 'stanford_bean_types') . '/css/stanford_bean_types.admin.css');
+    drupal_add_css(drupal_get_path('module', 'stanford_bean_types') . '/css/stanford_bean_types.admin.css');
+  }
+}
