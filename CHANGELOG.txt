@@ -1,6 +1,10 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-3.2-alpha1                   2017-04-21
+---------------------------------------------
+- Bean status options
+
 7.x-3.1-alpha2                   2017-03-17
 ---------------------------------------------
 - fix Notice: Undefined index: content
