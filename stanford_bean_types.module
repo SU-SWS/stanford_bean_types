@@ -265,3 +265,12 @@ function stanford_bean_types_field_attach_form($entity_type, $entity, &$form, &$
     drupal_add_css(drupal_get_path('module', 'stanford_bean_types') . '/css/stanford_bean_types.admin.css');
   }
 }
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function stanford_bean_types_field_widget_form_alter(&$element, &$form_state, $context) {
+  if (isset($element['field_s_smc_color'])) {
+    $element['field_s_smc_color'][LANGUAGE_NONE]['#chosen'] = FALSE;
+  }
+}

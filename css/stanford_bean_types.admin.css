@@ -32,3 +32,40 @@
   border: 1px solid #808080;
   color: #000;
 }
+.field-name-field-s-smc-color option[value*="color-red"] {
+  background: #8c1515;
+}
+.field-name-field-s-smc-color option[value*="color-black"] {
+  background: #000000;
+}
+.field-name-field-s-smc-color option[value*="color-white"] {
+  border: 1px solid #fff;
+  color: #000;
+}
+.field-name-field-s-smc-color option[value*="color-cool-gray"] {
+  background: #4d4f53;
+}
+.field-name-field-s-smc-color option[value*="color-dark-taupe"] {
+  background: #928b81;
+}
+.field-name-field-s-smc-color option[value*="color-light-taupe"] {
+  background: #d5d0c0;
+}
+.field-name-field-s-smc-color option[value*="color-deep-blue"] {
+  background: #006374;
+}
+.field-name-field-s-smc-color option[value*="color-deep-purple"] {
+  background: #53284f;
+}
+.field-name-field-s-smc-color option[value*="color-bright-green"] {
+  background: #009b76;
+}
+.field-name-field-s-smc-color option[value*="color-bright-blue"] {
+  background: #0f6c91;
+}
+.field-name-field-s-smc-color option[value*="color-bright-yellow"] {
+  background: #eaab00;
+}
+.field-name-field-s-smc-color option[value*="color-bright-orange"] {
+  background: #e98300;
+}
