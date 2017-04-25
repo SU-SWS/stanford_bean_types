@@ -76,7 +76,7 @@ function stanford_icon_grid_field_default_field_bases() {
     'field_name' => 'field_s_icon_ext_columns_fa_icon',
     'indexes' => array(),
     'locked' => 0,
-    'module' => 'stanford_icon_grid',
+    'module' => 'stanford_field_formatters',
     'settings' => array(),
     'translatable' => 0,
     'type' => 'fontawesome_icon',
