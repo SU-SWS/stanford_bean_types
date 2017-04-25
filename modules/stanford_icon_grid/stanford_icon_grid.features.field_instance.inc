@@ -101,14 +101,14 @@ function stanford_icon_grid_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'stanford_icon_grid',
+        'module' => 'stanford_field_formatters',
         'settings' => array(),
         'type' => 'fontawesome_icon_formatter',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'stanford_icon_grid',
+        'module' => 'stanford_field_formatters',
         'settings' => array(),
         'type' => 'fontawesome_icon_formatter',
         'weight' => 1,
@@ -123,7 +123,7 @@ function stanford_icon_grid_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'stanford_icon_grid',
+      'module' => 'stanford_field_formatters',
       'settings' => array(),
       'type' => 'fontawesome_icon_widget',
       'weight' => 0,
