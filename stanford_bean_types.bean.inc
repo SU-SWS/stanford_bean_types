@@ -83,5 +83,14 @@ You can insert files and images into your body content. There is no header image
   $bean_type->description = 'Testimonial blocks are used to feature a headshot, quote, and attribution.';
   $export['stanford_testimonial_block'] = $bean_type;
 
+  $bean_type = new stdClass();
+  $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
+  $bean_type->api_version = 5;
+  $bean_type->name = 'test';
+  $bean_type->label = 'stanford_fw_image';
+  $bean_type->options = '';
+  $bean_type->description = '';
+  $export['test'] = $bean_type;
+
   return $export;
 }
