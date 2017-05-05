@@ -304,73 +304,6 @@ function stanford_bean_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_s_fw_image_content|bean|test|default';
-  $field_group->group_name = 'group_s_fw_image_content';
-  $field_group->entity_type = 'bean';
-  $field_group->bundle = 'test';
-  $field_group->mode = 'default';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Content Container',
-    'weight' => '2',
-    'children' => array(
-      0 => 'field_s_fw_image_body',
-      1 => 'field_s_fw_image_file_insert',
-      2 => 'field_s_fw_image_read_more_link',
-      3 => 'title',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'label' => 'Content Container',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => 'group-s-fw-image-content field-group-div well',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups['group_s_fw_image_content|bean|test|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_s_fw_image_image_container|bean|test|default';
-  $field_group->group_name = 'group_s_fw_image_image_container';
-  $field_group->entity_type = 'bean';
-  $field_group->bundle = 'test';
-  $field_group->mode = 'default';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Image Container',
-    'weight' => '0',
-    'children' => array(
-      0 => 'field_fw_image_image',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'label' => 'Image Container',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => 'group-s-fw-image-image-container field-group-div',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups['group_s_fw_image_image_container|bean|test|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_s_more_link_style|bean|stanford_big_text_block|default';
   $field_group->group_name = 'group_s_more_link_style';
   $field_group->entity_type = 'bean';
@@ -1079,9 +1012,7 @@ function stanford_bean_types_field_group_info() {
   t('Address');
   t('Big Text');
   t('Circle Image');
-  t('Content Container');
   t('Credits');
-  t('Image Container');
   t('More Link');
   t('Postcard');
   t('Postcard Content');
