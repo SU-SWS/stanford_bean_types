@@ -1,0 +1,93 @@
+.field-name-field-s-icon-ext-columns {
+  text-align: center;
+  line-height: 1em;
+
+  .field-collection-view.span4:nth-child(3n+1) {
+    clear: none;
+  }
+
+}
+
+.field-name-field-s-icon-ext-columns-title {
+  margin: 20px 0;
+}
+
+.field-name-field-s-icon-ext-columns-links {
+  margin-bottom: 20px;
+}
+
+.field-name-field-s-icon-ext-columns-fa-icon,
+.field-name-field-s-icon-ext-columns-up-icon {
+  font-size: 80px;
+  height: 160px;
+  width: 160px;
+  border-radius: 80px;
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  img {
+    max-height: 80px;
+    max-width: 80px;
+  }
+
+  .icon-color-ffffff & {
+    color: #ffffff;
+  }
+
+  .icon-color-000000 & {
+    color: #000000;
+  }
+
+  .icon-background-8c1515 & {
+    background-color: #8c1515;
+  }
+
+  .icon-background-000000 & {
+    background-color: #000000;
+  }
+
+  .icon-background-ffffff & {
+    background-color: #ffffff;
+  }
+
+  .icon-background-4d4f53 & {
+    background-color: #4d4f53;
+  }
+
+  .icon-background-928b81 & {
+    background-color: #928b81;
+  }
+
+  .icon-background-d5d0c0 & {
+    background-color: #d5d0c0;
+  }
+
+  .icon-background-006374 & {
+    background-color: #006374;
+  }
+
+  .icon-background-53284f & {
+    background-color: #53284f;
+  }
+
+  .icon-background-009b76 & {
+    background-color: #009b76;
+  }
+
+  .icon-background-0f6c91 & {
+    background-color: #0f6c91;
+  }
+
+  .icon-background-eaab00 & {
+    background-color: #eaab00;
+  }
+
+  .icon-background-e98300 & {
+    background-color: #e98300;
+  }
+
+}

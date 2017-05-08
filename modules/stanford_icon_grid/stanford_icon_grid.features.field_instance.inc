@@ -58,12 +58,30 @@ function stanford_icon_grid_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_key',
         'weight' => 0,
       ),
-      'full' => array(
+      'stanford_block' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'stanford_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'stanford_tiles' => array(
         'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
@@ -81,9 +99,11 @@ function stanford_icon_grid_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -104,9 +124,28 @@ function stanford_icon_grid_field_default_field_instances() {
         'module' => 'stanford_field_formatters',
         'settings' => array(),
         'type' => 'fontawesome_icon_formatter',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'full' => array(
+        'label' => 'hidden',
+        'module' => 'stanford_field_formatters',
+        'settings' => array(),
+        'type' => 'fontawesome_icon_formatter',
+        'weight' => 1,
+      ),
+      'stanford_block' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'stanford_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'stanford_tiles' => array(
         'label' => 'hidden',
         'module' => 'stanford_field_formatters',
         'settings' => array(),
@@ -126,7 +165,7 @@ function stanford_icon_grid_field_default_field_instances() {
       'module' => 'stanford_field_formatters',
       'settings' => array(),
       'type' => 'fontawesome_icon_widget',
-      'weight' => 0,
+      'weight' => 2,
     ),
   );
 
@@ -151,6 +190,27 @@ function stanford_icon_grid_field_default_field_instances() {
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 4,
+      ),
+      'stanford_block' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+      'stanford_list' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 6,
+      ),
+      'stanford_tiles' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -185,7 +245,61 @@ function stanford_icon_grid_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 4,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_s_icon_ext_columns-field_s_icon_ext_columns_style'.
+  $field_instances['field_collection_item-field_s_icon_ext_columns-field_s_icon_ext_columns_style'] = array(
+    'bundle' => 'field_s_icon_ext_columns',
+    'default_value' => array(
+      0 => array(
+        'value' => 'icon',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'stanford_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'stanford_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'stanford_tiles' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_s_icon_ext_columns_style',
+    'label' => 'Icon Style',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 1,
     ),
   );
 
@@ -210,6 +324,27 @@ function stanford_icon_grid_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 3,
+      ),
+      'stanford_block' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'stanford_list' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'stanford_tiles' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -253,7 +388,7 @@ function stanford_icon_grid_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -266,6 +401,12 @@ function stanford_icon_grid_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -274,7 +415,23 @@ function stanford_icon_grid_field_default_field_instances() {
         'type' => 'image',
         'weight' => 2,
       ),
-      'full' => array(
+      'stanford_block' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'stanford_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'stanford_tiles' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
@@ -411,7 +568,7 @@ function stanford_icon_grid_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 1,
+      'weight' => 3,
     ),
   );
 
@@ -421,6 +578,7 @@ function stanford_icon_grid_field_default_field_instances() {
   t('Column Title');
   t('Columns');
   t('Font Awesome Icon');
+  t('Icon Style');
   t('Links');
   t('Upload Icon');
 

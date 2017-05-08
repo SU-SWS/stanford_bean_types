@@ -21,11 +21,15 @@ function stanford_icon_grid_field_default_field_bases() {
       'revision_id' => array(
         0 => 'revision_id',
       ),
+      'value' => array(
+        0 => 'value',
+      ),
     ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
       'hide_blank_items' => 1,
+      'hide_initial_item' => FALSE,
       'path' => '',
     ),
     'translatable' => 0,
@@ -77,7 +81,9 @@ function stanford_icon_grid_field_default_field_bases() {
     'indexes' => array(),
     'locked' => 0,
     'module' => 'stanford_field_formatters',
-    'settings' => array(),
+    'settings' => array(
+      'subset' => NULL,
+    ),
     'translatable' => 0,
     'type' => 'fontawesome_icon',
   );
@@ -109,6 +115,32 @@ function stanford_icon_grid_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'link_field',
+  );
+
+  // Exported field_base: 'field_s_icon_ext_columns_style'.
+  $field_bases['field_s_icon_ext_columns_style'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_s_icon_ext_columns_style',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'icon' => 'FontAwesome Icon',
+        'image' => 'Image File',
+        'text' => 'Text/Number',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_s_icon_ext_columns_title'.
