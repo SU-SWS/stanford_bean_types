@@ -51,7 +51,7 @@ function stanford_icon_grid_preprocess_entity(&$vars) {
   }
   drupal_add_css(drupal_get_path('module', 'stanford_icon_grid') . '/css/stanford_icon_grid.css');
 
-  $colors = $entity->field_s_icon_ext_columns_bg_colo['und'][0]['value'];
+  $colors = $entity->field_s_icon_ext_columns_bg_colo[LANGUAGE_NONE][0]['value'];
   if (strpos($colors, ',') !== FALSE) {
     list($background, $font) = explode(',', $colors);
     $vars['classes_array'][] = 'icon-color-' . trim($font, ', #');
@@ -64,11 +64,11 @@ function stanford_icon_grid_preprocess_entity(&$vars) {
 }
 
 /**
- * Implementation of hook_entity_view_mode_alter().
+ * Implements hook_entity_view_mode_alter().
  */
 function stanford_icon_grid_entity_view_mode_alter(&$view_mode, $context) {
   if ($context['entity_type'] == 'field_collection_item' && $context['entity']->field_name == 'field_s_icon_ext_columns') {
-    switch ($context['entity']->field_s_icon_ext_columns_style['und'][0]['value']) {
+    switch ($context['entity']->field_s_icon_ext_columns_style[LANGUAGE_NONE][0]['value']) {
       case 'image':
         $view_mode = 'stanford_block';
         break;

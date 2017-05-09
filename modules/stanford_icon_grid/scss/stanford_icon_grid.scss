@@ -25,10 +25,12 @@
   position: relative;
   margin: 0 auto;
   display: table;
+
   > div {
     display: table-cell;
     vertical-align: middle;
   }
+
   img {
     max-height: 80px;
     max-width: 80px;
