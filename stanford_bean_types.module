@@ -101,6 +101,42 @@ function stanford_bean_types_block_view_alter(&$data, $block) {
  * with irrelevant view modes that do not necessarily apply to this bean.
  */
 function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id) {
+  if ($form_state['bean']->type == 'stanford_fw_image_block') {
+    // Hide title field so a user can't change it.
+    $form['title']['#type'] = 'hidden';
+    $form['title']['#value'] = $form['title']['#default_value'];
+  }
+
+  // Bean additional settings similar to node form.
+  // @see node_form().
+  $bean = $form_state['bean'];
+
+  $form['additional_settings'] = array(
+    '#type' => 'vertical_tabs',
+    '#weight' => 99,
+  );
+
+  $form['options'] = array(
+    '#type' => 'fieldset',
+    '#access' => user_access('administer beans'),
+    '#title' => t('Publishing options'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'additional_settings',
+    '#attributes' => array(
+      'class' => array('node-form-options'),
+    ),
+    '#attached' => array(
+      'js' => array(drupal_get_path('module', 'node') . '/node.js'),
+    ),
+    '#weight' => 95,
+  );
+  $form['options']['status'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Published'),
+    '#default_value' => isset($bean->status) ? $bean->status : 1,
+  );
+
   // Change the label and title fields description.
   $form['title']['#description'] = t("The title displays when the block is displayed on a page. Leave it blank if you don't want a title.");
   $form['label']['#description'] = t('The label identifies the block for administration purposes. It is <em>not displayed</em> when the block is displayed on a page. It is displayed in the admin interface and when the block is edited.');
@@ -139,36 +175,6 @@ function stanford_bean_types_form_bean_form_alter(&$form, $form_state, $form_id)
   $options = array_merge($options, $enabled);
 
   $form['view_mode']['#options'] = $options;
-
-  // Bean additional settings similar to node form.
-  // @see node_form().
-  $bean = $form_state['bean'];
-
-  $form['additional_settings'] = array(
-    '#type' => 'vertical_tabs',
-    '#weight' => 99,
-  );
-
-  $form['options'] = array(
-    '#type' => 'fieldset',
-    '#access' => user_access('administer beans'),
-    '#title' => t('Publishing options'),
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-    '#group' => 'additional_settings',
-    '#attributes' => array(
-      'class' => array('node-form-options'),
-    ),
-    '#attached' => array(
-      'js' => array(drupal_get_path('module', 'node') . '/node.js'),
-    ),
-    '#weight' => 95,
-  );
-  $form['options']['status'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Published'),
-    '#default_value' => isset($bean->status) ? $bean->status : 1,
-  );
 }
 
 /**
