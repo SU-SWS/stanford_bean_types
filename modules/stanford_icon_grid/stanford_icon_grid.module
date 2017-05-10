@@ -54,13 +54,13 @@ function stanford_icon_grid_preprocess_entity(&$vars) {
   $colors = $entity->field_s_icon_ext_columns_bg_colo[LANGUAGE_NONE][0]['value'];
   if (strpos($colors, ',') !== FALSE) {
     list($background, $font) = explode(',', $colors);
-    $vars['classes_array'][] = 'icon-color-' . trim($font, ', #');
+    $vars['classes_array'][] = 'color-icon-' . trim($font, ', #');
   }
   else {
     $background = $colors;
   }
 
-  $vars['classes_array'][] = 'icon-background-' . trim($background, ', #');
+  $vars['classes_array'][] = 'background-icon-' . trim($background, ', #');
 }
 
 /**
