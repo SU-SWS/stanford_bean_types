@@ -8,7 +8,7 @@
 /**
  * Populate fields so display settings work.
  */
-function stanford_icon_grid_update_7302() {
+function stanford_icon_grid_update_7300() {
   $blocks = db_select('bean', 'b')
     ->fields('b', array('bid', 'delta'))
     ->condition('type', 'stanford_icon_grid')
