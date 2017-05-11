@@ -33,11 +33,11 @@ function stanford_icon_grid_preprocess_field(&$vars) {
 }
 
 /**
- * Implements hook_field_attach_form().
+ * Implements hook_form_FORM_ID_alter().
  */
-function stanford_icon_grid_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
-  if (isset($form['field_s_icon_ext_columns_bg_colo'])) {
-    drupal_add_js(drupal_get_path('module', 'stanford_icon_grid') . '/js/stanford_icon_grid.js');
+function stanford_icon_grid_form_bean_form_alter(&$form, &$form_state, $form_id) {
+  if ($form['#bundle'] == 'stanford_icon_grid') {
+    $form['#attached']['js'][] = drupal_get_path('module', 'stanford_icon_grid') . '/js/stanford_icon_grid.js';
   }
 }
 
