@@ -42,6 +42,33 @@ function stanford_icon_grid_field_attach_form($entity_type, $entity, &$form, &$f
 }
 
 /**
+ * Implements hook_field_attach_validate().
+ */
+function stanford_icon_grid_field_attach_validate($entity_type, $entity, &$errors) {
+  if ($entity_type == 'field_collection_item' && $entity->field_name == 'field_s_icon_ext_columns') {
+    if ($entity->field_s_icon_ext_columns_style[LANGUAGE_NONE][0]['value'] == 'text' && !empty($entity->field_s_icon_ext_columns_bg_colo)) {
+
+      $background = $entity->field_s_icon_ext_columns_bg_colo[LANGUAGE_NONE][0]['value'];
+
+      $bad_contrast = array(
+        '#d5d0c0,#ffffff',
+        '#eaab00,#ffffff',
+        '#e98300,#ffffff',
+      );
+
+      // To prevent a user from an inaccessible color choice, display an error
+      // with invalid choices.
+      if (in_array($background, $bad_contrast)) {
+        $errors['field_s_icon_ext_columns_bg_colo'][LANGUAGE_NONE][0][] = array(
+          'error' => 'field_example_invalid',
+          'message' => t('Invalid background color choice. Please choose one with greater contrast for the text.'),
+        );
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_entity().
  */
 function stanford_icon_grid_preprocess_entity(&$vars) {
