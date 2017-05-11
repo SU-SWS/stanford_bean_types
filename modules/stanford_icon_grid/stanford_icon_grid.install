@@ -14,11 +14,10 @@ function stanford_icon_grid_update_7300() {
     ->condition('type', 'stanford_icon_grid')
     ->execute()->fetchAllKeyed();
 
-  foreach ($blocks as $bid => $delta) {
+  foreach (array_keys($blocks) as $bid) {
     $bean = bean_load($bid, TRUE);
     $collections = field_get_items('bean', $bean, 'field_s_icon_ext_columns');
     foreach ($collections as $collection_value) {
-      $changed = FALSE;
 
       $field_collection = field_collection_item_load($collection_value['value'], TRUE);
 
