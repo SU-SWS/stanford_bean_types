@@ -27,8 +27,6 @@
       }
 
       function iconStyleHideShow(fieldset, value) {
-        console.log(fieldset);
-        console.log(value);
         var showFields = ['.field-name-field-s-icon-ext-columns-style'];
         var hideFields = [];
 
