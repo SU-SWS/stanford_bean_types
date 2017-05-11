@@ -68,14 +68,16 @@ function stanford_icon_grid_preprocess_entity(&$vars) {
  */
 function stanford_icon_grid_entity_view_mode_alter(&$view_mode, $context) {
   if ($context['entity_type'] == 'field_collection_item' && $context['entity']->field_name == 'field_s_icon_ext_columns') {
-    switch ($context['entity']->field_s_icon_ext_columns_style[LANGUAGE_NONE][0]['value']) {
-      case 'image':
-        $view_mode = 'stanford_block';
-        break;
+    if (!empty($context['entity']->field_s_icon_ext_columns_style)) {
+      switch ($context['entity']->field_s_icon_ext_columns_style[LANGUAGE_NONE][0]['value']) {
+        case 'image':
+          $view_mode = 'stanford_block';
+          break;
 
-      case 'text':
-        $view_mode = 'stanford_list';
-        break;
+        case 'text':
+          $view_mode = 'stanford_list';
+          break;
+      }
     }
   }
 }
