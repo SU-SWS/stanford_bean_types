@@ -8,7 +8,7 @@
 /**
  * Populate fields so display settings work.
  */
-function stanford_icon_grid_update_7301() {
+function stanford_icon_grid_update_7302() {
   $blocks = db_select('bean', 'b')
     ->fields('b', array('bid', 'delta'))
     ->condition('type', 'stanford_icon_grid')
@@ -23,15 +23,16 @@ function stanford_icon_grid_update_7301() {
       $field_collection = field_collection_item_load($collection_value['value'], TRUE);
 
       // If the bean doesnt have its style set but has an image uploaded.
-      if (empty($field_collection->field_s_icon_ext_columns_style) && !empty($field_collection->field_s_icon_ext_columns_up_icon)) {
-        $field_collection->field_s_icon_ext_columns_style[LANGUAGE_NONE][0]['value'] = 'image';
-        $changed = TRUE;
+      if (empty($field_collection->field_s_icon_ext_columns_style)) {
+        if (!empty($field_collection->field_s_icon_ext_columns_up_icon)) {
+          $field_collection->field_s_icon_ext_columns_style[LANGUAGE_NONE][0]['value'] = 'image';
+        }
+        else {
+          $field_collection->field_s_icon_ext_columns_style[LANGUAGE_NONE][0]['value'] = 'icon';
+        }
       }
 
-      // Only save if it has changed.
-      if($changed){
-        entity_save('field_collection_item', $field_collection);
-      }
+      entity_save('field_collection_item', $field_collection);
     }
   }
 }
