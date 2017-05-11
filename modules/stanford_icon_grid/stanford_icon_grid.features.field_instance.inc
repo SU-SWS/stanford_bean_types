@@ -371,7 +371,7 @@ function stanford_icon_grid_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 10,
+        'size' => 5,
       ),
       'type' => 'text_textfield',
       'weight' => 8,

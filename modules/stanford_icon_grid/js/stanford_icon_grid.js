@@ -51,7 +51,8 @@
 
         }
         $.each(showFields, function (i, field) {
-          $(fieldset).find(field).show();
+          console.log('here');
+          $(fieldset).find(field).show().find('select').trigger('chosen:updated');
         });
         $.each(hideFields, function (i, field) {
           $(fieldset).find(field).hide();
