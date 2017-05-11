@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * stanford_icon_grid.install
+ */
+
+/**
+ * Populate fields so display settings work.
+ */
+function stanford_icon_grid_update_7301() {
+  $blocks = db_select('bean', 'b')
+    ->fields('b', array('bid', 'delta'))
+    ->condition('type', 'stanford_icon_grid')
+    ->execute()->fetchAllKeyed();
+
+  foreach ($blocks as $bid => $delta) {
+    $bean = bean_load($bid, TRUE);
+    $collections = field_get_items('bean', $bean, 'field_s_icon_ext_columns');
+    foreach ($collections as $collection_value) {
+      $changed = FALSE;
+
+      $field_collection = field_collection_item_load($collection_value['value'], TRUE);
+
+      // If the bean doesnt have its style set but has an image uploaded.
+      if (empty($field_collection->field_s_icon_ext_columns_style) && !empty($field_collection->field_s_icon_ext_columns_up_icon)) {
+        $field_collection->field_s_icon_ext_columns_style[LANGUAGE_NONE][0]['value'] = 'image';
+        $changed = TRUE;
+      }
+
+      // Only save if it has changed.
+      if($changed){
+        entity_save('field_collection_item', $field_collection);
+      }
+    }
+  }
+}
