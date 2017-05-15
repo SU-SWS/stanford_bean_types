@@ -1,5 +1,9 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
+7.x-3.2-alpha2                   2017-04-21
+---------------------------------------------
+- Extended social connect bean type with color options
+- New stanford_fw_image bean type
 
 7.x-3.2-alpha1                   2017-04-21
 ---------------------------------------------
