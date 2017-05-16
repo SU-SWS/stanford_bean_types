@@ -21,7 +21,7 @@ function stanford_icon_grid_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Read More',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_s_icon_ext_columns_links',
     ),
@@ -53,7 +53,7 @@ function stanford_icon_grid_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Read More',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_s_icon_ext_columns_links',
     ),
@@ -88,8 +88,8 @@ function stanford_icon_grid_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_s_icon_ext_columns_bg_colo',
-      1 => 'field_s_icon_ext_columns_fa_icon',
-      2 => 'field_s_icon_ext_columns_up_icon',
+      1 => 'field_s_icon_ext_columns_up_icon',
+      2 => 'field_s_icon_ext_columns_fa_icon',
       3 => 'field_s_icon_ext_columns_style',
       4 => 'field_s_icon_ext_columns_text',
     ),
@@ -117,7 +117,7 @@ function stanford_icon_grid_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'More Link Style',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_s_icon_ext_columns_links',
     ),

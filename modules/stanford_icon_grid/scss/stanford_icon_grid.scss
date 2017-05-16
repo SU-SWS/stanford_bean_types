@@ -2,17 +2,19 @@
   text-align: center;
   line-height: 1em;
 
-  .field-collection-view.span4:nth-child(3n+1) {
-    clear: none;
+  .more-link a {
+    display: block;
+    text-align: center;
   }
-
 }
+
 
 .field-name-field-s-icon-ext-columns-title {
   margin: 20px 0;
 }
 
-.field-name-field-s-icon-ext-columns-links {
+.field-name-field-s-icon-ext-columns-links,
+.field-name-field-s-icon-ext-columns-caption {
   margin-bottom: 20px;
 }
 
@@ -27,14 +29,18 @@
   margin: 0 auto;
   display: table;
 
+  i {
+    font-size: 100px;
+  }
+
   > div {
     display: table-cell;
     vertical-align: middle;
   }
 
   img {
-    max-height: 80px;
-    max-width: 80px;
+    max-height: 140px;
+    max-width: 140px;
   }
 
   .color-icon-ffffff & {
