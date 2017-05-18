@@ -12,7 +12,6 @@
   <?php endif; ?>
 
   <?php foreach($item_chunks as $chunk_delta => $items): ?>
-    <?php ddl($offsets); ?>
 
     <div class="field-items clearfix"<?php print $content_attributes; ?>>
       <?php foreach ($items as $delta => $item): ?>
