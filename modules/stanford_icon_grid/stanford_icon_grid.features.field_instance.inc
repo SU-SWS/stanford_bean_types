@@ -188,7 +188,7 @@ function stanford_icon_grid_field_default_field_instances() {
     'bundle' => 'field_s_icon_ext_columns',
     'default_value' => array(
       0 => array(
-        'icon' => 'american-sign-language-interpreting',
+        'icon' => '500px',
       ),
     ),
     'deleted' => 0,
@@ -236,9 +236,11 @@ function stanford_icon_grid_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'stanford_field_formatters',
-      'settings' => array(),
+      'settings' => array(
+        'subset' => array(),
+      ),
       'type' => 'fontawesome_icon_widget',
       'weight' => 6,
     ),
