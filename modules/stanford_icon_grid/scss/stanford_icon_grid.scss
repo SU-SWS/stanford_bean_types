@@ -8,12 +8,14 @@
   }
 }
 
-
 .field-name-field-s-icon-ext-columns-title {
   margin: 20px 0;
 }
 
-.field-name-field-s-icon-ext-columns-links,
+.field-name-field-s-icon-ext-columns-links a {
+  margin-bottom: 10px;
+}
+
 .field-name-field-s-icon-ext-columns-caption {
   margin-bottom: 20px;
 }
