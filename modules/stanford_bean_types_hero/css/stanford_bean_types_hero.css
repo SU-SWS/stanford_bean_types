@@ -1,0 +1,8 @@
+html.js .hero-curtain {
+  position: relative;
+  z-index: 99;
+}
+html.js .hero-reveal {
+  position: relative;
+  top: -1000px;
+}
