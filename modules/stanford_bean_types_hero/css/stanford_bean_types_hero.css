@@ -26,6 +26,9 @@ html.js div.hero-curtain iframe {
   height: 100%;
   position: relative;
 }
+html.js div.hero-curtain .entity-paragraphs-item {
+  margin-bottom: 0;
+}
 html.js .hero-reveal {
   position: fixed;
   top: 0;

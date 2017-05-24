@@ -18,12 +18,6 @@
       });
 
       var images = $('.hero-curtain img');
-      var imageCopies = {};
-      $.each(images, function (i) {
-        $('<img>').attr('src', $(this).attr('src')).load(function () {
-          imageCopies[i] = {width: this.width, height: this.height};
-        });
-      });
 
       function heroCurtain() {
         var winHeight = $(window).height();
