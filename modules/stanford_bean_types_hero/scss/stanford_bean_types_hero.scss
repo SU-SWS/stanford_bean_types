@@ -1,12 +1,40 @@
 html.js {
   // With javascript
-  .hero-curtain {
+  div.hero-curtain {
     position: relative;
-    z-index: 99;
+    z-index: 10;
+
+    a {
+      z-index: 20;
+    }
+
+    &.below-hero {
+      margin-bottom: 0 !important;
+    }
+
+    .player {
+      padding-bottom: 0;
+      height: auto;
+    }
+
+    img {
+      position: relative;
+      max-width: none;
+      width: auto;
+    }
+
+    iframe {
+      min-width: 100%;
+      position: relative;
+    }
   }
   .hero-reveal {
-    position: relative;
-    top: -1000px;
-  }
+    position: fixed;
+    top: 0;
+    width: 100%;
 
+    &.below-hero {
+      position: relative;
+    }
+  }
 }

@@ -1,30 +1,44 @@
-/**
- * @file
- * Applies some functionality on the paragraph types.
- */
-
 (function ($) {
   Drupal.behaviors.stanfordBeanTypesHero = {
     attach: function (context, settings) {
-      var winHeight = $(window).height();
 
+      // Move the hero to the top of the body tag.
       $('.hero-curtain', context).each(function () {
         var clonedBlock = $(this).detach().prependTo('body');
-        var wrapper = $('<div>', {class: 'hero-reveal'}).css('top', 0 - winHeight + 'px');
+        var wrapper = $('<div>', {class: 'hero-reveal'});
         $(clonedBlock).siblings().wrapAll(wrapper);
+
+        // If focus is moved away from the hero, scroll to the top of the normal page.
+        $(this).find('a').last().focusout(function (e) {
+          if ($(this).is(':visible')) {
+            var topPage = $(clonedBlock).height();
+            $('body').scrollTop(topPage);
+          }
+        })
       });
 
       function heroCurtain() {
-        $('.hero-curtain').find('img, iframe').height($(window).height());
+        var winHeight = $(window).height();
+        $('.hero-curtain')
+          .css('margin-bottom', $('.hero-reveal').height())
+          .find('img, iframe')
+          .height(winHeight)
+          .css('width', 'auto')
+          .parent()
+          .height(winHeight)
+          .css('overflow', 'hidden');
       }
 
       $(window).scroll(function (e) {
-        var scrollPos = 0 - $(window).height() + $(window).scrollTop();
-        console.log(scrollPos);
+        var curtain = $('.hero-curtain');
+        var scrollPos = 0 - $(curtain).height() + $(window).scrollTop();
+
         if (scrollPos < 0) {
-          $('.hero-reveal').css('top', scrollPos + 'px');
+          $('.hero-reveal').removeClass('below-hero');
+          $(curtain).removeClass('below-hero');
         } else {
-          $('.hero-reveal').css('top', '0px');
+          $('.hero-reveal').addClass('below-hero');
+          $(curtain).addClass('below-hero');
         }
       });
 

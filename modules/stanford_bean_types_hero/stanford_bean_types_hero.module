@@ -11,11 +11,11 @@ include_once 'stanford_bean_types_hero.features.inc';
  * Implements hook_entity_view().
  */
 function stanford_bean_types_hero_entity_view($entity, $type, $view_mode, $langcode) {
-  if ($type == 'bean' && $entity->type == 'stanfords_hero_block') {
+//  if ($type == 'bean' && $entity->type == 'stanfords_hero_block') {
     $path = drupal_get_path('module', 'stanford_bean_types_hero');
     $entity->content['#attached']['css'][] = "$path/css/stanford_bean_types_hero.css";
     $entity->content['#attached']['js'][] = "$path/js/stanford_bean_types_hero.js";
-  }
+//  }
 }
 
 /**
