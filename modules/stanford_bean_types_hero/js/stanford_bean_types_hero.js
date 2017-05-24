@@ -17,16 +17,55 @@
         })
       });
 
+      var images = $('.hero-curtain img');
+      var imageCopies = {};
+      $.each(images, function (i) {
+        $('<img>').attr('src', $(this).attr('src')).load(function () {
+          imageCopies[i] = {width: this.width, height: this.height};
+        });
+      });
+
       function heroCurtain() {
         var winHeight = $(window).height();
-        $('.hero-curtain')
+        var winWidth = $(window).width();
+
+        var heroAssets = $('.hero-curtain')
           .css('margin-bottom', $('.hero-reveal').height())
-          .find('img, iframe')
-          .height(winHeight)
-          .css('width', 'auto')
-          .parent()
+          .find('img, iframe');
+
+        $(heroAssets).parent()
           .height(winHeight)
           .css('overflow', 'hidden');
+
+        $.each(images, function () {
+
+          var imgRatio = this.width / this.height;
+          var winRatio = winWidth / winHeight;
+
+          $(this).removeClass('stretch-vertical');
+          $(this).removeClass('stretch-horizontal');
+
+          // Taller than Wide Image
+          if (imgRatio < 0) {
+            if (imgRatio < winRatio) {
+              // Window has more narrow width and so image needs to stretch vertically.
+              $(this).addClass('stretch-vertical');
+            } else {
+              $(this).addClass('stretch-horizontal');
+            }
+          } else {
+            if (imgRatio < winRatio) {
+              // Window has more narrow width and so image needs to stretch horizontally.
+              $(this).addClass('stretch-horizontal');
+            } else {
+              $(this).addClass('stretch-vertical');
+            }
+          }
+
+          if ($(this).width() > winWidth) {
+            $(this).css('left', ($(this).width() - winWidth) / -2);
+          }
+        });
       }
 
       $(window).scroll(function (e) {
@@ -44,6 +83,14 @@
 
       $(window).resize(heroCurtain);
       heroCurtain();
+
+      $(window).load(function () {
+        if (typeof $.imagesLoaded !== 'undefined') {
+          $('.hero-curtain').imagesLoaded(heroCurtain);
+        } else {
+          heroCurtain();
+        }
+      });
     }
   }
 })(jQuery);

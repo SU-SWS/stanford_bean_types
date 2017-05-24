@@ -12,13 +12,18 @@ html.js div.hero-curtain .player {
   padding-bottom: 0;
   height: auto;
 }
-html.js div.hero-curtain img {
-  position: relative;
-  max-width: none;
+html.js div.hero-curtain img.stretch-vertical {
+  height: 100%;
   width: auto;
+  max-width: none;
+  position: relative;
+}
+html.js div.hero-curtain img.stretch-horizontal {
+  width: 100%;
 }
 html.js div.hero-curtain iframe {
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 html.js .hero-reveal {
