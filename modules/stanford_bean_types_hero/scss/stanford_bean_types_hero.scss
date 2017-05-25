@@ -1,51 +1,68 @@
 html.js {
   // With javascript
-  div.hero-curtain {
-    position: relative;
-    z-index: 10;
+  body > {
 
-    a {
-      z-index: 20;
-    }
+    div[class*="hero"]:not([class*="reveal"]) {
 
-    &.below-hero {
-      margin-bottom: 0 !important;
-    }
+      img {
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100vh;
+      }
 
-    .player {
-      padding-bottom: 0;
-      height: auto;
-    }
-    img {
-      &.stretch-vertical {
+      iframe {
+        width: 100%;
         height: 100%;
-        width: auto;
-        max-width: none;
         position: relative;
       }
 
-      &.stretch-horizontal {
-        width: 100%;
+      a {
+        z-index: 20;
+      }
+
+      .player {
+        padding-bottom: 0;
+        height: auto;
       }
     }
 
-    iframe {
+    .hero-curtain {
+      position: relative;
+      z-index: 10;
+
+      &.below-hero {
+        margin-bottom: 0 !important;
+      }
+
+      .entity-paragraphs-item {
+        margin-bottom: 0;
+      }
+    }
+
+    .hero-curtain-reveal {
+      position: fixed;
+      top: 0;
       width: 100%;
-      height: 100%;
-      position: relative;
+
+      &.below-hero {
+        position: relative;
+      }
     }
 
-    .entity-paragraphs-item {
-      margin-bottom: 0;
-    }
-  }
-  .hero-reveal {
-    position: fixed;
-    top: 0;
-    width: 100%;
+    .hero-scroll {
+      a.scroll-down {
+        position: absolute;
+        color: #fff;
+        bottom: 0;
+        font-size: 80px;
+        left: calc(50% - 40px);
+        text-align: center;
+        .scroll-text {
+          font-size: 20px;
+        }
+      }
 
-    &.below-hero {
-      position: relative;
     }
   }
 }

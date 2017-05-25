@@ -10,14 +10,32 @@
 function stanford_bean_types_hero_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-stanfords_hero_block-field_hero_block_hero'.
-  $field_instances['bean-stanfords_hero_block-field_hero_block_hero'] = array(
-    'bundle' => 'stanfords_hero_block',
+  // Exported field_instance: 'bean-stanford_hero_block-field_hero_block_hero'.
+  $field_instances['bean-stanford_hero_block-field_hero_block_hero'] = array(
+    'bundle' => 'stanford_hero_block',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 1,
+      ),
+      'large_landscape' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 1,
+      ),
+      'stanford_12_col_banner_tall' => array(
         'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
@@ -61,13 +79,60 @@ function stanford_bean_types_hero_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 31,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'bean-stanford_hero_block-field_hero_block_style'.
+  $field_instances['bean-stanford_hero_block-field_hero_block_style'] = array(
+    'bundle' => 'stanford_hero_block',
+    'default_value' => array(
+      0 => array(
+        'value' => 'curtain',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'large_landscape' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'stanford_12_col_banner_tall' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_hero_block_style',
+    'label' => 'Style',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Hero');
+  t('Style');
 
   return $field_instances;
 }
