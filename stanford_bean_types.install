@@ -6,6 +6,26 @@
  */
 
 /**
+ * Enables given module or throws error.
+ *
+ * @param $module
+ *   Machine name of module to enable.
+ *
+ * @throws \DrupalUpdateException
+ */
+function stanford_bean_types_enable_module($module) {
+  if (!module_exists($module)) {
+    if (!module_enable(array($module))) {
+      watchdog('stanford_bean_types', 'Could not enable %module module', array('%module' => $module));
+      throw new DrupalUpdateException("Could not enable $module module. Please check that the module exists.");
+    }
+    else {
+      watchdog('stanford_bean_types', 'Enabled stanford_field_formatters module.', array('%module' => $module));
+    }
+  }
+}
+
+/**
  * Ensures that any previous modules have the new permissions module enabled.
  */
 function stanford_bean_types_update_7100(&$sandbox) {
@@ -52,15 +72,7 @@ function stanford_bean_types_update_7201(&$sandbox) {
  * Move links to field collection.
  */
 function stanford_bean_types_update_7202(&$sandbox) {
-  if (!module_exists('stanford_field_formatters')) {
-    if (!module_enable(array('stanford_field_formatters'))) {
-      watchdog('stanford_bean_types', 'Could not enable stanford_field_formatters module');
-      throw new DrupalUpdateException("Could not enable stanford_field_formatters module. Please check that the module exists.");
-    }
-    else {
-      watchdog('stanford_bean_types', 'Enabled stanford_field_formatters module.');
-    }
-  }
+  stanford_bean_types_enable_module('stanford_field_formatters');
 
   module_load_include('inc', 'stanford_bean_types', 'stanford_bean_types.features.field_base');
   module_load_include('inc', 'stanford_bean_types', 'stanford_bean_types.features.field_instance');
