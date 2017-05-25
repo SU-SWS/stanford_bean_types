@@ -8,7 +8,7 @@
 /**
  * Enables given module or throws error.
  *
- * @param $module
+ * @param string $module
  *   Machine name of module to enable.
  *
  * @throws \DrupalUpdateException
