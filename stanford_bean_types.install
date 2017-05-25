@@ -52,6 +52,16 @@ function stanford_bean_types_update_7201(&$sandbox) {
  * Move links to field collection.
  */
 function stanford_bean_types_update_7202(&$sandbox) {
+  if (!module_exists('stanford_field_formatters')) {
+    if (!module_enable(array('stanford_field_formatters'))) {
+      watchdog('stanford_bean_types', 'Could not enable stanford_field_formatters module');
+      throw new DrupalUpdateException("Could not enable stanford_field_formatters module. Please check that the module exists.");
+    }
+    else {
+      watchdog('stanford_bean_types', 'Enabled stanford_field_formatters module.');
+    }
+  }
+
   module_load_include('inc', 'stanford_bean_types', 'stanford_bean_types.features.field_base');
   module_load_include('inc', 'stanford_bean_types', 'stanford_bean_types.features.field_instance');
   $fields = stanford_bean_types_field_default_field_bases();
