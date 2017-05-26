@@ -44,6 +44,41 @@ function stanford_icon_grid_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'bean-stanford_icon_grid-field_s_icon_ext_num_row'.
+  $field_instances['bean-stanford_icon_grid-field_s_icon_ext_num_row'] = array(
+    'bundle' => 'stanford_icon_grid',
+    'default_value' => array(
+      0 => array(
+        'value' => 3,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_s_icon_ext_num_row',
+    'label' => 'Icons per Row',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
       'weight' => 2,
     ),
   );
@@ -732,6 +767,7 @@ function stanford_icon_grid_field_default_field_instances() {
   t('Columns');
   t('Font Awesome Icon');
   t('Icon Style');
+  t('Icons per Row');
   t('Links');
   t('Text/Number');
   t('Upload Icon');

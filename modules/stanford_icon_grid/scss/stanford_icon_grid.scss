@@ -106,3 +106,7 @@
   }
 
 }
+
+.partial-offset:last-child > [class*="span"] {
+  padding-left: 8.5%;
+}
