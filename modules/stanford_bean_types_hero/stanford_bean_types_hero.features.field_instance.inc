@@ -79,7 +79,7 @@ function stanford_bean_types_hero_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 6,
+      'weight' => 2,
     ),
   );
 
@@ -125,7 +125,7 @@ function stanford_bean_types_hero_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 1,
     ),
   );
 

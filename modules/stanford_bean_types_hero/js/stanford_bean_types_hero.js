@@ -1,25 +1,29 @@
 (function ($) {
   Drupal.behaviors.stanfordBeanTypesHero = {
     attach: function (context, settings) {
-
       var classes = ['hero-curtain', 'hero-static', 'hero-scroll'];
-      $.each(classes, function (i, heroClass) {
 
+      $.each(classes, function (i, heroClass) {
         // Move the hero to the top of the body tag.
         $('.' + heroClass, context).each(function (i, a, b) {
           var clonedBlock = $(this).detach().prependTo('body');
           var wrapper = $('<div>', {class: heroClass + '-reveal'});
           $(clonedBlock).siblings().wrapAll(wrapper);
+        });
+      });
 
+      function setFocusOut() {
+        $.each(classes, function (i, heroClass) {
+          var hero = $('.' + heroClass);
           // If focus is moved away from the hero, scroll to the top of the normal page.
-          $(this).find('a').last().focusout(function (e) {
+          $(hero).find('a').last().focusout(function (e) {
             if ($(this).is(':visible')) {
-              var topPage = $(clonedBlock).height();
+              var topPage = $(hero).height();
               $('body').scrollTop(topPage);
             }
           })
         });
-      });
+      }
 
       function heroSetSize() {
         var winHeight = $(window).height();
@@ -31,10 +35,10 @@
             .height(winHeight)
             .css('overflow', 'hidden');
         });
-        $('.hero-curtain').css('margin-bottom', $('.hero-curtain-reveal').height())
+        $('.hero-curtain').css('margin-bottom', $('.hero-curtain-reveal').height());
       }
 
-      function heroScroll() {
+      function heroScroller() {
         $('.hero-scroll').append($('<a>', {
           class: 'scroll-down',
           href: '#',
@@ -68,11 +72,12 @@
         } else {
           heroSetSize();
         }
+        setFocusOut();
       });
 
       $(window).resize(heroSetSize);
       heroSetSize();
-      heroScroll();
+      heroScroller();
     }
   }
 })(jQuery);

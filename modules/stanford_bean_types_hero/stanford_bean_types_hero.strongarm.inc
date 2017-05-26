@@ -68,16 +68,16 @@ function stanford_bean_types_hero_strongarm() {
           'weight' => '0',
         ),
         'title' => array(
-          'weight' => '1',
-        ),
-        'revision' => array(
-          'weight' => '2',
-        ),
-        'view_mode' => array(
           'weight' => '3',
         ),
-        'redirect' => array(
+        'revision' => array(
           'weight' => '4',
+        ),
+        'view_mode' => array(
+          'weight' => '5',
+        ),
+        'redirect' => array(
+          'weight' => '6',
         ),
       ),
       'display' => array(),

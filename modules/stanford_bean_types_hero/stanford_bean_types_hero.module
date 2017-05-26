@@ -41,6 +41,6 @@ function stanford_bean_types_hero_entity_view_mode_alter(&$view_mode, $context) 
  */
 function stanford_bean_types_hero_form_bean_form_alter(&$form, &$form_state, $form_id) {
   if ($form['#bundle'] == 'stanford_hero_block') {
-    $form['title']['#type'] = 'hidden';
+    $form['title']['#type'] = $form['view_mode']['#type'] = 'hidden';
   }
 }
