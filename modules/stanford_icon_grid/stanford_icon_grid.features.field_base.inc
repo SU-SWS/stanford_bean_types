@@ -226,5 +226,34 @@ function stanford_icon_grid_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_s_icon_ext_num_row'.
+  $field_bases['field_s_icon_ext_num_row'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_s_icon_ext_num_row',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        1 => 1,
+        2 => 2,
+        3 => 3,
+        4 => 4,
+        6 => 6,
+        12 => 12,
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_integer',
+  );
+
   return $field_bases;
 }

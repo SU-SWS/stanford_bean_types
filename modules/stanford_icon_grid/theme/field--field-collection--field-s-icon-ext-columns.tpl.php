@@ -13,9 +13,9 @@
 
   <?php foreach($item_chunks as $chunk_delta => $items): ?>
 
-    <div class="field-items clearfix"<?php print $content_attributes; ?>>
+    <div class="field-items clearfix <?php print $partial_offset ? 'partial-offset': ''; ?>"<?php print $content_attributes; ?>>
       <?php foreach ($items as $delta => $item): ?>
-        <div class="collection-field-item span4 <?php print $delta % 2 ? 'odd ' : 'even '; print $offsets[$chunk_delta]; $offsets[$chunk_delta] = '';?>"<?php print $item_attributes[$delta]; ?>>
+        <div class="collection-field-item <?php print $delta % 2 ? 'odd ' : 'even '; print $offsets[$chunk_delta]; $offsets[$chunk_delta] = ''; print $span_per_item;?>"<?php print $item_attributes[$delta]; ?>>
           <?php print render($item); ?>
         </div>
       <?php endforeach; ?>
