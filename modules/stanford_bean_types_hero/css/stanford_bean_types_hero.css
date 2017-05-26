@@ -17,6 +17,7 @@ html.js body > div[class*="hero"]:not([class*="reveal"]) .player {
   height: auto;
 }
 html.js body > .hero-curtain {
+  background: #000;
   position: relative;
   z-index: 10;
 }
