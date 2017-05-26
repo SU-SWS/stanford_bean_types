@@ -57,7 +57,7 @@
 env:
   global:
     - PRODUCT_NAME="jumpstart-academic"
-    - ENABLE_MODULES="ds_bean_fields stanford_bean_types_permissions stanford_icon_grid stanford_field_formatters-7.x-1.x"
+    - ENABLE_MODULES="ds_bean_fields stanford_bean_types_hero stanford_paragraphs_types-7.x-1.x stanford_bean_types_permissions stanford_icon_grid stanford_field_formatters-7.x-1.x"
     - DISABLE_MODULES="webauth"
     - ONLY_TEST=""
     - DEPLOYER_BRANCH=""
