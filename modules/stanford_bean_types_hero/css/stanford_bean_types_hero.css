@@ -1,0 +1,48 @@
+html.js body > div[class*="hero"]:not([class*="reveal"]) img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100vh;
+}
+html.js body > div[class*="hero"]:not([class*="reveal"]) iframe {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+html.js body > div[class*="hero"]:not([class*="reveal"]) a {
+  z-index: 20;
+}
+html.js body > div[class*="hero"]:not([class*="reveal"]) .player {
+  padding-bottom: 0;
+  height: auto;
+}
+html.js body > .hero-curtain {
+  background: #000;
+  position: relative;
+  z-index: 10;
+}
+html.js body > .hero-curtain.below-hero {
+  margin-bottom: 0 !important;
+}
+html.js body > .hero-curtain .entity-paragraphs-item {
+  margin-bottom: 0;
+}
+html.js body > .hero-curtain-reveal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+html.js body > .hero-curtain-reveal.below-hero {
+  position: relative;
+}
+html.js body > .hero-scroll a.scroll-down {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  font-size: 80px;
+  left: calc(50% - 40px);
+  text-align: center;
+}
+html.js body > .hero-scroll a.scroll-down .scroll-text {
+  font-size: 20px;
+}

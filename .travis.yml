@@ -57,12 +57,12 @@
 env:
   global:
     - PRODUCT_NAME="jumpstart-academic"
-    - ENABLE_MODULES="ds_bean_fields stanford_bean_types_permissions stanford_icon_grid stanford_field_formatters-7.x-1.x"
+    - ENABLE_MODULES="stanford_paragraph_types-7.x-1.x ds_bean_fields stanford_bean_types_hero stanford_bean_types_permissions stanford_icon_grid stanford_field_formatters-7.x-1.x"
     - DISABLE_MODULES="webauth"
     - ONLY_TEST=""
     - DEPLOYER_BRANCH=""
     - DRUPAL_PROFILE_BRANCH=""
-    - CLICKY_BRANCH=""
+    - CLICKY_BRANCH="HSDO-554-hero-bean"
     - SCRIPTS_BRANCH=""
 
 language: php
