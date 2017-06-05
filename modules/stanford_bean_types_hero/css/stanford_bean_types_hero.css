@@ -16,6 +16,9 @@ html.js body > div[class*="hero"]:not([class*="reveal"]) .player {
   padding-bottom: 0;
   height: auto;
 }
+html.js body > div[class*="hero"]:not([class*="reveal"]) .entity-paragraphs-item {
+  margin-bottom: 0;
+}
 html.js body > .hero-curtain {
   background: #000;
   position: relative;
@@ -23,9 +26,6 @@ html.js body > .hero-curtain {
 }
 html.js body > .hero-curtain.below-hero {
   margin-bottom: 0 !important;
-}
-html.js body > .entity-paragraphs-item {
-  margin-bottom: 0;
 }
 html.js body > .hero-curtain-reveal {
   position: fixed;
