@@ -24,7 +24,7 @@ html.js body > .hero-curtain {
 html.js body > .hero-curtain.below-hero {
   margin-bottom: 0 !important;
 }
-html.js body > .hero-curtain .entity-paragraphs-item {
+html.js body > .entity-paragraphs-item {
   margin-bottom: 0;
 }
 html.js body > .hero-curtain-reveal {
