@@ -17,19 +17,23 @@ function stanford_bean_types_call_to_action_element_info_alter(&$type) {
   if (isset($type['link_field'])) {
     $type['link_field']['#process'][] = 'stanford_bean_types_call_to_action_link_field_process';
   }
-
+  if (isset($type['select'])) {
+    $type['select']['#process'][] = 'stanford_bean_types_call_to_action_select_process';
+  }
 }
 
 /**
  * Process Callback Function
  *
- * Callback to process the Call-to-Action textfield.
+ * Callback to process the Call-to-Action textfields.
  */
 function stanford_bean_types_call_to_action_textfield_process($element, $form_state, $complete_form) {
-  switch ($element['#name']) {
-    case 'title':
-      $element['#description'] = t('This title is ignored when this block is displayed on a page.');
-      break;
+  if (isset($element['#name'])) {
+    switch ($element['#name']) {
+      case 'title':
+        $element['#description'] = t('This title is ignored when this block is displayed on a page.');
+        break;
+    }
   }
   return $element;
 }
@@ -40,10 +44,29 @@ function stanford_bean_types_call_to_action_textfield_process($element, $form_st
  * Callback to process the Call-to-Action link field.
  */
 function stanford_bean_types_call_to_action_link_field_process($element, $form_state, $complete_form) {
-  switch ($element['#field_name']) {
-    case 'field_s_cta_link':
-      $element['title']['#title'] = t('Link text');
-      break;
+  if (isset($element['#field_name'])) {
+    switch ($element['#field_name']) {
+      case 'field_s_cta_link':
+        $element['title']['#title'] = t('Link text');
+        break;
+    }
   }
+  return $element;
+}
+
+/**
+ * Process Callback Function
+ *
+ * Callback to process the Call-to-Action select field.
+ */
+function stanford_bean_types_call_to_action_select_process($element, $form_state, $complete_form) {
+  if (isset($element['#field_name'])) {
+    switch ($element['#field_name']) {
+      case 'field_s_cta_icon':
+        $element['#description'] = t('To find your icon, begin by typing the icon name.');
+        break;
+    }
+  }
+  dsm($element);
   return $element;
 }
