@@ -67,6 +67,5 @@ function stanford_bean_types_call_to_action_select_process($element, $form_state
         break;
     }
   }
-  dsm($element);
   return $element;
 }
