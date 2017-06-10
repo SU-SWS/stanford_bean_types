@@ -26,7 +26,6 @@ function stanford_bean_types_call_to_action_element_info_alter(&$type) {
  * Callback to process the Call-to-Action textfield.
  */
 function stanford_bean_types_call_to_action_textfield_process($element, $form_state, $complete_form) {
-  dsm($element);
   switch ($element['#name']) {
     case 'title':
       $element['#description'] = t('This title is ignored when this block is displayed on a page.');
