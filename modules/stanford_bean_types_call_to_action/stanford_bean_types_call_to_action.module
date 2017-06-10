@@ -11,9 +11,28 @@ include_once 'stanford_bean_types_call_to_action.features.inc';
  * Implements hook_element_info_alter().
  */
 function stanford_bean_types_call_to_action_element_info_alter(&$type) {
+  if (isset($type['textfield'])) {
+    $type['textfield']['#process'][] = 'stanford_bean_types_call_to_action_textfield_process';
+  }
   if (isset($type['link_field'])) {
     $type['link_field']['#process'][] = 'stanford_bean_types_call_to_action_link_field_process';
   }
+
+}
+
+/**
+ * Process Callback Function
+ *
+ * Callback to process the Call-to-Action textfield.
+ */
+function stanford_bean_types_call_to_action_textfield_process($element, $form_state, $complete_form) {
+  dsm($element);
+  switch ($element['#name']) {
+    case 'title':
+      $element['#description'] = t('This title is ignored when this block is displayed on a page.');
+      break;
+  }
+  return $element;
 }
 
 /**
