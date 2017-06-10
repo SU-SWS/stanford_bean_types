@@ -6,3 +6,26 @@
  */
 
 include_once 'stanford_bean_types_call_to_action.features.inc';
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function stanford_bean_types_call_to_action_element_info_alter(&$type) {
+  if (isset($type['link_field'])) {
+    $type['link_field']['#process'][] = 'stanford_bean_types_call_to_action_link_field_process';
+  }
+}
+
+/**
+ * Process Callback Function
+ *
+ * Callback to process the Call-to-Action link field.
+ */
+function stanford_bean_types_call_to_action_link_field_process($element, $form_state, $complete_form) {
+  switch ($element['#field_name']) {
+    case 'field_s_cta_link':
+      $element['title']['#title'] = t('Link text');
+      break;
+  }
+  return $element;
+}
