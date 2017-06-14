@@ -28,11 +28,15 @@ function stanford_bean_types_call_to_action_element_info_alter(&$type) {
  * Callback to process the Call-to-Action textfields.
  */
 function stanford_bean_types_call_to_action_textfield_process($element, $form_state, $complete_form) {
-  if (isset($element['#name'])) {
-    switch ($element['#name']) {
-      case 'title':
-        $element['#description'] = t('This is the text that is displayed for the "Call-to-Action." ');
-        break;
+  if ($form_state['build_info']['form_id'] == 'bean_form'){
+    if ($form_state['complete form']['#bundle'] == 'stanford_call_to_action') {
+      if (isset($element['#name'])) {
+        switch ($element['#name']) {
+          case 'title':
+            $element['#description'] = t('This is the text that is displayed for the "Call-to-Action." ');
+            break;
+        }
+      }
     }
   }
   return $element;
@@ -44,11 +48,15 @@ function stanford_bean_types_call_to_action_textfield_process($element, $form_st
  * Callback to process the Call-to-Action link field.
  */
 function stanford_bean_types_call_to_action_link_field_process($element, $form_state, $complete_form) {
-  if (isset($element['#field_name'])) {
-    switch ($element['#field_name']) {
-      case 'field_s_cta_link':
-        $element['title']['#title'] = t('Link text');
-        break;
+  if ($form_state['build_info']['form_id'] == 'bean_form'){
+    if ($form_state['complete form']['#bundle'] == 'stanford_call_to_action') {
+      if (isset($element['#field_name'])) {
+        switch ($element['#field_name']) {
+          case 'field_s_cta_link':
+            $element['title']['#title'] = t('Link text');
+            break;
+        }
+      }
     }
   }
   return $element;
@@ -60,11 +68,15 @@ function stanford_bean_types_call_to_action_link_field_process($element, $form_s
  * Callback to process the Call-to-Action select field.
  */
 function stanford_bean_types_call_to_action_select_process($element, $form_state, $complete_form) {
-  if (isset($element['#field_name'])) {
-    switch ($element['#field_name']) {
-      case 'field_s_cta_icon':
-        $element['#description'] = t('To find your icon, begin by typing the icon name. If you don\'t want an icon, type \"none\"');
-        break;
+  if ($form_state['build_info']['form_id'] == 'bean_form') {
+    if ($form_state['complete form']['#bundle'] == 'stanford_call_to_action') {
+      if (isset($element['#field_name'])) {
+        switch ($element['#field_name']) {
+          case 'field_s_cta_icon':
+            $element['#description'] = t('To find your icon, begin by typing the icon name. If you don\'t want an icon, type "none"');
+            break;
+        }
+      }
     }
   }
   return $element;
