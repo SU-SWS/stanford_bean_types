@@ -31,7 +31,7 @@ function stanford_bean_types_call_to_action_textfield_process($element, $form_st
   if (isset($element['#name'])) {
     switch ($element['#name']) {
       case 'title':
-        $element['#description'] = t('This title is ignored when this block is displayed on a page.');
+        $element['#description'] = t('This is the text that is displayed for the "Call-to-Action." ');
         break;
     }
   }
@@ -63,9 +63,24 @@ function stanford_bean_types_call_to_action_select_process($element, $form_state
   if (isset($element['#field_name'])) {
     switch ($element['#field_name']) {
       case 'field_s_cta_icon':
-        $element['#description'] = t('To find your icon, begin by typing the icon name.');
+        $element['#description'] = t('To find your icon, begin by typing the icon name. If you don\'t want an icon, type \"none\"');
         break;
     }
   }
   return $element;
 }
+
+/**
+ * Implements hook_block_view_alter
+ */
+function stanford_bean_types_call_to_action_block_view_alter(&$data, $block) {
+  if ($block->module == 'bean') {
+    $delta = $block->delta;
+    if ($data['content']['bean'][$delta]['#bundle'] == 'stanford_call_to_action') {
+
+      // Don't display the title.
+      $data['subject'] = '<none>';
+    }
+  }
+}
+

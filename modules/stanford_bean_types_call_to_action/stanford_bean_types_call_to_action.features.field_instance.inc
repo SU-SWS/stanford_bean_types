@@ -10,40 +10,6 @@
 function stanford_bean_types_call_to_action_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-stanford_call_to_action-field_s_cta_color'.
-  $field_instances['bean-stanford_call_to_action-field_s_cta_color'] = array(
-    'bundle' => 'stanford_call_to_action',
-    'default_value' => array(
-      0 => array(
-        'tid' => 3737,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'bean',
-    'field_name' => 'field_s_cta_color',
-    'label' => 'Accent Color',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'bean-stanford_call_to_action-field_s_cta_icon'.
   $field_instances['bean-stanford_call_to_action-field_s_cta_icon'] = array(
     'bundle' => 'stanford_call_to_action',
@@ -60,7 +26,7 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
         'module' => 'stanford_field_formatters',
         'settings' => array(),
         'type' => 'fontawesome_icon_formatter',
-        'weight' => 3,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'bean',
@@ -75,7 +41,7 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
       'module' => 'stanford_field_formatters',
       'settings' => array(),
       'type' => 'fontawesome_icon_widget',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -93,7 +59,7 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
           'image_style' => '6-col-banner-short',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'bean',
@@ -106,7 +72,7 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '1600x1600',
+      'max_resolution' => '3200x3200',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -220,11 +186,11 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
           'link' => 0,
         ),
         'insert_width' => '',
-        'preview_image_style' => 'thumbnail',
+        'preview_image_style' => '6-col-banner-short',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -237,10 +203,9 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'bean',
@@ -262,7 +227,7 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'required',
+      'title' => 'none',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
@@ -281,7 +246,6 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Accent Color');
   t('CTA link');
   t('Icon');
   t('Image');

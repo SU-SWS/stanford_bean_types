@@ -71,13 +71,13 @@ function stanford_bean_types_call_to_action_strongarm() {
           'weight' => '1',
         ),
         'revision' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'view_mode' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'redirect' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
       ),
       'display' => array(),
