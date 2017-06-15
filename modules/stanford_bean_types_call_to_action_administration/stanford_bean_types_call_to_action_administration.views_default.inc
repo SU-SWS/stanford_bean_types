@@ -155,17 +155,12 @@ function stanford_bean_types_call_to_action_administration_views_default_views()
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'user';
   $handler->display->display_options['fields']['name']['label'] = 'Author';
-  /* Field: Block: Accent Color */
-  $handler->display->display_options['fields']['field_s_cta_color']['id'] = 'field_s_cta_color';
-  $handler->display->display_options['fields']['field_s_cta_color']['table'] = 'field_data_field_s_cta_color';
-  $handler->display->display_options['fields']['field_s_cta_color']['field'] = 'field_s_cta_color';
-  $handler->display->display_options['fields']['field_s_cta_color']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Block: CTA link */
   $handler->display->display_options['fields']['field_s_cta_link']['id'] = 'field_s_cta_link';
   $handler->display->display_options['fields']['field_s_cta_link']['table'] = 'field_data_field_s_cta_link';
   $handler->display->display_options['fields']['field_s_cta_link']['field'] = 'field_s_cta_link';
   $handler->display->display_options['fields']['field_s_cta_link']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_s_cta_link']['type'] = 'link_separate';
+  $handler->display->display_options['fields']['field_s_cta_link']['type'] = 'link_url';
   /* Field: Block: Icon */
   $handler->display->display_options['fields']['field_s_cta_icon']['id'] = 'field_s_cta_icon';
   $handler->display->display_options['fields']['field_s_cta_icon']['table'] = 'field_data_field_s_cta_icon';
@@ -242,30 +237,6 @@ function stanford_bean_types_call_to_action_administration_views_default_views()
     16 => 0,
     18 => 0,
   );
-  /* Filter criterion: Block: Accent Color (field_s_cta_color) */
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['id'] = 'field_s_cta_color_tid';
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['table'] = 'field_data_field_s_cta_color';
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['field'] = 'field_s_cta_color_tid';
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['expose']['operator_id'] = 'field_s_cta_color_tid_op';
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['expose']['label'] = 'Accent Color ';
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['expose']['operator'] = 'field_s_cta_color_tid_op';
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['expose']['identifier'] = 'field_s_cta_color_tid';
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    12 => 0,
-    10 => 0,
-    8 => 0,
-    6 => 0,
-    20 => 0,
-    14 => 0,
-    16 => 0,
-    18 => 0,
-  );
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_s_cta_color_tid']['vocabulary'] = 'stanford_cta_color';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

@@ -88,10 +88,12 @@ function stanford_bean_types_call_to_action_select_process($element, $form_state
 function stanford_bean_types_call_to_action_block_view_alter(&$data, $block) {
   if ($block->module == 'bean') {
     $delta = $block->delta;
-    if ($data['content']['bean'][$delta]['#bundle'] == 'stanford_call_to_action') {
+    if (isset($data['content']['bean'][$delta]['#bundle'])) {
+      if ($data['content']['bean'][$delta]['#bundle'] == 'stanford_call_to_action') {
 
-      // Don't display the title.
-      $data['subject'] = '<none>';
+        // Don't display the title.
+        $data['subject'] = '<none>';
+      }
     }
   }
 }
