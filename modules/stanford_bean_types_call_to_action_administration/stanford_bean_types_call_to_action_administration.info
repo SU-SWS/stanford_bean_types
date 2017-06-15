@@ -5,6 +5,7 @@ package = Stanford
 version = 7.x-2.8-dev
 dependencies[] = ctools
 dependencies[] = stanford_bean_types
+dependencies[] = stanford_bean_types_call_to_action
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
