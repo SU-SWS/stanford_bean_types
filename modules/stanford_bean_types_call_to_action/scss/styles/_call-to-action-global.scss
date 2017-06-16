@@ -40,11 +40,17 @@
       .span4 & {
         font-size: 85px;
         top: 30%;
+        @media (max-width: 979px) and (min-width: 480px) {
+          font-size: 65px;
+        }
       }
 
       .span3 & {
         font-size: 65px;
         top: 30%;
+        @media (max-width: 979px) and (min-width: 480px) {
+          font-size: 45px;
+        }
       }
 
       .span2 & {
