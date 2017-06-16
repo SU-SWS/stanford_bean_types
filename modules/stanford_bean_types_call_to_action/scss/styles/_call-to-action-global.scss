@@ -36,6 +36,21 @@
         font-size: 75px;
         top: 30%;
       }
+
+      .span4 & {
+        font-size: 85px;
+        top: 30%;
+      }
+
+      .span3 & {
+        font-size: 65px;
+        top: 30%;
+      }
+
+      .span2 & {
+        font-size: 40px;
+        top: 30%;
+      }
     }
   }
 
@@ -47,27 +62,6 @@
 
     h2 {
       margin-bottom: 0;
-    }
-  }
-
-  & .span4 {
-    .field-name-field-s-cta-icon {
-      font-size: 85px;
-      top: 30%;
-    }
-  }
-
-  & .span3 {
-    .field-name-field-s-cta-icon {
-      font-size: 65px;
-      top: 30%;
-    }
-  }
-
-  & .span2 {
-    .field-name-field-s-cta-icon {
-      font-size: 40px;
-      top: 30%;
     }
   }
 }
