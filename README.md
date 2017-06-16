@@ -29,7 +29,6 @@ Needs Description.
 Needs Description.
 
 
-
 Sub Modules
 ---
 
@@ -38,6 +37,16 @@ Stanford Bean Type Permissions modules provides some out of the box permissions 
 
 **[DS Bean Fields](https://github.com/SU-SWS/stanford_bean_types/tree/7.x-2.x-dev/modules/ds_bean_fields)**
 Display suite handling of the title field in BEAN types.
+
+**[Stanford Call To Action]**
+Stanford Call To Action modules provide a Bean type that can be used for call to action blocks (with the ability to add an image and a Font Awesome icon overlay), some out of the box permissions, and administration views. After installing and enabling the module, follow these steps to complete setup:
+
+1. Navigate to Stanford Call to Action blocks at **admin/structure/block-types/manage/stanford-call-to-action/display**.
+2. Enable Full Content display setting.
+3. Select the One Column layout.
+4. Navigate to the Full Content display.
+5. Move fields and field groups to be placed in the following order:
+ * Item 5a. (Link group (Image Style (Image, Icon), Title Style (Title)))
 
 
 Installation
