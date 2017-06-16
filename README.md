@@ -46,7 +46,7 @@ Stanford Call To Action modules provide a Bean type that can be used for call to
 3. Select the One Column layout.
 4. Navigate to the Full Content display.
 5. Move fields and field groups to be placed in the following order:
- * Item 5a. (Link group (Image Style (Image, Icon), Title Style (Title)))
+  5a. (Link group (Image Style (Image, Icon), Title Style (Title)))
 
 
 Installation
