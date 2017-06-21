@@ -31,5 +31,5 @@ features[field_instance][] = bean-stanford_call_to_action-field_s_cta_image
 features[field_instance][] = bean-stanford_call_to_action-field_s_cta_link
 features[variable][] = field_bundle_settings_bean__stanford_call_to_action
 features_exclude[field_group][group_s_cta_style|bean|stanford_call_to_action|default] = group_s_cta_style|bean|stanford_call_to_action|default
-project path = sites/default/modules/stanford/stanford_bean_types/modules/
+files[] = stanford_bean_types_call_to_action.install
 project status url = https://github.com/SU-SWS/stanford_bean_types
