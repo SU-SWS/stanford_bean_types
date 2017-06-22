@@ -12,6 +12,12 @@ include_once 'stanford_bean_types_hero.features.inc';
  */
 function stanford_bean_types_hero_entity_view($entity, $type, $view_mode, $langcode) {
   if ($type == 'bean' && $entity->type == 'stanford_hero_block') {
+    $setting = array(
+      'stanford_bean_types_hero' => array(
+        'heroMenu' => variable_get('stanford_bean_types_hero_menu', FALSE),
+      ),
+    );
+    drupal_add_js($setting, array('type' => 'setting'));
     $path = drupal_get_path('module', 'stanford_bean_types_hero');
     $entity->content['#attached']['css'][] = "$path/css/stanford_bean_types_hero.css";
     $entity->content['#attached']['js'][] = "$path/js/stanford_bean_types_hero.js";

@@ -1,12 +1,18 @@
 (function ($) {
   Drupal.behaviors.stanfordBeanTypesHero = {
     attach: function (context, settings) {
+      console.log(settings);
       var classes = ['hero-curtain', 'hero-static', 'hero-scroll'];
+      var menu = $('<div>', {id: 'hero-menu', html: $('.region-navigation div > ul').clone()});
+      if (settings.stanford_bean_types_hero.heroMenu) {
+        menu = null;
+      }
 
       $.each(classes, function (i, heroClass) {
         // Move the hero to the top of the body tag.
         $('.' + heroClass, context).each(function (i, a, b) {
-          var clonedBlock = $(this).detach().prependTo('body');
+          var clonedBlock = $(this).detach().prependTo('body')
+            .prepend($('#global-header').clone().attr('id', 'global-header-hero').append(menu));
           var wrapper = $('<div>', {class: heroClass + '-reveal'});
           $(clonedBlock).siblings().wrapAll(wrapper);
         });
