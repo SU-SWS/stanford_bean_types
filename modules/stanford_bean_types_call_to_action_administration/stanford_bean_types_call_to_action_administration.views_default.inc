@@ -36,7 +36,6 @@ function stanford_bean_types_call_to_action_administration_views_default_views()
     'title' => 'title',
     'changed' => 'changed',
     'name' => 'name',
-    'field_s_cta_color' => 'field_s_cta_color',
     'field_s_cta_link' => 'field_s_cta_link',
     'field_s_cta_icon' => 'field_s_cta_icon',
     'bid' => 'bid',
@@ -74,13 +73,6 @@ function stanford_bean_types_call_to_action_administration_views_default_views()
       'empty_column' => 0,
     ),
     'name' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_s_cta_color' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',

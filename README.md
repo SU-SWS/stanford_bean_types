@@ -10,6 +10,9 @@ This module provides default BEAN types. Contained in this feature are the Stanf
 **Stanford Banner**
 This bean type provides a block with the ability to create image banners. Users can add an image, credits, source information, and a caption.
 
+**Stanford Call-to-action**
+This bean type provides a block with a background image, icon, title, and link.
+
 **Stanford Contact**
 This bean type provides a uniform and easy to edit contact block. Users can add an address, fax, phone number, email address, and a number of links. When placed using a Stanford theme end users will see a nicely formatted address block.
 
@@ -46,7 +49,8 @@ Stanford Call To Action modules provide a Bean type that can be used for call to
 3. Select the One Column layout.
 4. Navigate to the Full Content display.
 5. Move fields and field groups to be placed in the following order:
-* 5a. (Link group (Image Style (Image, Icon), Title Style (Title)))
+* ex. (Link group (Image Style (Image, Icon), Title Style (Title)))
+6. Save
 
 
 Installation
