@@ -73,7 +73,8 @@ function stanford_bean_types_call_to_action_select_process($element, $form_state
       if (isset($element['#field_name'])) {
         switch ($element['#field_name']) {
           case 'field_s_cta_icon':
-            $element['#description'] = t('To find your icon, begin by typing the icon name. If you don\'t want an icon, type "none"');
+            $element['#description'] =
+              t('To find your service icon, begin by clicking on the dropdown and type the service\'s name (e.g. Instagram, Facebook, Twitter, YouTube, etc.). If you don\'t want an icon, type "none".');
             break;
         }
       }
