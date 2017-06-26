@@ -88,7 +88,6 @@ html.js #hero-menu li {
   display: table-cell;
   list-style: none;
   position: relative;
-  margin: 0;
   padding: 0;
   text-align: center;
 }
@@ -99,7 +98,7 @@ html.js #hero-menu li a {
   display: inline-block;
 }
 html.js #hero-menu li a:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 3px;
