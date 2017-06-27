@@ -15,7 +15,7 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
     'bundle' => 'stanford_call_to_action',
     'default_value' => array(
       0 => array(
-        'icon' => 'american-sign-language-interpreting',
+        'icon' => '',
       ),
     ),
     'deleted' => 0,
@@ -37,9 +37,11 @@ function stanford_bean_types_call_to_action_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'stanford_field_formatters',
-      'settings' => array(),
+      'settings' => array(
+        'subset' => array(),
+      ),
       'type' => 'fontawesome_icon_widget',
       'weight' => 4,
     ),
