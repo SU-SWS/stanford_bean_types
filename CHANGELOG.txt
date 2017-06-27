@@ -1,5 +1,14 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
+7.x-3.2                          2017-06-19
+-------------------------------------------
+- HSDO-557 Added text/number field to icon grid
+- Changed icon grid to use view modes & css sheets instead of inline styles.
+- HSDO-873 Added caption field to icon grid
+- HSDO-812 Hero bean type with scrool/curtain reveal
+- Added module enable for stanford_field_formatters
+- Added ability to change the number of icons per row in the icon grid
+
 7.x-3.2-alpha2                   2017-04-21
 ---------------------------------------------
 - Extended social connect bean type with color options
