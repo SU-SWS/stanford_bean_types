@@ -223,7 +223,7 @@ function stanford_icon_grid_field_default_field_instances() {
     'bundle' => 'field_s_icon_ext_columns',
     'default_value' => array(
       0 => array(
-        'icon' => '500px',
+        'icon' => '',
       ),
     ),
     'deleted' => 0,
