@@ -1,7 +1,7 @@
 (function ($) {
   Drupal.behaviors.stanfordBeanTypesHero = {
     attach: function (context, settings) {
-      console.log(settings);
+
       var classes = ['hero-curtain', 'hero-static', 'hero-scroll'];
       var menu = $('<div>', {id: 'hero-menu', html: $('.region-navigation div > ul').clone()});
       if (!settings.stanford_bean_types_hero.heroMenu) {
