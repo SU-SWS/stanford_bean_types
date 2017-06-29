@@ -22,7 +22,10 @@ html.js body > div[class*="hero"]:not([class*="reveal"]) .entity-paragraphs-item
 html.js body > .hero-curtain {
   background: transparent;
   position: relative;
+}
+html.js body > .hero-curtain > * {
   z-index: 10;
+  position: relative;
 }
 html.js body > .hero-curtain .entity {
   background: #000;

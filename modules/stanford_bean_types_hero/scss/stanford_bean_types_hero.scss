@@ -35,7 +35,11 @@ html.js {
     .hero-curtain {
       background: transparent;
       position: relative;
-      z-index: 10;
+
+      > * {
+        z-index: 10;
+        position: relative;
+      }
 
       .entity {
         background: #000;
