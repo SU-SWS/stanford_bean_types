@@ -20,12 +20,15 @@ html.js body > div[class*="hero"]:not([class*="reveal"]) .entity-paragraphs-item
   margin-bottom: 0;
 }
 html.js body > .hero-curtain {
-  background: #000;
+  background: transparent;
   position: relative;
   z-index: 10;
 }
+html.js body > .hero-curtain .entity {
+  background: #000;
+}
 html.js body > .hero-curtain.below-hero {
-  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 html.js body > .hero-curtain-reveal {
   position: fixed;

@@ -41,7 +41,7 @@
             .height(winHeight)
             .css('overflow', 'hidden');
         });
-        $('.hero-curtain').css('margin-bottom', $('.hero-curtain-reveal').height());
+        $('.hero-curtain').css('padding-bottom', $('.hero-curtain-reveal').height());
       }
 
       function heroScroller() {

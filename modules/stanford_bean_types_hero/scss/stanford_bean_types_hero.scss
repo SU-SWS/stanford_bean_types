@@ -33,13 +33,17 @@ html.js {
     }
 
     .hero-curtain {
-      background: #000;
+      background: transparent;
       position: relative;
       z-index: 10;
 
+      .entity {
+        background: #000;
+      }
+
       &.below-hero {
         // Need this to override the margin set by javascript.
-        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
       }
     }
 
