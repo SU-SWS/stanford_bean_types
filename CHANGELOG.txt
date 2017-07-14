@@ -1,5 +1,11 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
+
+7.x-3.3                          2017-07-14
+-------------------------------------------
+- HSDO-918 Branding overlay for hero block
+- Bug fix for curtain reveal on safari
+
 7.x-3.2                          2017-06-19
 -------------------------------------------
 - HSDO-557 Added text/number field to icon grid
