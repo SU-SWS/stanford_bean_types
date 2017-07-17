@@ -39,6 +39,14 @@ Stanford Bean Type Permissions modules provides some out of the box permissions 
 **[DS Bean Fields](https://github.com/SU-SWS/stanford_bean_types/tree/7.x-2.x-dev/modules/ds_bean_fields)**
 Display suite handling of the title field in BEAN types.
 
+**[Stanford Icon Grid](https://github.com/SU-SWS/stanford_bean_types/tree/7.x-3.x/modules/stanford_icon_grid)**
+Font awesome icons & uploaded images as icons with title and links below. Allows the user to change background color of
+the font awesome icons.
+
+**[Stanford Bean Types Hero](https://github.com/SU-SWS/stanford_bean_types/tree/7.x-3.x/modules/stanford_bean_types_hero)**
+A hero block type that can be used as a curtain reveal or a static header with a scroll link. This helps promote some 
+big promotion or announcement.
+
 
 Installation
 ---
