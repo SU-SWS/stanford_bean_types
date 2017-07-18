@@ -1,5 +1,5 @@
 # [Stanford Bean Types](https://github.com/SU-SWS/stanford_bean_types)
-##### Version: 7.x-3.3
+##### version: 7.x-3.3
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama), [boznik](https://github.com/boznik), [pookmish](https://github.com/pookmish)
 
@@ -33,17 +33,17 @@ Needs Description.
 Sub Modules
 ---
 
-**[Stanford Bean Types Permissions](https://github.com/SU-SWS/stanford_bean_types/tree/7.x-2.x-dev/modules/stanford_bean_types_permissions)**
+**[Stanford Bean Types Permissions](modules/stanford_bean_types_permissions)**
 Stanford Bean Type Permissions modules provides some out of the box permissions that may be installed through an installation profile as it is dependant on the Stanford Bean Types module. This module may be safely disabled and overridden through the permissions setting page.
 
-**[DS Bean Fields](https://github.com/SU-SWS/stanford_bean_types/tree/7.x-2.x-dev/modules/ds_bean_fields)**
+**[DS Bean Fields](modules/ds_bean_fields)**
 Display suite handling of the title field in BEAN types.
 
-**[Stanford Icon Grid](https://github.com/SU-SWS/stanford_bean_types/tree/7.x-3.x/modules/stanford_icon_grid)**
+**[Stanford Icon Grid](modules/stanford_icon_grid)**
 Font awesome icons & uploaded images as icons with title and links below. Allows the user to change background color of
 the font awesome icons.
 
-**[Stanford Bean Types Hero](https://github.com/SU-SWS/stanford_bean_types/tree/7.x-3.x/modules/stanford_bean_types_hero)**
+**[Stanford Bean Types Hero](modules/stanford_bean_types_hero)**
 A hero block type that can be used as a curtain reveal or a static header with a scroll link. This helps promote some 
 big promotion or announcement.
 
