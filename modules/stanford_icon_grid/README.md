@@ -1,5 +1,5 @@
 #[Stanford Icon Grid](https://github.com/SU-SWS/stanford_bean_types)
-##### Version: 7.x-3.1-dev
+##### version: 7.x-3.3
 
 Maintainers: [pookmish](https://github.com/pookmish), [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  
 
