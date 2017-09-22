@@ -1274,6 +1274,7 @@ function stanford_bean_types_field_default_field_instances() {
           'image_icon' => 0,
           'image_large' => 0,
           'image_large-landscape' => 0,
+          'image_large-landscape-scaled' => 'image_large-landscape-scaled',
           'image_large-profile' => 0,
           'image_large-scaled' => 'image_large-scaled',
           'image_large-square' => 'image_large-square',
