@@ -35,13 +35,29 @@
   margin: 0 auto;
   display: table;
 
-  i {
-    font-size: 100px;
+  a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    left: 0;
+    top: 0;
+    display: table;
+    line-height: 200px;
+
+    > * {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 
   > div {
     display: table-cell;
     vertical-align: middle;
+  }
+
+  i {
+    font-size: 100px;
   }
 
   img {
@@ -50,11 +66,31 @@
   }
 
   .color-icon-ffffff & {
-    color: #ffffff;
+    color: #fff;
+
+    a {
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        background: rgba(255, 255, 255, .2);
+        text-decoration: none;
+      }
+    }
   }
 
   .color-icon-000000 & {
-    color: #000000;
+    color: #000;
+
+    a {
+      color: #000;
+
+      &:hover,
+      &:focus {
+        background: rgba(255, 255, 255, .2);
+        text-decoration: none;
+      }
+    }
   }
 
   .background-icon-8c1515 & {
@@ -62,11 +98,11 @@
   }
 
   .background-icon-000000 & {
-    background-color: #000000;
+    background-color: #000;
   }
 
   .background-icon-ffffff & {
-    background-color: #ffffff;
+    background-color: #fff;
   }
 
   .background-icon-4d4f53 & {
