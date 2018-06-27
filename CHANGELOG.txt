@@ -1,6 +1,11 @@
 Stanford Bean Types x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+7.x-3.4                          2018-06-26
+-------------------------------------------
+- Added composer.json
+- Updated css for icon_grid block.
+
 7.x-3.3                          2017-07-14
 -------------------------------------------
 - HSDO-918 Branding overlay for hero block

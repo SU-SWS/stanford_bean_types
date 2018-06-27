@@ -1,5 +1,5 @@
 # [Stanford Bean Types](https://github.com/SU-SWS/stanford_bean_types)
-##### version: 7.x-3.x
+##### version: 7.x-3.4
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama), [boznik](https://github.com/boznik), [pookmish](https://github.com/pookmish)
 
@@ -44,7 +44,7 @@ Font awesome icons & uploaded images as icons with title and links below. Allows
 the font awesome icons.
 
 **[Stanford Bean Types Hero](modules/stanford_bean_types_hero)**
-A hero block type that can be used as a curtain reveal or a static header with a scroll link. This helps promote some 
+A hero block type that can be used as a curtain reveal or a static header with a scroll link. This helps promote some
 big promotion or announcement.
 
 

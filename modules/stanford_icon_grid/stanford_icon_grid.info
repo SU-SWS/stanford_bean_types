@@ -1,7 +1,7 @@
 name = Stanford Icon Grid Block
 core = 7.x
 package = Stanford
-version = 7.x-3.x
+version = 7.x-3.4
 dependencies[] = bean_admin_ui
 dependencies[] = ctools
 dependencies[] = features
