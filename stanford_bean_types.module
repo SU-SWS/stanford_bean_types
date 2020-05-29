@@ -247,7 +247,6 @@ function stanford_bean_types_bean_access($bean, $operation, $account) {
   if ($operation == "view" && isset($bean->status) && !$bean->status) {
     return FALSE;
   }
-  return TRUE;
 }
 
 /**
